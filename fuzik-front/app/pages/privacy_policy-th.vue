@@ -1,0 +1,1187 @@
+<template>
+    <div>
+        <!-- Hero Section for Privacy Policy -->
+        <section id="hero-privacy" class="hero-gradient min-h-[50vh] flex items-center relative overflow-hidden pt-20">
+            <!-- Dynamic background elements (Copied from index.html) -->
+            <div class="hero-wave-element w-48 h-48 top-1/4 left-1/4" style="animation-delay: 0s;"></div>
+            <div class="hero-wave-element w-64 h-64 bottom-1/3 right-1/4" style="animation-delay: 2s;"></div>
+            <div class="hero-wave-element w-40 h-40 top-1/2 left-10" style="animation-delay: 4s;"></div>
+            <div class="hero-wave-element w-56 h-56 bottom-10 right-10" style="animation-delay: 6s;"></div>
+            <div class="hero-wave-element w-32 h-32 top-1/3 right-10" style="animation-delay: 1s;"></div>
+            <div class="hero-wave-element w-48 h-48 bottom-20 left-1/3" style="animation-delay: 3s;"></div>
+            
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <h1 class="text-6xl md:text-7xl text-white mb-4 text-glow-subtle">
+                    นโยบายความเป็นส่วนตัว<span class="text-[#fff600]">ของเรา</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                    ความเป็นส่วนตัวของคุณเป็นสิ่งสำคัญสำหรับเรา เรียนรู้ว่าเราจัดการข้อมูลของคุณอย่างไร
+                </p>
+            </div>
+        </section>
+
+        <!-- Privacy Policy Content Section -->
+        <section id="privacy-content" class="section-padding bg-[#1a1a1a] text-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <p class="mb-8 text-lg">
+                    นโยบายความเป็นส่วนตัวนี้อธิบายว่าเว็บไซต์การตลาด Fuzik Collaborate ซึ่งตั้งอยู่ที่ <a href="https://fuzikapp.com" class="text-[#fff600] hover:underline">https://fuzikapp.com</a> ("เว็บไซต์") รวบรวม ใช้ และเปิดเผยข้อมูลอย่างไรเมื่อคุณเยี่ยมชมและโต้ตอบกับเว็บไซต์ของเรา
+                </p>
+                <!-- 
+                <p class="mb-8 text-lg font-bold text-fuzik-yellow">
+                    โปรดทราบ: นโยบายความเป็นส่วนตัวนี้ใช้ได้กับเว็บไซต์การตลาดนี้เท่านั้น สำหรับแนวปฏิบัติความเป็นส่วนตัวที่ควบคุมแอปพลิเคชัน Fuzik Collaborate รวมถึงบัญชีผู้ใช้ การสร้างเนื้อหา และคุณสมบัติการทำงานร่วมกัน โปรดดูนโยบายความเป็นส่วนตัวแยกต่างหากที่มีอยู่ในเว็บไซต์แอปพลิเคชันที่ <a href="https://fuzikapp.com/privacy" target="_blank" class="text-fuzik-yellow hover:underline">https://www.fuzikapp.com/privacy</a>
+                </p>
+                -->
+
+                <h2 class="text-4xl font-bold fuzik-yellow mb-6">1. ข้อมูลที่เรารวบรวม</h2>
+                <p class="mb-4">เรารวบรวมข้อมูลเพื่อให้บริการที่ดีขึ้นแก่ผู้ใช้ของเราทุกคน ประเภทของข้อมูลที่เรารวบรวมบนเว็บไซต์การตลาดนี้ประกอบด้วย:</p>
+                <ul class="list-disc list-inside ml-4 mb-8 space-y-2">
+                    <li><strong>ข้อมูลการใช้งาน:</strong> เราอาจรวบรวมข้อมูลเกี่ยวกับการเข้าถึงและการใช้งานเว็บไซต์ ("ข้อมูลการใช้งาน") ข้อมูลการใช้งานนี้อาจรวมถึงข้อมูลเช่น ที่อยู่ Internet Protocol ของคอมพิวเตอร์ของคุณ (เช่น ที่อยู่ IP) ประเภทเบราว์เซอร์ เวอร์ชันเบราว์เซอร์ หน้าเว็บไซต์ของเราที่คุณเยี่ยมชม เวลาและวันที่ที่คุณเยี่ยมชม เวลาที่ใช้ในหน้าเหล่านั้น ตัวระบุอุปกรณ์ที่ไม่ซ้ำกัน และข้อมูลการวินิจฉัยอื่น ๆ สิ่งนี้ส่วนใหญ่รวบรวมผ่าน Google Analytics โดยขึ้นอยู่กับความต้องการของคุณเกี่ยวกับคุกกี้</li>
+                    <li><strong>ข้อมูลแบบฟอร์มการติดต่อ:</strong> หากคุณใช้แบบฟอร์มการติดต่อของเรา เราจะรวบรวมข้อมูลที่คุณให้ เช่น ชื่อ ที่อยู่อีเมล และข้อความ ข้อมูลนี้ใช้เพื่อตอบคำถามของคุณเท่านั้น</li>
+                </ul>
+
+                <h2 class="text-4xl font-bold fuzik-yellow mb-6">2. การใช้ข้อมูล</h2>
+                <p class="mb-4">Fuzik Collaborate ใช้ข้อมูลที่รวบรวมเพื่อวัตถุประสงค์ต่างๆ:</p>
+                <ul class="list-disc list-inside ml-4 mb-8 space-y-2">
+                    <li>เพื่อจัดหาและบำรุงรักษาเว็บไซต์ของเรา</li>
+                    <li>เพื่อแจ้งให้คุณทราบเกี่ยวกับการเปลี่ยนแปลงเว็บไซต์ของเรา</li>
+                    <li>เพื่อให้คุณสามารถเข้าร่วมคุณสมบัติเชิงโต้ตอบของเว็บไซต์ของเราเมื่อคุณเลือกที่จะทำเช่นนั้น</li>
+                    <li>เพื่อให้บริการดูแลลูกค้าและการสนับสนุน</li>
+                    <li>เพื่อจัดเตรียมการวิเคราะห์หรือข้อมูลที่มีค่าเพื่อให้เราสามารถปรับปรุงเว็บไซต์ได้</li>
+                    <li>เพื่อตรวจสอบการใช้งานเว็บไซต์</li>
+                    <li>เพื่อตรวจจับ ป้องกัน และแก้ไขปัญหาทางเทคนิค</li>
+                    <li>เพื่อตอบคำถามของคุณที่ส่งผ่านแบบฟอร์มการติดต่อ</li>
+                </ul>
+
+                <h2 class="text-4xl font-bold fuzik-yellow mb-6">3. การถ่ายโอนข้อมูล</h2>
+                <p class="mb-8">ข้อมูลของคุณ รวมถึงข้อมูลส่วนบุคคล อาจถูกถ่ายโอนไปยัง — และเก็บรักษาไว้บน — คอมพิวเตอร์ที่ตั้งอยู่นอกรัฐ จังหวัด ประเทศ หรือเขตอำนาจศาลอื่น ๆ ของคุณ ซึ่งกฎหมายคุ้มครองข้อมูลอาจแตกต่างจากเขตอำนาจศาลของคุณ หากคุณอยู่นอก [ประเทศ/รัฐของคุณ] และเลือกที่จะให้ข้อมูลแก่เรา โปรดทราบว่าเราถ่ายโอนข้อมูล รวมถึงข้อมูลส่วนบุคคล ไปยัง [ประเทศ/รัฐของคุณ] และประมวลผลที่นั่น การยินยอมของคุณต่อนโยบายความเป็นส่วนตัวนี้ตามด้วยการส่งข้อมูลดังกล่าวของคุณแสดงถึงการตกลงของคุณในการถ่ายโอนนั้น</p>
+
+                <h2 class="text-4xl font-bold fuzik-yellow mb-6">4. การเปิดเผยข้อมูล</h2>
+                <p class="mb-4">เราอาจเปิดเผยข้อมูลส่วนบุคคลของคุณด้วยความเชื่อโดยสุจริตว่าการกระทำดังกล่าวจำเป็นเพื่อ:</p>
+                <ul class="list-disc list-inside ml-4 mb-8 space-y-2">
+                    <li>เพื่อปฏิบัติตามข้อผูกพันทางกฎหมาย</li>
+                    <li>เพื่อปกป้องและปกป้องสิทธิ์หรือทรัพย์สินของ Fuzik Collaborate</li>
+                    <li>เพื่อป้องกันหรือสอบสวนการกระทำผิดที่อาจเกิดขึ้นที่เกี่ยวข้องกับเว็บไซต์</li>
+                    <li>เพื่อปกป้องความปลอดภัยส่วนบุคคลของผู้ใช้เว็บไซต์หรือสาธารณะ</li>
+                    <li>เพื่อป้องกันความรับผิดตามกฎหมาย</li>
+                </ul>
+
+                <h2 class="text-4xl font-bold fuzik-yellow mb-6">5. ความปลอดภัยของข้อมูล</h2>
+                <p class="mb-8">ความปลอดภัยของข้อมูลของคุณเป็นสิ่งสำคัญสำหรับเรา แต่โปรดจำไว้ว่าไม่มีวิธีการส่งข้อมูลผ่านอินเทอร์เน็ต หรือวิธีการจัดเก็บข้อมูลอิเล็กทรอนิกส์ใดที่ปลอดภัย 100% แม้ว่าเราจะพยายามใช้วิธีการที่ยอมรับได้ในเชิงพาณิชย์เพื่อปกป้องข้อมูลส่วนบุคคลของคุณ แต่เราไม่สามารถรับประกันความปลอดภัยที่สมบูรณ์ได้</p>
+
+                <h2 class="text-4xl font-bold fuzik-yellow mb-6">6. ผู้ให้บริการ</h2>
+                <p class="mb-8">เราอาจจ้างบริษัทและบุคคลที่สามเพื่ออำนวยความสะดวกในการใช้งานเว็บไซต์ของเรา ("ผู้ให้บริการ") เพื่อให้บริการเว็บไซต์ในนามของเรา เพื่อดำเนินการบริการที่เกี่ยวข้องกับเว็บไซต์ หรือเพื่อช่วยเราในการวิเคราะห์วิธีการใช้งานเว็บไซต์ของเรา บุคคลที่สามเหล่านี้สามารถเข้าถึงข้อมูลส่วนบุคคลของคุณได้เฉพาะเพื่อดำเนินการเหล่านี้ในนามของเรา และมีข้อผูกพันที่จะไม่เปิดเผยหรือใช้ข้อมูลดังกล่าวเพื่อวัตถุประสงค์อื่นใด</p>
+
+                <h2 class="text-4xl font-bold fuzik-yellow mb-6">7. ลิงก์ไปยังเว็บไซต์อื่น ๆ</h2>
+                <p class="mb-8">เว็บไซต์ของเราอาจมีลิงก์ไปยังเว็บไซต์อื่น ๆ ที่ไม่ได้ดำเนินการโดยเรา หากคุณคลิกที่ลิงก์ของบุคคลที่สาม คุณจะถูกนำไปยังเว็บไซต์ของบุคคลที่สามนั้น เราขอแนะนำอย่างยิ่งให้คุณตรวจสอบนโยบายความเป็นส่วนตัวของทุกเว็บไซต์ที่คุณเยี่ยมชม เราไม่มีการควบคุมและไม่รับผิดชอบต่อเนื้อหา นโยบายความเป็นส่วนตัว หรือแนวปฏิบัติของเว็บไซต์หรือบริการของบุคคลที่สามใด ๆ</p>
+
+                <h2 class="text-4xl font-bold fuzik-yellow mb-6">8. ความเป็นส่วนตัวของเด็ก</h2>
+                <p class="mb-8">เว็บไซต์ของเราไม่ได้มุ่งเป้าไปที่บุคคลที่มีอายุต่ำกว่า 18 ปี ("เด็ก") เราไม่ได้รวบรวมข้อมูลส่วนบุคคลที่สามารถระบุตัวตนได้จากบุคคลที่มีอายุต่ำกว่า 18 ปีโดยเจตนา หากคุณเป็นผู้ปกครองหรือผู้ดูแล และคุณทราบว่าบุตรหลานของคุณได้ให้ข้อมูลส่วนบุคคลแก่เรา โปรดติดต่อเรา หากเราทราบว่าเราได้รวบรวมข้อมูลส่วนบุคคลจากเด็กโดยไม่ได้รับการยืนยันจากผู้ปกครอง เราจะดำเนินการเพื่อลบข้อมูลนั้นออกจากเซิร์ฟเวอร์ของเรา</p>
+
+                <h2 class="text-4xl font-bold fuzik-yellow mb-6">9. การเปลี่ยนแปลงนโยบายความเป็นส่วนตัวนี้</h2>
+                <p class="mb-8">เราอาจอัปเดตนโยบายความเป็นส่วนตัวของเราเป็นครั้งคราว เราจะแจ้งให้คุณทราบถึงการเปลี่ยนแปลงใด ๆ โดยการโพสต์นโยบายความเป็นส่วนตัวใหม่บนหน้านี้ คุณควรทบทวนนโยบายความเป็นส่วนตัวนี้เป็นระยะ ๆ สำหรับการเปลี่ยนแปลงใด ๆ การเปลี่ยนแปลงนโยบายความเป็นส่วนตัวนี้มีผลบังคับใช้เมื่อมีการโพสต์บนหน้านี้</p>
+
+                <h2 class="text-4xl font-bold fuzik-yellow mb-6">10. ติดต่อเรา</h2>
+                <p class="mb-8">หากคุณมีคำถามใด ๆ เกี่ยวกับนโยบายความเป็นส่วนตัวนี้ คุณสามารถติดต่อเราได้ที่:</p>
+                <ul class="list-disc list-inside ml-4 mb-8 space-y-2">
+                    <li>ทางอีเมล: <a href="mailto:admin@fuzikapp.com" class="text-[#fff600] hover:underline">admin@fuzikapp.com</a></li>
+                    <li>โดยการเยี่ยมชมหน้านี้บนเว็บไซต์ของเรา: <a href="/contact-th" class="text-[#fff600]  hover:underline">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-padding bg-[#fff600] text-black text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl font-bold mb-6 text-[#111111]" >พร้อมที่จะเริ่ม<span class="text-[#1a1a1a]">การแจมระดับโลกของคุณแล้วหรือยัง?</span></h2>
+                <p class="text-xl mb-8 opacity-90">
+                    เข้าร่วมกับนักดนตรีมือสมัครเล่นหลายพันคนทั่วโลกที่กำลังเชื่อมต่อ เล่น และสร้างสรรค์บน Fuzik Collaborate การผจญภัยทางดนตรีครั้งต่อไปของคุณเพียงแค่คลิกเดียว!
+                </p>
+                <a href="/webapp" target="_blank" class="btn-primary btn-final-cta pulse-yellow">
+                    <img src="/images/icons/rocket_launch_256.png" class="w-16 px-4"  />เปิดแอป Fuzik เลย!
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- footer -->
+    <div class="bg-black py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-12">
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="/index" class="flex items-center space-x-2 mb-4">
+                        <img src="/images/logo/FuzikLogo.png" alt="Fuzik Collaborate Logo" class="h-10 w-auto">
+                        <span class="text-2xl font-bold text-[#f8f9fa]">Fuzik Collaborate</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6">
+                        เสริมสร้างศักยภาพนักดนตรีทั่วโลกให้เชื่อมต่อ สร้างสรรค์ และแจมดนตรีร่วมกันผ่านเทคโนโลยีการซิงโครไนซ์วิดีโอที่เป็นนวัตกรรม
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://discord.gg/US2hz9FvsV" target="_blank" class="footer-social-icon">
+                            <img src="/images/icons/Discord-Symbol-White.png" class="w-12 px-2 py-4"  />
+                        </a>
+                        <a href="https://www.facebook.com/fuzikcollaboration" target="_blank" class="footer-social-icon">
+                            <img src="/images/icons/Facebook_Logo_Primary.png" class="w-12 px-2 py-4"  />
+                        </a>
+                        <a href="https://www.instagram.com/fuzikmusiccollaboration/?fbclid=IwY2xjawLQ4BlleHRuA2FlbQIxMQBicmlkETFFSWFvdmFUWHBoWDZKSUUzAR4gMnSxq6J0Et494YOLIXkFBcFRXuzNzUzUA9IOjXjgx35lKgKVSUWqPgfW3ALQ_aem_sQYkD7FbPk-RJEMRy7VyWQ" target="_blank" class="footer-social-icon">
+                            <img src="/images/icons/Instagram_icon.png" class="w-12 px-2 py-4"  />
+                        </a>
+                        <a href="https://www.youtube.com/@fuzikapplication" target="_blank" class="footer-social-icon">
+                            <img src="/images/icons/yt_icon_red_digital.png" class="w-20 px-2 py-2"  />
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-5 text-[#fff600]">แพลตฟอร์ม</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="/feature-th" class="nav-link-hover-effect">ฟีเจอร์</a></li>
+                        <li><a href="/pricing-th" class="nav-link-hover-effect">ราคา</a></li>
+                        <li><a href="https://fuzikapp.com/webpapp" target="_blank" class="nav-link-hover-effect">เว็บแอป</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-5 text-[#fff600]">แหล่งข้อมูล</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="/contact-th" class="nav-link-hover-effect">ติดต่อเรา</a></li>
+                        <li><a href="/faq-th" class="nav-link-hover-effect">คำถามที่พบบ่อย</a></li>
+                        <li><a href="/blog/index-th" class="nav-link-hover-effect">บล็อก</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-5 text-[#fff600]">กฎหมาย</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="/privacy_policy-th" class="nav-link-hover-effect">นโยบายความเป็นส่วนตัว</a></li>
+                        <li><a href="/terms-th" class="nav-link-hover-effect">ข้อกำหนดในการให้บริการ</a></li>
+                        <li><a href="/cookie-th" class="nav-link-hover-effect">นโยบายคุกกี้</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-[#aaaaaa] pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>
+                    © 2024 Fuzik Collaborate โดย Fuzik Connex Co., Ltd. สงวนลิขสิทธิ์
+                </p>
+                <p class="mt-2 md:mt-0">
+                    เล่นดนตรีด้วยกัน
+                </p>
+            </div>
+        </div>
+    
+        <div id="cookie-consent-modal" class="cookie-modal-overlay">
+            <div class="cookie-modal-content">
+                <h2 class="text-2xl font-bold mb-4 text-[#f8f9fa]">เราให้ความสำคัญกับความเป็นส่วนตัวของคุณ</h2>
+                <p class="text-gray-300 mb-6">
+                    เว็บไซต์นี้ (<a href="https://fuzikapp.com" class="text-[#fff600] hover:underline">www.fuzik.co</a>) ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณและวิเคราะห์ปริมาณการเข้าชมเว็บไซต์ การคลิก "ยอมรับคุกกี้ทั้งหมด" แสดงว่าคุณยินยอมให้ใช้คุกกี้ทั้งหมด สำหรับข้อมูลเพิ่มเติมหรือจัดการการตั้งค่าของคุณ โปรดคลิก "จัดการการตั้งค่า".
+                </p>
+                <div id="initial-buttons" class="flex justify-center space-x-4">
+                    <button onclick="acceptAllCookies()" class="btn-primary px-6 py-3">ยอมรับคุกกี้ทั้งหมด</button>
+                    <button onclick="showPreferenceManager()" class="btn-secondary px-6 py-3">จัดการการตั้งค่า</button>
+                </div>
+
+                <div id="cookie-preferences" class="cookie-preferences-section hidden">
+                    <h3 class="text-xl font-bold mb-4 text-[#f8f9fa]">จัดการการตั้งค่าคุกกี้ของคุณ</h3>
+                    
+                    <div class="cookie-preference-item">
+                        <input type="checkbox" id="essential-cookies" checked disabled>
+                        <label for="essential-cookies">คุกกี้ที่จำเป็น</label>
+                        <p class="text-gray-400">คุกกี้เหล่านี้จำเป็นสำหรับการทำงานของเว็บไซต์และไม่สามารถปิดได้</p>
+                    </div>
+
+                  
+
+                    <div class="flex justify-center mt-6">
+                        <button onclick="saveCookiePreferences()" class="btn-primary px-6 py-3">บันทึกการตั้งค่า</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup lang="ts">
+    definePageMeta({
+        layout: "front-th"
+    });
+
+    useSeoMeta({
+        title: 'Fuzik Collaborate - การรวมวงดนตรีระดับโลกของคุณเริ่มต้นขึ้นแล้ว!',
+        ogTitle: 'Fuzik Collaborate - การรวมวงดนตรีระดับโลกของคุณเริ่มต้นขึ้นแล้ว!',
+        description: 'เชื่อมต่อกับนักดนตรีทั่วโลก สร้างวิดีโอแจมที่ซิงค์กัน และยกระดับดนตรีของคุณไปพร้อมกับ Fuzik Collaborate การทำงานร่วมกันทางดนตรีออนไลน์ที่ราบรื่นสำหรับทุกระดับทักษะ',
+        ogDescription: 'เชื่อมต่อกับนักดนตรีทั่วโลก สร้างวิดีโอแจมที่ซิงค์กัน และยกระดับดนตรีของคุณไปพร้อมกับ Fuzik Collaborate การทำงานร่วมกันทางดนตรีออนไลน์ที่ราบรื่นสำหรับทุกระดับทักษะ',
+        ogImage: 'https://fuzikapp.com/images/logo/FuzikLogo.png',
+    });
+
+</script>
+
+<style scoped>
+.section-padding {
+        padding: 100px 0;
+    }
+        
+    /* Custom button styles for consistency */
+    .btn-primary {
+        background-color: #fff600;
+        color: #111111;
+        padding: 1rem 2.5rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid transparent;
+        text-decoration: none;
+        box-shadow: 0 5px 15px rgba(255, 246, 0, 0.3);
+    }
+
+    .btn-primary:hover {
+        background-color: #ffe000;
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 8px 20px rgba(255, 246, 0, 0.5);
+    }
+
+    .pulse-yellow {
+        animation: pulse-yellow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        box-shadow: 0 0 0 0 rgba(255, 246, 0, 0.5);
+    }
+
+    @keyframes pulse-yellow {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(255, 246, 0, 0.5); }
+        50% { box-shadow: 0 0 0 25px rgba(255, 246, 0, 0); }
+    }
+
+    .btn-secondary {
+        border: 2px solid #fff600;
+        color: #fff600;
+        background-color: transparent;
+        padding: 1rem 2.5rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+        background-color: #fff600;
+        color: #111111;
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 8px 20px rgba(255, 246, 0, 0.2);
+    }
+
+    /* Visual Explainer Icons */
+    .visual-explainer-icon {
+        font-size: 6rem;
+        color: #fff600;
+        margin-bottom: 1rem;
+        text-shadow: 0 0 20px rgba(255, 246, 0, 0.6);
+    }
+    .visual-explainer-card {
+        background-color: #2a2a2a;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 0 0 0 rgba(255, 246, 0, 0);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 246, 0, 0.05);
+    }
+    .visual-explainer-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(255, 246, 0, 0.25), inset 0 0 20px rgba(255, 246, 0, 0.1);
+    }
+
+    /* Video Carousel Specific Styles */
+    .video-carousel-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio (height / width * 100%) */
+        background-color: #2a2a2a;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        border: 2px solid #fff600;
+    }
+
+    .video-carousel-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .carousel-controls {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0.75rem;
+        z-index: 10;
+    }
+
+    .carousel-dot {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel-dot.active {
+        background-color: #fff600;
+        transform: scale(1.2);
+        box-shadow: 0 0 8px rgba(255, 246, 0, 0.6);
+    }
+
+    .carousel-nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff600;
+        border: none;
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        z-index: 10;
+    }
+
+    .carousel-nav-button:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .carousel-nav-button.prev {
+        left: 1rem;
+    }
+
+    .carousel-nav-button.next {
+        right: 1rem;
+    }
+
+    /* Specific styles for the "Launch Fuzik App Now!" button in the final CTA */
+    .btn-final-cta {
+        background-color: #111111 !important;
+        color: #fff600 !important;
+        font-weight: 800;
+        text-shadow: 0 0 3px rgba(255, 246, 0, 0.2);
+        border: 2px solid #fff600 !important;
+    }
+
+    .btn-final-cta:hover {
+        background-color: #fff600 !important;
+        color: #111111!important;
+        text-shadow: none !important;
+        transform: translateY(-3px) scale(1.03);
+    }
+
+    /* --- Hover Underline and Color for Nav/Footer Links --- */
+    .nav-link-hover-effect {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        transition: color 0.3s ease-out;
+        color: #e2e8f0; /* Default text color for links */
+    }
+
+    .nav-link-hover-effect::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #fff600;
+        transform-origin: bottom center;
+        transition: transform 0.3s ease-out;
+    }
+
+    .nav-link-hover-effect:hover {
+        color: #fff600; /* Change color on hover */
+    }
+
+    .nav-link-hover-effect:hover::after {
+        transform: scaleX(1); /* Expand on hover */
+    }
+
+    /* Active link state for current page */
+    .nav-link-active {
+        color: #fff600;
+        font-weight: 600;
+    }
+    .nav-link-active::after {
+        transform: scaleX(1);
+    }
+
+    /* Back to Top Button Styling */
+    #back-to-top-btn {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: #fff600;
+        color: #111111;
+        padding: 1rem;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(255, 246, 0, 0.4);
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+        border: none;
+    }
+
+    #back-to-top-btn.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    #back-to-top-btn:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 6px 15px rgba(255, 246, 0, 0.6);
+    }
+
+    /* Cookie Consent Modal Specific Styles (Fuzik Theme) */
+    .cookie-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .cookie-modal-overlay.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .cookie-modal-content {
+        background-color: #2a2a2a;
+        padding: 2rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+        position: relative;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        color: #e2e8f0;
+    }
+
+    .cookie-modal-overlay.show .cookie-modal-content {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .cookie-preferences-section {
+        text-align: left;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .cookie-preference-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .cookie-preference-item input[type="checkbox"] {
+        margin-right: 0.75rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        accent-color: #fff600; /* Sets checkbox color to fuzik-yellow */
+    }
+    
+    .cookie-preference-item label {
+        flex-grow: 1;
+        font-weight: 500;
+        color: #e2e8f0;
+    }
+
+    .cookie-preference-item p {
+        font-size: 0.875rem;
+        color: #b0b0b0;
+        margin-top: 0.25rem;
+        margin-left: calc(1.25rem + 0.75rem); /* Align with label text */
+    }
+
+
+    
+    
+    
+    /* Gradient background for sections (Copied from index.html) */
+    .gradient-bg {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    }
+    
+    /* Hero section specific gradient and dynamic background (Copied from index.html) */
+    .hero-gradient {
+        background: linear-gradient(135deg, #111111 0%, #1a1a1a 50%, #2a2a2a 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Dynamic background elements for Hero (abstract sound waves/particles) (Copied from index.html) */
+    .hero-wave-element {
+        position: absolute;
+        background: radial-gradient(circle, rgba(255,246,0,0.15) 0%, rgba(255,246,0,0) 70%);
+        border-radius: 50%;
+        animation: wave-pulse 15s ease-in-out infinite;
+        filter: blur(12px);
+        z-index: 0;
+    }
+
+    @keyframes wave-pulse {
+        0% { transform: scale(0.5) translateY(0px) translateX(0px); opacity: 0.15; }
+        25% { transform: scale(1.1) translateY(-20px) translateX(10px); opacity: 0.25; }
+        50% { transform: scale(0.8) translateY(10px) translateX(-15px); opacity: 0.18; }
+        75% { transform: scale(1.2) translateY(-10px) translateX(5px); opacity: 0.22; }
+        100% { transform: scale(0.5) translateY(0px) translateX(0px); opacity: 0.15; }
+    }
+    
+    /* Less glowing text, only for main headline (Copied from index.html) */
+    .text-glow-subtle {
+        text-shadow: 0 0 10px rgba(255, 246, 0, 0.3);
+    }
+    
+    /* Smooth scroll behavior for anchor links (Copied from index.html) */
+    .scroll-smooth {
+        scroll-behavior: smooth;
+    }
+    
+    /* Floating animation for hero headline (Copied from index.html) */
+    .animate-float-headline {
+        animation: float-headline 6s ease-in-out infinite;
+    }
+    
+    @keyframes float-headline {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+    }
+    
+    /* Card hover effects (Copied from index.html) */
+    .card-hover {
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 0 0 0 rgba(255, 246, 0, 0);
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(255, 246, 0, 0.25), inset 0 0 20px rgba(255, 246, 0, 0.1);
+    }
+    
+    /* Standard padding for content sections (Copied from index.html) */
+    .section-padding {
+        padding: 100px 0;
+    }
+    
+    /* Custom button styles for consistency (Copied from index.html) */
+    .btn-primary {
+        background-color: #fff600;
+        color: #111111;
+        padding: 1rem 2.5rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid transparent;
+        text-decoration: none;
+        box-shadow: 0 5px 15px rgba(255, 246, 0, 0.3);
+    }
+
+    .btn-primary:hover {
+        background-color: #ffe000;
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 8px 20px rgba(255, 246, 0, 0.5);
+    }
+
+    /* Specific styles for the "Launch Fuzik App Now!" button in the final CTA (Copied from index.html) */
+    .btn-final-cta {
+        background-color: #111111!important;
+        color: #fff600 !important;
+        font-weight: 800;
+        text-shadow: 0 0 3px rgba(255, 246, 0, 0.2);
+        border: 2px solid #fff600 !important;
+    }
+
+    .btn-final-cta:hover {
+        background-color: #fff600!important;
+        color: #111111 !important;
+        text-shadow: none !important;
+        transform: translateY(-3px) scale(1.03);
+    }
+
+
+    .btn-secondary {
+        border: 2px solid #fff600;
+        color: #fff600;
+        background-color: transparent;
+        padding: 1rem 2.5rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+        background-color: #fff600;
+        color: #111111;
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 8px 20px rgba(255, 246, 0, 0.2);
+    }
+
+    /* Mobile menu specific styles */
+    #mobile-menu {
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+        max-height: 0; /* Start hidden */
+        overflow: hidden;
+        opacity: 0; /* Start invisible */
+        background: rgba(0, 0, 0, 0.98);
+        border-radius: 0.75rem;
+        margin-top: 1rem;
+        padding: 0 1.5rem; /* No padding when closed */
+    }
+
+    #mobile-menu.open {
+        max-height: 500px; /* Adjust as needed for content */
+        opacity: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /* Custom pulse animation for CTA button (Copied from index.html) */
+    .pulse-yellow {
+        animation: pulse-yellow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        box-shadow: 0 0 0 0 rgba(255, 246, 0, 0.5);
+    }
+
+    @keyframes pulse-yellow {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(255, 246, 0, 0.5); }
+        50% { box-shadow: 0 0 0 25px rgba(255, 246, 0, 0); }
+    }
+
+    /* Footer social icon styling (Copied from index.html) */
+    .footer-social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        color: #f8f9fa;
+    }
+
+    .footer-social-icon:hover {
+        background-color: #fff600;
+        color: #111111;
+        transform: translateY(-3px);
+    }
+
+    /* Visual Explainer Icons (Copied from index.html) */
+    .visual-explainer-icon {
+        font-size: 6rem;
+        color: #fff600;
+        margin-bottom: 1rem;
+        text-shadow: 0 0 20px rgba(255, 246, 0, 0.6);
+    }
+    .visual-explainer-card {
+        background-color: #2a2a2a;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 0 0 0 rgba(255, 246, 0, 0);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 246, 0, 0.05);
+    }
+    .visual-explainer-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(255, 246, 0, 0.25), inset 0 0 20px rgba(255, 246, 0, 0.1);
+    }
+
+    /* Simple Flow Icons (Copied from index.html) */
+    .simple-flow-icon {
+        font-size: 5rem;
+        color: #fff600;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 0 15px rgba(255, 246, 0, 0.5);
+    }
+    .simple-flow-step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        padding: 1rem;
+    }
+    .simple-flow-arrow {
+        position: absolute;
+        right: -3.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(255, 246, 0, 0.4);
+        font-size: 2.5rem;
+        z-index: 1;
+    }
+    @media (max-width: 767px) {
+        .simple-flow-arrow {
+            display: none;
+        }
+        .simple-flow-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: -2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 4rem;
+            background-color: rgba(255, 246, 0, 0.4);
+        }
+    }
+
+    /* --- Hover Underline and Color for Nav/Footer Links --- */
+    .nav-link-hover-effect {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        transition: color 0.3s ease-out;
+        color:#e2e8f0; /* Default text color for links */
+    }
+
+    .nav-link-hover-effect::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #fff600;
+        transform-origin: bottom center;
+        transition: transform 0.3s ease-out;
+    }
+
+    .nav-link-hover-effect:hover {
+        color: #fff600; /* Change color on hover */
+    }
+
+    .nav-link-hover-effect:hover::after {
+        transform: scaleX(1); /* Expand on hover */
+    }
+
+    /* Active link state for current page */
+    .nav-link-active {
+        color: #fff600;
+        font-weight: 600;
+    }
+    .nav-link-active::after {
+        transform: scaleX(1);
+    }
+
+    /* Back to Top Button Styling */
+    #back-to-top-btn {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: #fff600;
+        color: #1a1a1a;
+        padding: 1rem;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(255, 246, 0, 0.4);
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+        border: none;
+    }
+
+    #back-to-top-btn.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    #back-to-top-btn:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 6px 15px rgba(255, 246, 0, 0.6);
+    }
+
+    /* Cookie Consent Modal Specific Styles (Fuzik Theme) */
+    .cookie-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .cookie-modal-overlay.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .cookie-modal-content {
+        background-color: #2a2a2a;
+        padding: 2rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+        position: relative;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        color: #e2e8f0;
+    }
+
+    .cookie-modal-overlay.show .cookie-modal-content {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .cookie-preferences-section {
+        text-align: left;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .cookie-preference-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .cookie-preference-item input[type="checkbox"] {
+        margin-right: 0.75rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        accent-color: #fff600; /* Sets checkbox color to fuzik-yellow */
+    }
+    
+    .cookie-preference-item label {
+        flex-grow: 1;
+        font-weight: 500;
+        color: #e2e8f0;
+    }
+
+    .cookie-preference-item p {
+        font-size: 0.875rem;
+        color: #b0b0b0;
+        margin-top: 0.25rem;
+        margin-left: calc(1.25rem + 0.75rem); /* Align with label text */
+    }
+
+    /* Language Dropdown Specific Styles */
+    .language-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .language-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f8f9fa;
+        min-width: 120px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        right: 0; /* Align dropdown to the right of the button */
+        top: 100%; /* Position below the button */
+        margin-top: 0.5rem; /* Space between button and dropdown */
+    }
+
+    .language-dropdown-content a {
+        color: #f8f9fa;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-weight: 500;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .language-dropdown-content a:hover {
+        background-color: #1a1a1a;
+        color: #fff600;
+    }
+
+    .language-dropdown-content.show {
+        display: block;
+    }
+
+    /* Mobile specific adjustments for language dropdown */
+    #mobile-language-dropdown-content {
+        position: static; /* Override absolute positioning for mobile */
+        background-color: transparent; /* No background for mobile dropdown */
+        box-shadow: none;
+        min-width: unset;
+        margin-top: 0;
+        border-radius: 0;
+        padding-left: 1.5rem; /* Indent mobile language options */
+    }
+
+    #mobile-language-dropdown-content a {
+        padding: 8px 0; /* Adjust padding for mobile links */
+    }
+
+    /* Style for active language link */
+    .active-lang {
+        color: #fff600 !important;
+        font-weight: 700 !important;
+        text-decoration: underline !important;
+    }
+
+    /* Styles for the detailed How It Works steps */
+    .how-it-works-step {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        background-color: #2a2a2a;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+        border: 1px solid rgba(255, 246, 0, 0.05);
+    }
+
+    .how-it-works-step:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(255, 246, 0, 0.25), inset 0 0 20px rgba(255, 246, 0, 0.1);
+    }
+
+    .how-it-works-step-icon {
+        font-size: 4rem;
+        color: #fff600;
+        flex-shrink: 0;
+        text-shadow: 0 0 15px rgba(255, 246, 0, 0.5);
+    }
+
+    .how-it-works-step-number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #fff600;
+        line-height: 1;
+        margin-right: 1rem;
+        text-shadow: 0 0 10px rgba(255, 246, 0, 0.4);
+    }
+
+    /* Alternate layout for steps on larger screens */
+    .how-it-works-step:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .how-it-works-step:nth-child(even) .how-it-works-step-number {
+        margin-left: 1rem;
+        margin-right: 0;
+    }
+
+    /* Pricing Card Specific Styles */
+    .pricing-card {
+        background-color: #2a2a2a;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(255, 246, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 100%; /* Ensure cards are same height */
+    }
+    .pricing-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(255, 246, 0, 0.25), inset 0 0 20px rgba(255, 246, 0, 0.1);
+    }
+    .pricing-card-header {
+        color: #fff600;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+    .pricing-card-coins {
+        font-size: 4rem;
+        font-weight: 900;
+        color: #f8f9fa;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+    }
+    .pricing-card-price {
+        font-size: 1.875rem; /* text-3xl */
+        font-weight: 700;
+        color: #fff600;
+        margin-bottom: 1.5rem;
+    }
+    .pricing-card ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2rem;
+        text-align: left;
+        width: 100%;
+        max-width: 250px;
+    }
+    .pricing-card ul li {
+        display: flex;
+        align-items: flex-start; /* Align icon to top of text */
+        margin-bottom: 0.75rem;
+        color: #e2e8f0;
+    }
+    .pricing-card ul li i {
+        color: #fff600;
+        margin-right: 0.75rem;
+        font-size: 1.25rem;
+        flex-shrink: 0; /* Prevent icon from shrinking */
+        margin-top: 0.2rem; /* Adjust icon vertical alignment */
+    }
+    .pricing-card .btn-primary {
+        width: 100%;
+        margin-top: auto; /* Push button to bottom */
+    }
+
+    /* FAQ Accordion Styles */
+    .faq-header {
+        background-color: #2a2a2a;
+        padding: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s ease;
+    }
+    .faq-header:hover {
+        background-color: #1a1a1a;
+    }
+    .faq-header.active {
+        background-color: #1a1a1a;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .faq-header.active .faq-icon {
+        transform: rotate(180deg);
+    }
+    .faq-icon {
+        transition: transform 0.3s ease;
+        color: #fff600;
+    }
+    .faq-content {
+        background-color: #2a2a2a;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        max-height: 0;
+    }
+
+    
+    .faq-content p {
+        padding: 1.5rem;
+        padding-top: 0;
+        color: #e2e8f0;
+    }
+
+    /* Policy content styling */
+        .policy-content {
+            background-color: var(--fuzik-gray);
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 246, 0, 0.05);
+        }
+
+        .policy-content h2, .policy-content h3 {
+            color: var(--fuzik-yellow);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .policy-content h2 {
+            font-size: 2.5rem;
+        }
+
+        .policy-content h3 {
+            font-size: 1.75rem;
+        }
+
+        .policy-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            color: var(--text-default-gray);
+        }
+
+        .policy-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-default-gray);
+        }
+
+        .policy-content ol {
+            list-style-type: decimal;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-default-gray);
+        }
+
+        .policy-content li {
+            margin-bottom: 0.75rem;
+        }
+
+        .policy-content a {
+            color: var(--fuzik-yellow);
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+
+        .policy-content a:hover {
+            color: #ffe000;
+        }
+
+
+</style>

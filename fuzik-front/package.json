@@ -1,0 +1,31 @@
+{
+  "name": "fuzik-front",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/free-solid-svg-icons": "^7.2.0",
+    "@fortawesome/vue-fontawesome": "^3.2.0",
+    "@headlessui/vue": "^1.7.23",
+    "@heroicons/vue": "^2.2.0",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@tailwindcss/postcss": "^4.3.0",
+    "@tailwindcss/vite": "^4.3.0",
+    "@tailwindplus/elements": "^1.0.22",
+    "flowbite": "^4.0.2",
+    "install": "^0.13.0",
+    "marked": "^18.0.4",
+    "npm": "^11.14.1",
+    "nuxt": "^4.4.5",
+    "tailwindcss": "^4.3.0",
+    "vue": "^3.5.34",
+    "vue-router": "^5.0.6"
+  }
+}
