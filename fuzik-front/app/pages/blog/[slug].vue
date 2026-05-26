@@ -61,7 +61,7 @@
             <p class="text-xl mb-8 opacity-90">
                 Join thousands of hobbyist musicians already connecting, playing, and creating on Fuzik Collaborate. Your next musical adventure is just a click away!
             </p>
-            <a href="/webapp" target="_blank" class="btn-primary btn-final-cta pulse-yellow">
+            <a href="https://classic01.fuzikapp.com" target="_blank" class="btn-primary btn-final-cta pulse-yellow">
                 <img src="/images/icons/rocket_launch_256.png" class="w-16 px-4"  />Launch Fuzik App Now!
             </a>
         </div>

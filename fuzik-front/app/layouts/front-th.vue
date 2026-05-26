@@ -40,7 +40,7 @@
                         </Menu>
                     
 
-                        <a href="/webapp" target="_blank" class="bg-[#fff600] text-black visited:text-[#111111] font-semi-bold rounded-full px-6 py-2">
+                        <a href="https://classic01.fuzikapp.com" target="_blank" class="bg-[#fff600] text-black visited:text-[#111111] font-semi-bold rounded-full px-6 py-2">
                             Launch<span class="text-[#fff600]">_</span>App
                         </a>
                         
