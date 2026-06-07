@@ -16,7 +16,10 @@ library.add(fas)
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  
+  modules: ['@nuxtjs/supabase', '@nuxt/image','@nuxt/ui'],
+  supabase: {
+    redirect: false // Disables global redirects
+  },
   app: {
     head: {
       title: "Fuzik Collaborate - Your Global Jam Session Starts Now!",

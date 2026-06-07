@@ -209,7 +209,7 @@
             <p class="text-xl mb-8 opacity-90">
                 เข้าร่วมกับนักดนตรีมือสมัครเล่นหลายพันคนทั่วโลกที่กำลังเชื่อมต่อ เล่น และสร้างสรรค์บน Fuzik Collaborate การผจญภัยทางดนตรีครั้งต่อไปของคุณเพียงแค่คลิกเดียว!
             </p>
-            <a href="https://classic01.fuzikapp.com" target="_blank" class="btn-primary btn-final-cta pulse-yellow">
+            <a href="/webapp" target="_blank" class="btn-primary btn-final-cta pulse-yellow">
                 <img src="/images/icons/rocket_launch_256.png" class="w-16 px-4"  />เปิดแอป Fuzik เลย!
             </a>
         </div>
