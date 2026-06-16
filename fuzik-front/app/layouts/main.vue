@@ -47,7 +47,7 @@
                         <div v-else class="flex items-center ms-3">
                             <UDropdown :items="items" :popper="{ placement: 'bottom-start' }" >
                                 <UButton color="neutral" trailing-icon="i-heroicons-chevron-down-20-solid" class="bg-yellow-300 text-black hover:text-yellow-500 border rounded-xl" >
-                                    <UAvatar :src="profile_image" class="bg-white border border-gray-800" />
+                                    <UAvatar :src="profile_image" class="bg-white border border-gray-800" size="2xs" />
                                     {{ display_name  }}
                                 </UButton>
                             </UDropdown>

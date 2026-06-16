@@ -178,7 +178,7 @@ async function search_play2clip() {
             location += '&ex4=' + play2_url4.value;
         }*/
 
-        plays = await $fetch(location, {
+        plays = await fetch(location, {
             method: 'get',
         });
     //}
@@ -214,7 +214,7 @@ async function search_play2clip() {
         if (play2_url4.value.length > 0) {
             location2 += '&ex4=' + play2_url4.value;
         }*/
-        plays2 = await $fetch(location2);  
+        plays2 = await fetch(location2);  
     //}
 
 }
@@ -231,7 +231,7 @@ function allowDrop(ev) {
   ev.preventDefault();
 }
 */
-async function drop(ev, number) {
+async function drop(ev:any, number:any) {
 
 ev.preventDefault();
 var data = ev.dataTransfer.getData("text");
@@ -289,6 +289,9 @@ if  (number == 1) {
 if (data.length > 0) { 
     play2_url1.value = data;         
     var play_data = await getPicture(data);
+    var dimension = await getDimension(data);
+    var preview = await getPreview(data);
+    
     //console.log('play_data = ' + play_data);
     // number1.value = '';
     // hidden1.value = false;
@@ -298,7 +301,9 @@ if (data.length > 0) {
         if (play_data != null) { 
             //alert(source_image1);
 
-            if(play_data[0].dimension.localeCompare('P') == 0 ) { 
+            //if(play_data[0].dimension.localeCompare('P') == 0 ) { 
+            if(dimension.localeCompare('P') == 0 ) { 
+
                 // only Portrait
                 number1.value = '';
                 hidden1.value = false;
@@ -405,11 +410,31 @@ if (allowed) {
 //ev.target.appendChild(document.getElementById(data));
 }
 
+async function getDimension(url:any) {
+    try {
+        var request_url = '/api/play2_watch?p=' + url;
+        const html = await $fetch<string>(request_url)
+        
+        // Regex to locate the dimension key/value
+        const match = html.match(/dimension["']?\s*[:=]\s*["']?([^"'\s,}]*)["']?/)
+        
+        // Explicitly enforce that the value is a string
+        const dimensionValue: string = match ? String(match[1]) : 'not_found'
+        
+        return dimensionValue;
+    } catch (err) {
+        throw createError({
+        statusCode: 500,
+        statusMessage: 'Failed to fetch external data',
+        })
+    }
+}
 
-async function getPicture(url) {
+async function getPicture(url:any) {
     var request_url = '/api/play2_watch?p=' + url;
 
-    const data = await $fetch(request_url);  
+    const data = await fetch(request_url);
+
     return data;
 
 }
@@ -488,7 +513,7 @@ function proceed() {
     return allowed;
 }
 
-function makeid(length) {
+function makeid(length:any) {
     let result = '';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const charactersLength = characters.length;

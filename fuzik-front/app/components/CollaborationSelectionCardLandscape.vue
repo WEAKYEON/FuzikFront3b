@@ -49,12 +49,12 @@ function test() {
   console.log('test');
 }
 
-function allowDrop(ev) {
+function allowDrop(ev:any) {
   ev.preventDefault();
 }
 
 
-function drag(ev, url) {
+function drag(ev:any, url:any) {
 ev.dataTransfer.setData("text", url);
 
 
