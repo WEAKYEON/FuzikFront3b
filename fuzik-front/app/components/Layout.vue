@@ -21,7 +21,10 @@ const { layout } = defineProps(['layout']);
 var layout_image = 'https://media04.tetraserver.com/' + layout.layout_file_location;
 
 var  description = layout.description
-const target = ref("/collaboration02" + "?code=" + layout.layout_name)
+const target = {
+    path: '/webapp/collaboration02',
+    query: { code: layout.layout_name }
+}
 
 var description_id = "desc_" + layout.layout_file_location;
 

@@ -20,7 +20,15 @@ console.log(video01_p);
 var layout_image = 'https://media04.tetraserver.com/' + layout.layout_file_location;
 
 var  description = layout.description
-const target = ref("/collaboration02" + "?code=" + layout.layout_name + "&video01=" + video01_p + "&video02=" + video02_p + "&video03=" + video03_p);
+const target = {
+    path: '/webapp/collaboration02',
+    query: {
+        code: layout.layout_name,
+        video01: video01_p,
+        video02: video02_p,
+        video03: video03_p
+    }
+};
 
 var description_id = "desc_" + layout.layout_file_location;
 

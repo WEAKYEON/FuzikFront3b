@@ -235,7 +235,7 @@ if (email == '') {
 
     is_auth.value = true;
 
-    var raw_value = JSON.parse(JSON.stringify(data_musician))._rawValue[0];
+    var raw_value = data_musician.value[0];
 
     if (raw_value.profile_pic != '') {
         profile_image = 'https://media04.tetraserver.com/' + raw_value.profile_pic;

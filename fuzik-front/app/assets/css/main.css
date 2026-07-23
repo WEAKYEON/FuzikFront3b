@@ -1,2 +1,17 @@
 @import "tailwindcss";
 
+@layer components {
+    .btn {
+      @apply bg-yellow-400 text-black px-3 py-2 rounded-md text-sm inline-block;
+    }
+    .card {
+      @apply p-3 rounded-md bg-white shadow-md h-full;
+    }
+    .txtinput {
+      @apply bg-blue-50 text-gray-800;
+    }
+    .txtinput2 {
+      @apply text-black dark:text-black bg-yellow-300 border border-white;
+    }
+
+}

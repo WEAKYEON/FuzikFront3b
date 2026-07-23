@@ -45,12 +45,12 @@
                             </NuxtLink>
                         </div>
                         <div v-else class="flex items-center ms-3">
-                            <UDropdown :items="items" :popper="{ placement: 'bottom-start' }" >
+                            <UDropdownMenu :items="items" :content="{ side: 'bottom', align: 'start' }">
                                 <UButton color="neutral" trailing-icon="i-heroicons-chevron-down-20-solid" class="bg-yellow-300 text-black hover:text-yellow-500 border rounded-xl" >
                                     <UAvatar :src="profile_image" class="bg-white border border-gray-800" size="2xs" />
                                     {{ display_name  }}
                                 </UButton>
-                            </UDropdown>
+                            </UDropdownMenu>
                         </div>
                     </div>
                 </div>
@@ -255,31 +255,31 @@ const items = [
   {
     label: 'Dashboard',
     icon: 'i-heroicons-home-modern-20-solid',
-    shortcuts: ['D'],
-    to: '/'
+    kbds: ['D'],
+    to: '/webapp'
   }], 
   [{
     label: 'Profile',
     icon: 'i-heroicons-clipboard-document-list-solid',
-    shortcuts: ['P'],
-    to: 'profile'
+    kbds: ['P'],
+    to: '/webapp/profile'
 
   }, 
   {
     label: 'Change password',
     icon: 'i-heroicons-key-20-solid',
-    to: 'check_recent_login'
+    to: '/webapp/check_recent_login'
   }], 
   [{
     label: 'Inventory',
     icon: 'i-heroicons-musical-note-solid',
-    shortcuts: ['I'],
-    to: 'inventory'
+    kbds: ['I'],
+    to: '/webapp/inventory'
   }],
   [{
     label: 'Logout',
     icon: 'i-heroicons-arrow-right-start-on-rectangle-20-solid',
-    to: 'logout'
+    to: '/webapp/logout'
   }]
 ]
 

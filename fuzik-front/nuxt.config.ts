@@ -28,11 +28,17 @@ export default defineNuxtConfig({
       ],
       charset: 'utf-16',
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
-      
-    }
+      bodyAttrs: {
+        class: "bg-black",
+    },
 
   },
-  css: ['./app/assets/css/main.css','@fortawesome/fontawesome-svg-core/styles.css','./app/assets/css/input.css'],
+},
+  css: [
+    '~/assets/css/main.css',
+    '@fortawesome/fontawesome-svg-core/styles.css',
+    '~/assets/css/input.css',
+  ],
   vite: {
     plugins: [
       tailwindcss(),
