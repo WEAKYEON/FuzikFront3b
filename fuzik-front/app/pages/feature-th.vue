@@ -20,7 +20,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Feature 1: Precision Video Sync -->
                 <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="https://placehold.co/600x350/1a1a1a/fff600?text=Sync+Feature+UI" alt="การซิงค์วิดีโอที่แม่นยำ" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab03.png" alt="การซิงค์วิดีโอที่แม่นยำ" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">การซิงค์วิดีโอที่แม่นยำ</h3>
                     <p class="text-gray-300 text-sm flex-grow">
                         เทคโนโลยีขั้นสูงของเราช่วยให้มั่นใจได้ว่าเสียงและวิดีโอของคุณจะซิงโครไนซ์กันอย่างสมบูรณ์แบบ
@@ -30,7 +30,7 @@
                 
                 <!-- Feature 2: Multi-User Collaboration -->
                 <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="https://placehold.co/600x350/1a1a1a/fff600?text=Collab+Feature+UI" alt="การทำงานร่วมกันหลายผู้ใช้" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab02.png" alt="การทำงานร่วมกันหลายผู้ใช้" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">การทำงานร่วมกันหลายผู้ใช้</h3>
                     <p class="text-gray-300 text-sm flex-grow">
                         เชิญเพื่อนร่วมวงหรือผู้ทำงานร่วมกันใหม่ๆ เข้ามาในโปรเจกต์ของคุณ
@@ -40,41 +40,11 @@
                 
                 <!-- Feature 3: Intuitive Interface -->
                 <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="https://placehold.co/600x350/1a1a1a/fff600?text=Interface+UI" alt="อินเทอร์เฟซที่ใช้งานง่าย" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab01.png" alt="อินเทอร์เฟซที่ใช้งานง่าย" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">อินเทอร์เฟซที่ใช้งานง่าย</h3>
                     <p class="text-gray-300 text-sm flex-grow">
                         ออกแบบมาสำหรับนักดนตรี ไม่ใช่ผู้เชี่ยวชาญด้านเทคโนโลยี อินเทอร์เฟซที่เป็นมิตรต่อผู้ใช้ของเรา
                         ทำให้การสร้างสรรค์และการทำงานร่วมกันเป็นเรื่องง่ายและสนุกสนาน
-                    </p>
-                </div>
-                
-                <!-- Feature 4: Cloud Storage -->
-                <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="https://placehold.co/600x350/1a1a1a/fff600?text=Cloud+Feature+UI" alt="ที่เก็บข้อมูลบนคลาวด์ที่ปลอดภัย" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
-                    <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">ที่เก็บข้อมูลบนคลาวด์ที่ปลอดภัย</h3>
-                    <p class="text-gray-300 text-sm flex-grow">
-                        เก็บโปรเจกต์ทั้งหมดของคุณให้ปลอดภัยและเข้าถึงได้จากทุกที่ด้วยที่เก็บข้อมูลบนคลาวด์ที่ปลอดภัย
-                        ไม่พลาดไอเดียดีๆ อีกต่อไป
-                    </p>
-                </div>
-                
-                <!-- Feature 5: Flexible Export Options -->
-                <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="https://placehold.co/600x350/1a1a1a/fff600?text=Export+Feature+UI" alt="ตัวเลือกการส่งออกที่ยืดหยุ่น" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
-                    <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">ตัวเลือกการส่งออกที่ยืดหยุ่น</h3>
-                    <p class="text-gray-300 text-sm flex-grow">
-                        ส่งออกผลงานแจมที่เสร็จสมบูรณ์ของคุณในรูปแบบคุณภาพสูงต่างๆ พร้อมแชร์บนโซเชียลมีเดีย
-                        YouTube หรือพอร์ตโฟลิโอของคุณ
-                    </p>
-                </div>
-                
-                <!-- Feature 6: Global Community -->
-                <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="https://placehold.co/600x350/1a1a1a/fff600?text=Community+UI" alt="คอมมูนิตี้ระดับโลก" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
-                    <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">คอมมูนิตี้ระดับโลก</h3>
-                    <p class="text-gray-300 text-sm flex-grow">
-                        เชื่อมต่อกับเครือข่ายนักดนตรีที่หลากหลายจากทั่วโลก
-                        ค้นหาเพื่อนร่วมวงใหม่ๆ โปรดิวเซอร์ หรือเพียงแค่เพื่อนร่วมแจม
                     </p>
                 </div>
             </div>
@@ -90,7 +60,7 @@
                 <!-- Step 1 -->
                 <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
                     <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                        <img src="https://placehold.co/500x350/2a2a2a/fff600?text=Record+Track+Screenshot" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                        <img src="/images/collab05.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
                     </div>
                     <div class="w-full md:w-3/5 text-left">
                         <div class="flex items-center mb-3">
@@ -107,7 +77,7 @@
                 <!-- Step 2 -->
                 <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
                     <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                        <img src="https://placehold.co/500x350/2a2a2a/fff600?text=Invite+Screenshot" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                        <img src="/images/collab02.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
                     </div>
                     <div class="w-full md:w-3/5 text-left">
                         <div class="flex items-center mb-3">
@@ -124,7 +94,7 @@
                 <!-- Step 3 -->
                 <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
                     <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                        <img src="https://placehold.co/500x350/2a2a2a/fff600?text=Jamming+Screenshot" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                        <img src="/images/collab03.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
                     </div>
                     <div class="w-full md:w-3/5 text-left">
                         <div class="flex items-center mb-3">
@@ -141,7 +111,7 @@
                 <!-- Step 4 -->
                 <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
                     <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                        <img src="https://placehold.co/500x350/2a2a2a/fff600?text=Export+Screenshot" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                        <img src="/images/collab04.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
                     </div>
                     <div class="w-full md:w-3/5 text-left">
                         <div class="flex items-center mb-3">

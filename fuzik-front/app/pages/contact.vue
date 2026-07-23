@@ -36,8 +36,8 @@
                                     <i class="fas fa-id-card text-[#fff600] text-2xl mr-4 mt-1"></i>
                                     <div>
                                         <p class="font-semibold text-lg text-white">Registration Info</p>
-                                        <p>Fuzik Company Limited</p>
-                                        <p>DBD No.: <span class="text-[#fff600]">xxxxxxxxxxxxx</span></p>
+                                        <p>Fuzik Connex Co., Ltd.</p>
+                                        <p>DBD No.: <span class="text-[#fff600]">0105566025012</span></p>
                                     </div>
                                 </div>
 
@@ -53,8 +53,8 @@
                                     <i class="fas fa-phone-alt text-[#fff600] text-2xl mr-4 mt-1"></i>
                                     <div>
                                         <p class="font-semibold text-lg text-white">Call Us</p>
-                                        <p>(Thailand) <a href="tel:0878220006" class="text-[#fff600] hover:underline">087-822-0006</a></p>
-                                        <p>(Global) <a href="tel:+66878220006" class="text-[#fff600] hover:underline">+66 87 822 0006</a></p>
+                                        <p>(Thailand) <a href="tel:0878220006" class="text-[#fff600] hover:underline">061-919-9456</a></p>
+                                        <p>(Global) <a href="tel:+66878220006" class="text-[#fff600] hover:underline">+66 61 919 9456</a></p>
                                     </div>
                                 </div>
 
@@ -71,7 +71,8 @@
                         <!-- Social Network Services -->
                         <div class="bg-[#2a2a2a] rounded-xl shadow-lg p-8 card-hover">
                             <h3 class="text-2xl font-bold mb-6 text-white">Social network services</h3>
-                            <div class="flex flex-wrap justify-between items-center gap-2 text-center">
+                            
+                            <div class="flex flex-wrap justify-evenly items-center w-full text-center gap-y-4">
                                 
                                 <a href="https://discord.gg/US2hz9FvsV" target="_blank" class="group flex flex-col items-center">
                                     <div class="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-[#fff600] group-hover:border-[#fff600] transition mb-2">
@@ -107,15 +108,6 @@
                                         </svg>
                                     </div>
                                     <span class="text-sm text-gray-400 group-hover:text-white transition">Youtube</span>
-                                </a>
-
-                                <a href="#" target="_blank" class="group flex flex-col items-center">
-                                    <div class="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-[#fff600] group-hover:border-[#fff600] transition mb-2">
-                                        <svg class="w-6 h-6 text-white group-hover:text-black transition" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                        </svg>
-                                    </div>
-                                    <span class="text-sm text-gray-400 group-hover:text-white transition">LinkedIn</span>
                                 </a>
 
                             </div>

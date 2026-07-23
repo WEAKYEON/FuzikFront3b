@@ -13,6 +13,7 @@
     </section>
 
     <!-- Features Section -->
+    <!-- Features Section -->
     <section class="section-padding bg-[#1a1a1a]">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-12 text-white">Key <span class="text-[#fff600]">Features</span></h2>
@@ -20,7 +21,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Feature 1: Precision Video Sync -->
                 <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="https://placehold.co/600x350/1a1a1a/fff600?text=Sync+Feature+UI" alt="Precision Video Sync" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab03.png" alt="Precision Video Sync" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Precision Video Sync</h3>
                     <p class="text-gray-300 text-sm flex-grow">
                         Our advanced technology ensures your audio and video are perfectly synchronized, 
@@ -30,7 +31,7 @@
                 
                 <!-- Feature 2: Multi-User Collaboration -->
                 <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="https://placehold.co/600x350/1a1a1a/fff600?text=Collab+Feature+UI" alt="Multi-User Collaboration" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab02.png" alt="Multi-User Collaboration" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Multi-User Collaboration</h3>
                     <p class="text-gray-300 text-sm flex-grow">
                         Invite multiple bandmates or new collaborators to your projects. 
@@ -40,41 +41,11 @@
                 
                 <!-- Feature 3: Intuitive Interface -->
                 <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="https://placehold.co/600x350/1a1a1a/fff600?text=Interface+UI" alt="Intuitive Interface" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab01.png" alt="Intuitive Interface" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Intuitive Interface</h3>
                     <p class="text-gray-300 text-sm flex-grow">
                         Designed for musicians, not tech experts. Our user-friendly interface 
                         makes creating and collaborating simple and enjoyable.
-                    </p>
-                </div>
-                
-                <!-- Feature 4: Cloud Storage -->
-                <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="https://placehold.co/600x350/1a1a1a/fff600?text=Cloud+Feature+UI" alt="Secure Cloud Storage" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
-                    <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Secure Cloud Storage</h3>
-                    <p class="text-gray-300 text-sm flex-grow">
-                        Keep all your projects safe and accessible from anywhere with secure cloud storage. 
-                        Never lose a brilliant idea again.
-                    </p>
-                </div>
-                
-                <!-- Feature 5: Flexible Export Options -->
-                <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="https://placehold.co/600x350/1a1a1a/fff600?text=Export+Feature+UI" alt="Flexible Export Options" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
-                    <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Flexible Export Options</h3>
-                    <p class="text-gray-300 text-sm flex-grow">
-                        Export your finished jams in various high-quality formats, ready to share on social media, 
-                        YouTube, or your portfolio.
-                    </p>
-                </div>
-                
-                <!-- Feature 6: Global Community -->
-                <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="https://placehold.co/600x350/1a1a1a/fff600?text=Community+UI" alt="Global Community" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
-                    <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Global Community</h3>
-                    <p class="text-gray-300 text-sm flex-grow">
-                        Connect with a diverse network of musicians from around the world. 
-                        Find new bandmates, producers, or simply jam partners.
                     </p>
                 </div>
             </div>
@@ -90,8 +61,7 @@
                 <!-- Step 1 -->
                 <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
                     <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                        <!-- แทนที่ไอคอนด้วย Screenshot ของแต่ละขั้นตอน -->
-                        <img src="https://placehold.co/500x350/2a2a2a/fff600?text=Record+Track+Screenshot" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                        <img src="/images/collab05.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
                     </div>
                     <div class="w-full md:w-3/5 text-left">
                         <div class="flex items-center mb-3">
@@ -108,7 +78,7 @@
                 <!-- Step 2 -->
                 <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
                     <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                        <img src="https://placehold.co/500x350/2a2a2a/fff600?text=Invite+Screenshot" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                        <img src="/images/collab02.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
                     </div>
                     <div class="w-full md:w-3/5 text-left">
                         <div class="flex items-center mb-3">
@@ -125,7 +95,7 @@
                 <!-- Step 3 -->
                 <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
                     <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                        <img src="https://placehold.co/500x350/2a2a2a/fff600?text=Jamming+Screenshot" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                        <img src="/images/collab03.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
                     </div>
                     <div class="w-full md:w-3/5 text-left">
                         <div class="flex items-center mb-3">
@@ -142,7 +112,7 @@
                 <!-- Step 4 -->
                 <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
                     <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                        <img src="https://placehold.co/500x350/2a2a2a/fff600?text=Export+Screenshot" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                        <img src="/images/collab04.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
                     </div>
                     <div class="w-full md:w-3/5 text-left">
                         <div class="flex items-center mb-3">
