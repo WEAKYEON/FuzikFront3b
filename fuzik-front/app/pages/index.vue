@@ -38,21 +38,26 @@
                 Fuzik Collaborate is designed to break down musical barriers and amplify your creative journey. Discover how our core functionalities empower you to connect, create, and share like never before.
             </p>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="visual-explainer-card flex flex-col items-center">
-                    <img src="/images/icons/groups_yellow_256.png" width="144" />
+            <div class="grid md:grid-cols-3 gap-8 items-stretch">
+                <!-- Card 1: Connect Globally -->
+                <div class="visual-explainer-card flex flex-col items-center bg-[#2a2a2a] p-6 rounded-xl card-hover h-full">
+                    <img src="/images/collab02.png" alt="Connect Globally" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">Connect Globally</h3>
-                    <p class="text-gray-400">Find your jam partners worldwide. Connect with a diverse community, discover new talents, and expand your musical network effortlessly.</p>
+                    <p class="text-gray-400 flex-grow">Find your jam partners worldwide. Connect with a diverse community, discover new talents, and expand your musical network effortlessly.</p>
                 </div>
-                <div class="visual-explainer-card flex flex-col items-center">
-                    <img src="/images/icons/video_camera.png" width="144" />
+                
+                <!-- Card 2: Create Seamlessly -->
+                <div class="visual-explainer-card flex flex-col items-center bg-[#2a2a2a] p-6 rounded-xl card-hover h-full">
+                    <img src="/images/collab03.png" alt="Create Seamlessly" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">Create Seamlessly</h3>
-                    <p class="text-gray-400">Synchronize video performances with precision. Our tech makes multi-track collaboration feel like magic, eliminating complex editing.</p>
+                    <p class="text-gray-400 flex-grow">Synchronize video performances with precision. Our tech makes multi-track collaboration feel like magic, eliminating complex editing.</p>
                 </div>
-                <div class="visual-explainer-card flex flex-col items-center">
-                    <img src="/images/icons/library_music.png" width="144" />
-                    <h3 class="text-2xl font-semibold text-[#fff600] mb-2">Express Freely</h3>
-                    <p class="text-gray-400">Jam on original riffs or public domain music without limitations. Unleash your ideas and collaborate on unique, copyright-friendly projects.</p>
+                
+                <!-- Card 3: Express Freely -->
+                <div class="visual-explainer-card flex flex-col items-center bg-[#2a2a2a] p-6 rounded-xl card-hover h-full">
+                    <img src="/images/collab05.png" alt="Express Freely" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <h3 class="text-2xl font-bold text-[#fff600] mb-2">Express Freely</h3>
+                    <p class="text-gray-400 flex-grow">Jam on original riffs or public domain music without limitations. Unleash your ideas and collaborate on unique, copyright-friendly projects.</p>
                 </div>
             </div>
         </div>

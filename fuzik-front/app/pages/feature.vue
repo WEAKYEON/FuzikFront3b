@@ -13,33 +13,37 @@
     </section>
 
     <!-- Features Section -->
+    <!-- Features Section -->
     <section class="section-padding bg-[#1a1a1a]">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-12 text-white">Key <span class="text-[#fff600]">Features</span></h2>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Feature 1: Precision Video Sync -->
-                <div class="visual-explainer-card text-center">
-                    <div class="flex justify-center"><img src="/images/icons/videocam_256.png" class="w-36 p-4"  /></div>
+                <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
+                    <img src="/images/collab03.png" alt="Precision Video Sync" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Precision Video Sync</h3>
-                    <p class="text-gray-300">
+                    <p class="text-gray-300 text-sm flex-grow">
                         Our advanced technology ensures your audio and video are perfectly synchronized, 
                         eliminating latency and making remote jams feel like you're in the same room.
                     </p>
                 </div>
+                
                 <!-- Feature 2: Multi-User Collaboration -->
-                <div class="visual-explainer-card text-center">
-                    <div class="flex justify-center"><img src="/images/icons/groups_yellow_256.png" class="w-36 p-4"  /></div>
+                <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
+                    <img src="/images/collab02.png" alt="Multi-User Collaboration" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Multi-User Collaboration</h3>
-                    <p class="text-gray-300">
+                    <p class="text-gray-300 text-sm flex-grow">
                         Invite multiple bandmates or new collaborators to your projects. 
                         Work together in real-time, share ideas, and build tracks seamlessly.
                     </p>
                 </div>
+                
                 <!-- Feature 3: Intuitive Interface -->
-                <div class="visual-explainer-card text-center">
-                    <div class="flex justify-center"><img src="/images/icons/auto_awesome_mosaic_256.png" class="w-36 p-4"  /></div>
+                <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
+                    <img src="/images/collab01.png" alt="Intuitive Interface" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Intuitive Interface</h3>
-                    <p class="text-gray-300">
+                    <p class="text-gray-300 text-sm flex-grow">
                         Designed for musicians, not tech experts. Our user-friendly interface 
                         makes creating and collaborating simple and enjoyable.
                     </p>
@@ -76,58 +80,79 @@
     </section>
 
     <!-- How It Works Section -->
-    <section class="section-padding gradient-bg">
+    <section class="section-padding bg-black">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-12 text-white">How It <span class="text-[#fff600]">Works</span></h2>
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-5xl mx-auto space-y-8">
+                
                 <!-- Step 1 -->
-                <div class="how-it-works-step">
-                    <span class="how-it-works-step-number">1</span>
-                    <img src="/images/icons/mic_256.png" class="w-24 px-2"  />
-                    <div>
-                        <h3 class="text-2xl font-bold text-[#f8f9fa] mb-2">Record Your Track</h3>
-                        <p class="text-gray-300">
+                <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
+                    <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                        <img src="/images/collab05.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                    </div>
+                    <div class="w-full md:w-3/5 text-left">
+                        <div class="flex items-center mb-3">
+                            <span class="text-[#fff600] text-4xl font-black mr-4">01</span>
+                            <h3 class="text-2xl font-bold text-[#f8f9fa]">Record Your Track</h3>
+                        </div>
+                        <p class="text-gray-300 pl-14">
                             Start by recording your individual audio or video track directly within Fuzik, 
                             or upload an existing one. Our smart system prepares it for collaboration.
                         </p>
                     </div>
                 </div>
+
                 <!-- Step 2 -->
-                <div class="how-it-works-step">
-                    <span class="how-it-works-step-number">2</span>
-                    <img src="/images/icons/3p_256.png" class="w-24 px-2"  />
-                    <div>
-                        <h3 class="text-2xl font-bold text-[#f8f9fa]  mb-2">Invite Collaborators</h3>
-                        <p class="text-gray-300">
+                <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
+                    <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                        <img src="/images/collab02.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                    </div>
+                    <div class="w-full md:w-3/5 text-left">
+                        <div class="flex items-center mb-3">
+                            <span class="text-[#fff600] text-4xl font-black mr-4">02</span>
+                            <h3 class="text-2xl font-bold text-[#f8f9fa]">Invite Collaborators</h3>
+                        </div>
+                        <p class="text-gray-300 pl-14">
                             Share a unique project link with your bandmates or new friends. 
                             They can join instantly, no complex setup required.
                         </p>
                     </div>
                 </div>
+
                 <!-- Step 3 -->
-                <div class="how-it-works-step">
-                    <span class="how-it-works-step-number">3</span>
-                    <img src="/images/icons/music_note_2_256.png" class="w-24 px-2"  />
-                    <div>
-                        <h3 class="text-2xl font-bold text-[#f8f9fa]  mb-2">Jam & Create</h3>
-                        <p class="text-gray-300">
+                <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
+                    <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                        <img src="/images/collab03.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                    </div>
+                    <div class="w-full md:w-3/5 text-left">
+                        <div class="flex items-center mb-3">
+                            <span class="text-[#fff600] text-4xl font-black mr-4">03</span>
+                            <h3 class="text-2xl font-bold text-[#f8f9fa]">Jam & Create</h3>
+                        </div>
+                        <p class="text-gray-300 pl-14">
                             Everyone records their parts, perfectly synchronized to the original track. 
                             Watch your collaborative masterpiece come to life in real-time.
                         </p>
                     </div>
                 </div>
+
                 <!-- Step 4 -->
-                <div class="how-it-works-step">
-                    <span class="how-it-works-step-number">4</span>
-                    <img src="/images/icons/share_windows_256.png" class="w-24 px-2"  />
-                    <div>
-                        <h3 class="text-2xl font-bold text-[#f8f9fa]  mb-2">Export & Share</h3>
-                        <p class="text-gray-300">
+                <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
+                    <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                        <img src="/images/collab04.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                    </div>
+                    <div class="w-full md:w-3/5 text-left">
+                        <div class="flex items-center mb-3">
+                            <span class="text-[#fff600] text-4xl font-black mr-4">04</span>
+                            <h3 class="text-2xl font-bold text-[#f8f9fa]">Export & Share</h3>
+                        </div>
+                        <p class="text-gray-300 pl-14">
                             Once your jam is complete, easily export the synchronized video and audio. 
                             Share it with the world or keep it private – it's your music!
                         </p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>

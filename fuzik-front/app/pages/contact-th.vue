@@ -12,65 +12,135 @@
             </div>
         </section>
 
-        <!-- Contact Information Section -->
+        <!-- Contact Information Section (Thai Version) -->
         <section class="section-padding bg-[#1a1a1a]">
             <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                    <!-- Contact Details -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                    
+
+                    <div class="flex flex-col space-y-8">
+                        
+                        <!-- รายละเอียดการติดต่อ -->
+                        <div class="bg-[#2a2a2a] rounded-xl shadow-lg p-8 card-hover flex-grow">
+                            <h3 class="text-3xl font-bold mb-6 text-[#f8f9fa]">รายละเอียดการติดต่อ</h3>
+                            <div class="space-y-6 text-gray-300">
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-[#fff600] text-2xl mr-4 mt-1"></i>
+                                    <div>
+                                        <p class="font-semibold text-lg text-white">ออฟฟิศของเรา</p>
+                                        <p>2/35 ซอย พระรามเก้า 43 (ถนนเสรี 4) สวนหลวง สวนหลวง กรุงเทพฯ 10250 ประเทศไทย</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <i class="fas fa-id-card text-[#fff600] text-2xl mr-4 mt-1"></i>
+                                    <div>
+                                        <p class="font-semibold text-lg text-white">ข้อมูลจดทะเบียนนิติบุคคล</p>
+                                        <p>บริษัท ฟิวซิก คอนเนกซ์ จำกัด</p>
+                                        <p>เลขทะเบียนนิติบุคคล: <span class="text-[#fff600]">0105566025012</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <i class="fas fa-envelope text-[#fff600] text-2xl mr-4 mt-1"></i>
+                                    <div>
+                                        <p class="font-semibold text-lg text-white">อีเมล</p>
+                                        <p><a href="mailto:admin@fuzikapp.com" class="text-[#fff600] hover:underline">admin@fuzikapp.com</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <i class="fas fa-phone-alt text-[#fff600] text-2xl mr-4 mt-1"></i>
+                                    <div>
+                                        <p class="font-semibold text-lg text-white">โทรหาเรา</p>
+                                        <p>(ประเทศไทย) <a href="tel:0878220006" class="text-[#fff600] hover:underline">061-919-9456</a></p>
+                                        <p>(ทั่วโลก) <a href="tel:+66878220006" class="text-[#fff600] hover:underline">+66 61 919 9456</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <i class="fab fa-discord text-[#fff600] text-2xl mr-4 mt-1"></i>
+                                    <div>
+                                        <p class="font-semibold text-lg text-white">เข้าร่วม Discord</p>
+                                        <p><a href="https://discord.gg/sm2x7mRAHb" target="_blank" class="text-[#fff600] hover:underline">https://discord.gg/sm2x7mRAHb</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- บัญชีสังคมออนไลน์ -->
+                        <div class="bg-[#2a2a2a] rounded-xl shadow-lg p-8 card-hover">
+                            <h3 class="text-2xl font-bold mb-6 text-white">บัญชีสังคมออนไลน์</h3>
+                            
+                            <div class="flex flex-wrap justify-evenly items-center w-full text-center gap-y-4">
+                                
+                                <a href="https://discord.gg/US2hz9FvsV" target="_blank" class="group flex flex-col items-center">
+                                    <div class="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-[#fff600] group-hover:border-[#fff600] transition mb-2">
+                                        <svg class="w-6 h-6 text-white group-hover:text-black transition" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-sm text-gray-400 group-hover:text-white transition">Discord</span>
+                                </a>
+
+                                <a href="https://www.facebook.com/fuzikcollaboration" target="_blank" class="group flex flex-col items-center">
+                                    <div class="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-[#fff600] group-hover:border-[#fff600] transition mb-2">
+                                        <svg class="w-6 h-6 text-white group-hover:text-black transition" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M14 13.5h2.5l1-4H14v-2c0-1.03.8-1.5 2-1.5h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-sm text-gray-400 group-hover:text-white transition">Facebook</span>
+                                </a>
+
+                                <a href="https://www.instagram.com/fuzikmusiccollaboration" target="_blank" class="group flex flex-col items-center">
+                                    <div class="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-[#fff600] group-hover:border-[#fff600] transition mb-2">
+                                        <svg class="w-6 h-6 text-white group-hover:text-black transition" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-sm text-gray-400 group-hover:text-white transition">Instagram</span>
+                                </a>
+
+                                <a href="https://www.youtube.com/@fuzikapplication" target="_blank" class="group flex flex-col items-center">
+                                    <div class="w-14 h-14 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-[#fff600] group-hover:border-[#fff600] transition mb-2">
+                                        <svg class="w-6 h-6 text-white group-hover:text-black transition" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-sm text-gray-400 group-hover:text-white transition">Youtube</span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ฟอร์มส่งข้อความ (แบบแปลไทย) -->
                     <div class="bg-[#2a2a2a] rounded-xl shadow-lg p-8 card-hover">
-                        <h3 class="text-3xl font-bold mb-6 text-[#f8f9fa] ">รายละเอียดการติดต่อ<</h3>
-                        <div class="space-y-6 text-gray-300">
-                            <div class="flex items-center">
-                                <i class="fas fa-map-marker-alt text-[#fff600] text-2xl mr-4"></i>
-                                <div>
-                                    <p class="font-semibold text-lg">ออฟฟิศของเรา</p>
-                                    <p>2/35 ซอย พระรามเก้า 43 (ถนนเสรี 4) สวนหลวง สวนหลวง กรุงเทพฯ 10250 ประเทศไทย</p>
-                                </div>
+                        <form class="space-y-5" @submit.prevent="">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-1">ชื่อ-นามสกุล</label>
+                                <input type="text" class="w-full bg-[#1a1a1a] border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-[#fff600] transition" placeholder="กรอกชื่อของคุณ">
                             </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-envelope text-[#fff600] text-2xl mr-4"></i>
-                                <div>
-                                    <p class="font-semibold text-lg">อีเมล</p>
-                                    <p><a href="mailto:admin@fuzikapp.com" class="text-[#fff600] hover:underline">admin@fuzikapp.com</a></p>
-                                </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-1">อีเมล</label>
+                                <input type="email" class="w-full bg-[#1a1a1a] border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-[#fff600] transition" placeholder="your@email.com">
                             </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-phone-alt text-[#fff600] text-2xl mr-4"></i>
-                                <div>
-                                    <p class="font-semibold text-lg">โทรหาเรา</p>
-                                    <p>(ประเทศไทย) <a href="tel:0878220006" class="text-[#fff600] hover:underline">087-822-0006</a></p>
-                                    <p>(ทั่วโลก) <a href="tel:+66878220006" class="text-[#fff600] hover:underline">+66 87 822 0006</a></p>
-                                </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-1">หัวข้อ</label>
+                                <input type="text" class="w-full bg-[#1a1a1a] border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-[#fff600] transition" placeholder="เรื่องที่ต้องการติดต่อ">
                             </div>
-                            <div class="flex items-center">
-                                <i class="fab fa-discord text-[#fff600] text-2xl mr-4"></i>
-                                <div>
-                                    <p class="font-semibold text-lg">เข้าร่วม Discord</p>
-                                    <p><a href="https://discord.gg/sm2x7mRAHb" target="_blank" class="text-[#fff600] hover:underline">https://discord.gg/sm2x7mRAHb</a></p>
-                                </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-1">ข้อความ</label>
+                                <textarea class="w-full h-40 bg-[#1a1a1a] border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-[#fff600] transition resize-none" placeholder="พิมพ์ข้อความของคุณที่นี่..."></textarea>
                             </div>
-                        </div>
+                            <div class="pt-4">
+                                <button type="submit" class="bg-[#fff600] text-black font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition-colors w-full sm:w-auto">
+                                    ส่งข้อความ
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="bg-[#2a2a2a] rounded-xl shadow-lg p-8 card-hover ">
-                    <h3 class="text-3xl font-bold mb-6 text-white">บัญชีสังคมออนไลน์</h3>
-                    <div class="flex items-center">
-                            <i class="fab fa-discord text-[#fff600] text-2xl mr-4"></i>
-                            <div class="flex space-x-4">
-                                <a href="https://discord.gg/US2hz9FvsV" target="_blank" class="footer-social-icon">
-                                    <img src="/images/icons/Discord-Symbol-White.png" class="w-12 px-2 py-4"  />
-                                </a>
-                                <a href="https://www.facebook.com/fuzikcollaboration" target="_blank" class="footer-social-icon">
-                                    <img src="/images/icons/Facebook_Logo_Primary.png" class="w-12 px-2 py-4"  />
-                                </a>
-                                <a href="https://www.instagram.com/fuzikmusiccollaboration/?fbclid=IwY2xjawLQ4BlleHRuA2FlbQIxMQBicmlkETFFSWFvdmFUWHBoWDZKSUUzAR4gMnSxq6J0Et494YOLIXkFBcFRXuzNzUzUA9IOjXjgx35lKgKVSUWqPgfW3ALQ_aem_sQYkD7FbPk-RJEMRy7VyWQ" target="_blank" class="footer-social-icon">
-                                    <img src="/images/icons/Instagram_icon.png" class="w-12 px-2 py-4"  />
-                                </a>
-                                <a href="https://www.youtube.com/@fuzikapplication" target="_blank" class="footer-social-icon">
-                                    <img src="/images/icons/yt_icon_red_digital.png" class="w-20 px-2 py-2"  />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>

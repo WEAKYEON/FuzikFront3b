@@ -31,32 +31,60 @@
         </div>
     </section>
 
-    <!-- Our Team Section -->
+    <!-- Our Team Section (Thai Version) -->
     <section class="section-padding bg-black">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-12">พบกับ <span class="text-[#fff600]">ทีมงาน</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-white">พบกับ <span class="text-[#fff600]">ทีมงาน</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto items-stretch">
+                
                 <!-- Team Member 1 -->
-                <div class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg card-hover">
+                <div class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg card-hover flex flex-col h-full">
                     <img src="/images/people/win.jpeg" alt="ผู้ก่อตั้ง 1" class="rounded-full w-32 h-32 mx-auto mb-6 object-cover border-4 border-[#fff600]">
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">ภาวิน</h3>
                     <p class="text-gray-300 text-lg mb-2">CEO และผู้ร่วมก่อตั้ง</p>
-                    <p class="text-gray-400 text-sm">ผู้นำที่มีวิสัยทัศน์และนักดนตรีผู้หลงใหล ทำให้มั่นใจว่าแพลตฟอร์มของเราจะเสริมสร้างศักยภาพศิลปินทั่วโลก ความทุ่มเทในการสร้างสรรค์นวัตกรรมของเขาเป็นตัวกำหนดพันธกิจของเราในการเชื่อมโยงนักดนตรีทั่วโลก</p>
+                    <p class="text-gray-400 text-sm flex-grow">ผู้นำที่มีวิสัยทัศน์และนักดนตรีผู้หลงใหล ทำให้มั่นใจว่าแพลตฟอร์มของเราจะเสริมสร้างศักยภาพศิลปินทั่วโลก ความทุ่มเทในการสร้างสรรค์นวัตกรรมของเขาเป็นตัวกำหนดพันธกิจของเราในการเชื่อมโยงนักดนตรีทั่วโลก</p>
+                    <!-- LinkedIn Icon -->
+                    <div class="mt-6">
+                        <a href="https://www.linkedin.com/in/pawin-nuntachantoon-16715624a" target="_blank" class="inline-block text-gray-500 hover:text-[#fff600] transition">
+                            <svg class="w-6 h-6 mx-auto" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+                
                 <!-- Team Member 2 -->
-                <div class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg card-hover">
+                <div class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg card-hover flex flex-col h-full">
                     <img src="/images/people/Ing.jpeg" alt="ผู้ก่อตั้ง 2" class="rounded-full w-32 h-32 mx-auto mb-6 object-cover border-4 border-[#fff600]">
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">บุษราคัม</h3>
                     <p class="text-gray-300 text-lg mb-2">CMO และผู้ร่วมก่อตั้ง</p>
-                    <p class="text-gray-400 text-sm">ด้วยความเข้าใจอย่างลึกซึ้งในคอมมูนิตี้ดนตรี เธอทุ่มเทเพื่อส่งเสริมสภาพแวดล้อมที่สดใสและให้การสนับสนุน ซึ่งนักดนตรีสามารถเติบโตและทำงานร่วมกันได้อย่างอิสระ</p>
+                    <p class="text-gray-400 text-sm flex-grow">ด้วยความเข้าใจอย่างลึกซึ้งในคอมมูนิตี้ดนตรี เธอทุ่มเทเพื่อส่งเสริมสภาพแวดล้อมที่สดใสและให้การสนับสนุน ซึ่งนักดนตรีสามารถเติบโตและทำงานร่วมกันได้อย่างอิสระ</p>
+                    <!-- LinkedIn Icon -->
+                    <div class="mt-6">
+                        <a href="https://www.linkedin.com/in/butsarakham-klowuthiwat-2419821a1" target="_blank" class="inline-block text-gray-500 hover:text-[#fff600] transition">
+                            <svg class="w-6 h-6 mx-auto" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <!-- Team Member 3 -->
-                <div class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg card-hover">
+                
+                <!-- Team Member 3-->
+                <div class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg card-hover flex flex-col h-full">
                     <img src="/images/people/Ohm.jpg" alt="ผู้ก่อตั้ง 3" class="rounded-full w-32 h-32 mx-auto mb-6 object-cover border-4 border-[#fff600]">
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">ธีรชาติ</h3>
                     <p class="text-gray-300 text-lg mb-2">CTO และผู้ร่วมก่อตั้ง</p>
-                    <p class="text-400 text-sm">สถาปนิกด้านเทคนิคเบื้องหลังประสบการณ์ที่ราบรื่นของ Fuzik Collaborate ความเชี่ยวชาญของเขาในการซิงโครไนซ์เสียงและวิดีโอทำให้มั่นใจว่าแพลตฟอร์มของเรามอบการทำงานร่วมกันคุณภาพสูง ไร้ความหน่วงสำหรับผู้ใช้ทุกคน</p>
+                    <p class="text-gray-400 text-sm flex-grow">สถาปนิกด้านเทคนิคเบื้องหลังประสบการณ์ที่ราบรื่นของ Fuzik Collaborate ความเชี่ยวชาญของเขาในการซิงโครไนซ์เสียงและวิดีโอทำให้มั่นใจว่าแพลตฟอร์มของเรามอบการทำงานร่วมกันคุณภาพสูง ไร้ความหน่วงสำหรับผู้ใช้ทุกคน</p>
+                    <!-- LinkedIn Icon -->
+                    <div class="mt-6">
+                        <a href="https://www.linkedin.com/in/dhirachat-chayaporn-0aa43570/" target="_blank" class="inline-block text-gray-500 hover:text-[#fff600] transition">
+                            <svg class="w-6 h-6 mx-auto" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </section>

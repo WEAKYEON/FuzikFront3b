@@ -33,28 +33,56 @@
     <section class="section-padding bg-black">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold mb-12 text-white">Meet the <span class="text-[#fff600]">Team</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto items-stretch">
+                
                 <!-- Team Member 1 -->
-                <div class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg card-hover">
+                <div class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg card-hover flex flex-col h-full">
                     <img src="/images/people/win.jpeg" alt="Win" class="rounded-full w-32 h-32 mx-auto mb-6 object-cover border-4 border-[#fff600]">
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">Pawin N.</h3>
                     <p class="text-gray-300 text-lg mb-2">CEO & Co-Founder</p>
-                    <p class="text-gray-400 text-sm">A visionary leader and passionate musician, ensuring our platform empowers artists worldwide. His dedication to innovation shapes our mission to connect musicians globally.</p>
+                    <p class="text-gray-400 text-sm flex-grow">A visionary leader and passionate musician, ensuring our platform empowers artists worldwide. His dedication to innovation shapes our mission to connect musicians globally.</p>
+                    <!-- LinkedIn Icon -->
+                    <div class="mt-6">
+                        <a href="https://www.linkedin.com/in/pawin-nuntachantoon-16715624a" target="_blank" class="inline-block text-gray-500 hover:text-[#fff600] transition">
+                            <svg class="w-6 h-6 mx-auto" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+
                 <!-- Team Member 2 -->
-                <div class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg card-hover">
+                <div class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg card-hover flex flex-col h-full">
                     <img src="/images/people/Ing.jpeg" alt="Ing" class="rounded-full w-32 h-32 mx-auto mb-6 object-cover border-4 border-[#fff600]">
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">Butsarakham K.</h3>
                     <p class="text-gray-300 text-lg mb-2">CMO & Co-Founder</p>
-                    <p class="text-gray-400 text-sm">With a deep understanding of the music community, She is dedicated to fostering a vibrant and supportive environment where musicians can thrive and collaborate freely.</p>
+                    <p class="text-gray-400 text-sm flex-grow">With a deep understanding of the music community, She is dedicated to fostering a vibrant and supportive environment where musicians can thrive and collaborate freely.</p>
+                    <!-- LinkedIn Icon -->
+                    <div class="mt-6">
+                        <a href="https://www.linkedin.com/in/butsarakham-klowuthiwat-2419821a1" target="_blank" class="inline-block text-gray-500 hover:text-[#fff600] transition">
+                            <svg class="w-6 h-6 mx-auto" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+
                 <!-- Team Member 3 -->
-                <div class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg card-hover">
+                <div class="bg-[#2a2a2a] p-8 rounded-xl shadow-lg card-hover flex flex-col h-full">
                     <img src="/images/people/Ohm.jpg" alt="Ohm" class="rounded-full w-32 h-32 mx-auto mb-6 object-cover border-4 border-[#fff600]">
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">Dhirachat C.</h3>
                     <p class="text-gray-300 text-lg mb-2">CTO & Co-Founder</p>
-                    <p class="text-gray-400 text-sm"> Technical architect behind Fuzik Collaborate's seamless experience. His expertise in audio and video synchronization ensures our platform delivers high-quality, lag-free collaboration for every user.</p>
+                    <p class="text-gray-400 text-sm flex-grow">Technical architect behind Fuzik Collaborate's seamless experience. His expertise in audio and video synchronization ensures our platform delivers high-quality, lag-free collaboration for every user.</p>
+                    <!-- LinkedIn Icon -->
+                    <div class="mt-6">
+                        <a href="https://www.linkedin.com/in/dhirachat-chayaporn-0aa43570/" target="_blank" class="inline-block text-gray-500 hover:text-[#fff600] transition">
+                            <svg class="w-6 h-6 mx-auto" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>

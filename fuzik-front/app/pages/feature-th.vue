@@ -16,30 +16,33 @@
     <section class="section-padding bg-[#1a1a1a] text-white">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-12"><span class="text-[#fff600] ">ฟีเจอร์</span>หลัก</h2>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Feature 1: Precision Video Sync -->
-                <div class="visual-explainer-card text-center">
-                    <i class="fas fa-video visual-explainer-icon"></i>
+                <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
+                    <img src="/images/collab03.png" alt="การซิงค์วิดีโอที่แม่นยำ" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">การซิงค์วิดีโอที่แม่นยำ</h3>
-                    <p class="text-gray-300">
+                    <p class="text-gray-300 text-sm flex-grow">
                         เทคโนโลยีขั้นสูงของเราช่วยให้มั่นใจได้ว่าเสียงและวิดีโอของคุณจะซิงโครไนซ์กันอย่างสมบูรณ์แบบ
                         ขจัดปัญหาความหน่วงและทำให้การแจมระยะไกลรู้สึกเหมือนอยู่ในห้องเดียวกัน
                     </p>
                 </div>
+                
                 <!-- Feature 2: Multi-User Collaboration -->
-                <div class="visual-explainer-card text-center">
-                    <i class="fas fa-users visual-explainer-icon"></i>
+                <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
+                    <img src="/images/collab02.png" alt="การทำงานร่วมกันหลายผู้ใช้" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">การทำงานร่วมกันหลายผู้ใช้</h3>
-                    <p class="text-gray-300">
+                    <p class="text-gray-300 text-sm flex-grow">
                         เชิญเพื่อนร่วมวงหรือผู้ทำงานร่วมกันใหม่ๆ เข้ามาในโปรเจกต์ของคุณ
                         ทำงานร่วมกันแบบเรียลไทม์ แบ่งปันความคิด และสร้างสรรค์ผลงานเพลงได้อย่างราบรื่น
                     </p>
                 </div>
+                
                 <!-- Feature 3: Intuitive Interface -->
-                <div class="visual-explainer-card text-center">
-                    <i class="fas fa-magic visual-explainer-icon"></i>
+                <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
+                    <img src="/images/collab01.png" alt="อินเทอร์เฟซที่ใช้งานง่าย" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">อินเทอร์เฟซที่ใช้งานง่าย</h3>
-                    <p class="text-gray-300">
+                    <p class="text-gray-300 text-sm flex-grow">
                         ออกแบบมาสำหรับนักดนตรี ไม่ใช่ผู้เชี่ยวชาญด้านเทคโนโลยี อินเทอร์เฟซที่เป็นมิตรต่อผู้ใช้ของเรา
                         ทำให้การสร้างสรรค์และการทำงานร่วมกันเป็นเรื่องง่ายและสนุกสนาน
                     </p>
@@ -76,58 +79,79 @@
     </section>
 
     <!-- How It Works Section -->
-    <section class="section-padding gradient-bg text-white">
+    <section class="section-padding bg-black text-white">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-12">วิธีการ<span class="text-[#fff600]">ทำงาน</span></h2>
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-5xl mx-auto space-y-8">
+                
                 <!-- Step 1 -->
-                <div class="how-it-works-step">
-                    <span class="how-it-works-step-number">1</span>
-                    <i class="fas fa-microphone-alt how-it-works-step-icon"></i>
-                    <div>
-                        <h3 class="text-2xl font-bold text-[#f8f9fa]  mb-2">บันทึกแทร็กของคุณ</h3>
-                        <p class="text-gray-300">
+                <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
+                    <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                        <img src="/images/collab05.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                    </div>
+                    <div class="w-full md:w-3/5 text-left">
+                        <div class="flex items-center mb-3">
+                            <span class="text-[#fff600] text-4xl font-black mr-4">01</span>
+                            <h3 class="text-2xl font-bold text-[#f8f9fa]">บันทึกแทร็กของคุณ</h3>
+                        </div>
+                        <p class="text-gray-300 pl-14">
                             เริ่มต้นด้วยการบันทึกแทร็กเสียงหรือวิดีโอของคุณโดยตรงภายใน Fuzik
                             หรืออัปโหลดไฟล์ที่มีอยู่ ระบบอัจฉริยะของเราจะเตรียมไฟล์ให้พร้อมสำหรับการทำงานร่วมกัน
                         </p>
                     </div>
                 </div>
+
                 <!-- Step 2 -->
-                <div class="how-it-works-step">
-                    <span class="how-it-works-step-number">2</span>
-                    <i class="fas fa-share-alt how-it-works-step-icon"></i>
-                    <div>
-                        <h3 class="text-2xl font-bold text-[#f8f9fa]  mb-2">เชิญผู้ทำงานร่วมกัน</h3>
-                        <p class="text-gray-300">
+                <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
+                    <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                        <img src="/images/collab02.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                    </div>
+                    <div class="w-full md:w-3/5 text-left">
+                        <div class="flex items-center mb-3">
+                            <span class="text-[#fff600] text-4xl font-black mr-4">02</span>
+                            <h3 class="text-2xl font-bold text-[#f8f9fa]">เชิญผู้ทำงานร่วมกัน</h3>
+                        </div>
+                        <p class="text-gray-300 pl-14">
                             แชร์ลิงก์โปรเจกต์ที่ไม่ซ้ำใครกับเพื่อนร่วมวงหรือเพื่อนใหม่ของคุณ
                             พวกเขาสามารถเข้าร่วมได้ทันทีโดยไม่ต้องตั้งค่าที่ซับซ้อน
                         </p>
                     </div>
                 </div>
+
                 <!-- Step 3 -->
-                <div class="how-it-works-step">
-                    <span class="how-it-works-step-number">3</span>
-                    <i class="fas fa-music how-it-works-step-icon"></i>
-                    <div>
-                        <h3 class="text-2xl font-bold text-[#f8f9fa]  mb-2">แจมและสร้างสรรค์</h3>
-                        <p class="text-gray-300">
+                <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
+                    <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                        <img src="/images/collab03.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                    </div>
+                    <div class="w-full md:w-3/5 text-left">
+                        <div class="flex items-center mb-3">
+                            <span class="text-[#fff600] text-4xl font-black mr-4">03</span>
+                            <h3 class="text-2xl font-bold text-[#f8f9fa]">แจมและสร้างสรรค์</h3>
+                        </div>
+                        <p class="text-gray-300 pl-14">
                             ทุกคนบันทึกส่วนของตนเอง ซึ่งซิงโครไนซ์กับแทร็กต้นฉบับได้อย่างสมบูรณ์แบบ
                             ชมผลงานชิ้นเอกที่ทำงานร่วมกันของคุณมีชีวิตขึ้นมาแบบเรียลไทม์
                         </p>
                     </div>
                 </div>
+
                 <!-- Step 4 -->
-                <div class="how-it-works-step">
-                    <span class="how-it-works-step-number">4</span>
-                    <i class="fas fa-download how-it-works-step-icon"></i>
-                    <div>
-                        <h3 class="text-2xl font-bold text-[#f8f9fa]  mb-2">ส่งออกและแบ่งปัน</h3>
-                        <p class="text-gray-300">
+                <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
+                    <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                        <img src="/images/collab04.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                    </div>
+                    <div class="w-full md:w-3/5 text-left">
+                        <div class="flex items-center mb-3">
+                            <span class="text-[#fff600] text-4xl font-black mr-4">04</span>
+                            <h3 class="text-2xl font-bold text-[#f8f9fa]">ส่งออกและแบ่งปัน</h3>
+                        </div>
+                        <p class="text-gray-300 pl-14">
                             เมื่อการแจมของคุณเสร็จสมบูรณ์แล้ว คุณสามารถส่งออกวิดีโอและเสียงที่ซิงโครไนซ์ได้อย่างง่ายดาย
                             แบ่งปันกับคนทั้งโลกหรือเก็บไว้เป็นส่วนตัว – มันคือดนตรีของคุณ!
                         </p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
