@@ -27,9 +27,9 @@
     
   </div>
 -->
-  <div>
-      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-2 sm:gap-1">
-        <div v-for="l in layouts">
+  <div class="layout-page">
+      <div class="layout-page__grid">
+        <div v-for="l in layouts" :key="l.layout_name">
           <Layout :layout="l"/>
         </div>
       </div>
@@ -78,6 +78,28 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
+.layout-page__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
 
+@media (max-width: 1279px) {
+  .layout-page__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 899px) {
+  .layout-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .layout-page__grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>

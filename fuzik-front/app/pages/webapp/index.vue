@@ -1,46 +1,42 @@
 <template>
-  <div class="lg:container lg:mx-auto px-2 py-2 ">
+  <div class="collaboration-feed">
 
-    <div class="w-full md:w-4/5 lg:w-3/5 xl:w-3/5 2xl:w-2/5 mx-auto py-6 lg:py-10  ">
-      <form ref="search_form" target="_self">
+    <div class="collaboration-feed__search">
+      <form @submit.prevent="submitSearch">
         <div
-          class="flex flex-row justify-center items-center gap-1  bg-black p-1 rounded-xl divide divide-white text-white border-2 border-white">
+          class="collaboration-feed__tabs">
 
-          <div @click="" class="flex-1 text-center rounded-lg cursor-pointer text-yellow-300 bg-black">
-            <NuxtLink to="/index02">Solo</NuxtLink>
-
-          </div>
-
-          <div @click="" class="flex-1 text-center rounded-lg cursor-pointer text-black bg-yellow-300">
-            <NuxtLink to="/">
-              Collaboration
-            </NuxtLink>
-          </div>
+          <NuxtLink to="/webapp/index02" class="collaboration-feed__tab">Solo</NuxtLink>
+          <NuxtLink to="/webapp" class="collaboration-feed__tab collaboration-feed__tab--active">
+            Collaboration
+          </NuxtLink>
 
         </div>
-        <div class="py-4 flex flex-row-reverse gap-2 m-2 h-16 ">
-          <button id="btn_submit" type="submit" @keyup.enter="search_enter"
-            class="flex-none bg-yellow-400 text-black px-3 py-0.5 rounded-xl">Search</button>
+        <div class="collaboration-feed__search-row">
+          <input
+            v-model="q_input_bar"
+            name="q"
+            placeholder="Song name or artist name"
+            type="search"
+            aria-label="Search by song or artist"
+          >
 
-          <input placeholder="Song name or artist name" type="text"
-            class="w-20 sm:w-max md:w-max lg:w-max xl:w-max 2xl:w-max flex-1 outline-none rounded-xl pl-4 pr-8 border-2 border-yellow-400 text-base dark:text-black"
-            v-model="q_input_bar" @keypress="" name="q">
+          <button id="btn_submit" type="submit">Search</button>
         </div>
       </form>
     </div>
 
-    <div class="flex flex-col space-y-2">
-
-      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-2 sm:gap-1">
-        <div v-for="j in jams">
+    <div>
+      <div class="collaboration-feed__grid">
+        <div v-for="j in jams" :key="j.url">
           <Jam :jam="j" />
         </div>
-        <div class="dark:text-white text-white text-center">{{ empty_message }}</div>
+        <div v-if="empty_message" class="collaboration-feed__empty">{{ empty_message }}</div>
       </div>
     </div>
 
-    <div class="text-center" @click="scrollToTop">
-      <div class=" btn">Back to top</div>
+    <div class="collaboration-feed__back" @click="scrollToTop">
+      <button type="button" class="btn">Back to top</button>
     </div>
 
     <div id="consent_form" v-show="cookie_form_visible" class="fixed w-3/4 bottom-4 right-1 lg:right-4 p-4 bg-white border-t-4 shadow-lg">
@@ -79,13 +75,8 @@ if (cookie_consent_form.value.localeCompare('Yes')==0) {
     cookie_form_visible.value = true;
     // Do nothing
 }
-// Search function
-
-const search_form = ref<HTMLFormElement>()
-
 const q_input_bar = ref('');
 const route = useRoute();
-const { q } = useRoute().params
 
 var empty_message = 'Jamming session will appear here.';
 
@@ -137,13 +128,136 @@ const scrollToTop = () => {
   }
 };
 
-function search_enter() {
-  //const search_form = ref<HTMLFormElement>()
-  if (search_form.value != undefined) {
-    search_form.value.submit();
-  }
+async function submitSearch() {
+  await navigateTo({
+    path: '/webapp',
+    query: q_input_bar.value.trim() ? { q: q_input_bar.value.trim() } : {}
+  })
 }
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.collaboration-feed {
+  width: 100%;
+  padding: 0 0 24px;
+}
+
+.collaboration-feed__search {
+  width: min(608px, 100%);
+  margin: 0 auto;
+  padding: 10px 0 62px;
+}
+
+.collaboration-feed__tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 3px;
+  height: 36px;
+  padding: 3px;
+  color: #fff;
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 12px;
+}
+
+.collaboration-feed__tab {
+  display: grid;
+  height: 26px;
+  place-items: center;
+  color: #ffe000;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.collaboration-feed__tab--active {
+  color: #000;
+  background: #ffe044;
+}
+
+.collaboration-feed__search-row {
+  display: flex;
+  gap: 8px;
+  margin: 16px 8px 0;
+}
+
+.collaboration-feed__search-row input {
+  min-width: 0;
+  height: 33px;
+  flex: 1;
+  padding: 0 14px;
+  color: #111827;
+  background: #fff;
+  border: 2px solid #f4d000;
+  border-radius: 12px;
+  outline: none;
+}
+
+.collaboration-feed__search-row input:focus {
+  border-color: #fff600;
+  box-shadow: 0 0 0 2px rgb(255 246 0 / 20%);
+}
+
+.collaboration-feed__search-row button {
+  height: 33px;
+  padding: 0 14px;
+  color: #000;
+  background: #ffd91a;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.collaboration-feed__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px 4px;
+}
+
+.collaboration-feed__empty {
+  grid-column: 1 / -1;
+  color: #fff;
+  text-align: center;
+}
+
+.collaboration-feed__back {
+  padding-top: 24px;
+  text-align: center;
+}
+
+@media (max-width: 1279px) {
+  .collaboration-feed__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+}
+
+@media (max-width: 899px) {
+  .collaboration-feed__search {
+    padding-bottom: 32px;
+  }
+
+  .collaboration-feed__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .collaboration-feed {
+    padding-top: 6px;
+  }
+
+  .collaboration-feed__search {
+    padding-bottom: 22px;
+  }
+
+  .collaboration-feed__search-row {
+    margin-inline: 0;
+  }
+
+  .collaboration-feed__grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

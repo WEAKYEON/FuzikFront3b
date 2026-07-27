@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:container lg:mx-auto px-0 lg:px-2 py-0 lg:py-4">
+    <div class="jam-watch-page">
       <ClientOnly>
         <JamPanel :file_location="file_location" />        
         <JamDescription :owner_display_name="owner_display_name"
@@ -40,7 +40,8 @@ var app_location = 'https://www.fuzikapp.com/';
 var media_location = 'https://media04.tetraserver.com/';
 
 definePageMeta({
-    layout: "mainyellow"
+    layout: "mainyellow",
+    alias: ['/jam_watch/:j']
 })
 
 const file_location = ref('');
@@ -367,4 +368,16 @@ function durationTime(dateString) {
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.jam-watch-page {
+    width: min(1536px, 100%);
+    margin: 0 auto;
+    padding: 16px 8px 0;
+}
+
+@media (max-width: 639px) {
+    .jam-watch-page {
+        padding: 0;
+    }
+}
+</style>

@@ -9,7 +9,7 @@
                 </div>
             </div> 
         </div>
-        <form @submit.prevent="proceed" target="_self" action="/collaboration03" id="main_form" ref="myForm">
+        <form @submit.prevent="proceed" target="_self" action="/webapp/collaboration03" id="main_form" ref="myForm">
 
             <div class="sm:flex sm:flex-row sm:gap-1 md:flex md:flex-row md:gap-2 lg:flex lg:flex-row lg:h-screen lg:gap-2 xl:flex xl:flex-row xl:gap-2 xl:h-screen 2xl:flex 2xl:flex-row 2xl:gap-8 2xl:h-screen" >
                 

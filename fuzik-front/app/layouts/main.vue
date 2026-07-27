@@ -4,7 +4,7 @@
 
 
     <div class="bg-black">
-        <nav class="fixed top-0 z-50 w-full border-b  bg-black border-gray-700">
+        <nav class="app-header fixed top-0 z-50 w-full border-b bg-black border-gray-700">
             <div class="px-3 py-3 lg:px-5 lg:pl-3">
                 <div class="flex items-center justify-between">                    
                     <div class="flex items-center justify-start rtl:justify-end">
@@ -15,11 +15,11 @@
                             <span class="sr-only">Open sidebar</span>
                             <span class="material-symbols-outlined">menu_open</span>
                         </button> 
-                        <a href="/" class="flex ms-2 md:me-24">
-                            <img src="https://media04.tetraserver.com/app/fuzik_logo03_02.png" class="h-8 me-3" alt="Fuzik Logo" />
+                        <NuxtLink to="/webapp" class="flex ms-2 md:me-24">
+                            <img src="/logo.webp" class="h-8 me-3" alt="Fuzik Logo" />
                             <span
                                 class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white"></span>
-                        </a>
+                        </NuxtLink>
                     </div>
                     <div class="flex items-center">
                         <div v-if="!is_auth">
@@ -45,12 +45,12 @@
                             </NuxtLink>
                         </div>
                         <div v-else class="flex items-center ms-3">
-                            <UDropdownMenu :items="items" :content="{ side: 'bottom', align: 'start' }">
-                                <UButton color="neutral" trailing-icon="i-heroicons-chevron-down-20-solid" class="bg-yellow-300 text-black hover:text-yellow-500 border rounded-xl" >
-                                    <UAvatar :src="profile_image" class="bg-white border border-gray-800" size="2xs" />
-                                    {{ display_name  }}
-                                </UButton>
-                            </UDropdownMenu>
+                            <ProfileDropdown
+                                :display-name="display_name"
+                                :full-name="`${first_name} ${last_name}`.trim()"
+                                :email="email"
+                                :profile-image="profile_image"
+                            />
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
         </nav>
 
         <aside id="logo-sidebar"
-            class="fixed top-0 left-0 z-40 -48 h-screen pt-20 transition-transform -translate-x-full  border-r  sm:translate-x-0 bg-black border-gray-700"
+            class="app-sidebar fixed top-0 left-0 z-40 h-screen pt-20 transition-transform -translate-x-full border-r sm:translate-x-0 bg-black border-gray-700"
             aria-label="Sidebar">
             <div class="h-full px-3 pb-4 overflow-y-auto bg-black">
                 <ul class="space-y-2 font-medium">
@@ -122,7 +122,7 @@
             </div>
         </aside>
 
-        <div class="p-4 sm:ml-48 bg-black">
+        <main class="app-main bg-black">
             
             <div class="p-4  mt-14">
                 <slot class="w-full" />
@@ -130,7 +130,7 @@
                 -->
 
             </div>
-        </div>
+        </main>
     </div>
 </template>
 
@@ -242,60 +242,25 @@ if (session == null) {
     //premium_coin.value = await get_token(premium_coin_realm_id, email);
 }
 
-const items = [
-  [{
-    label: first_name + ' ' + last_name ,
-    disabled: true
-
-  },
-  {
-    label: email,
-    disabled: true
-  },
-  {
-    label: 'Dashboard',
-    icon: 'i-heroicons-home-modern-20-solid',
-    kbds: ['D'],
-    to: '/webapp'
-  }], 
-  [{
-    label: 'Profile',
-    icon: 'i-heroicons-clipboard-document-list-solid',
-    kbds: ['P'],
-    to: '/webapp/profile'
-
-  }, 
-  {
-    label: 'Change password',
-    icon: 'i-heroicons-key-20-solid',
-    to: '/webapp/check_recent_login'
-  }], 
-  [{
-    label: 'Inventory',
-    icon: 'i-heroicons-musical-note-solid',
-    kbds: ['I'],
-    to: '/webapp/inventory'
-  }],
-  [{
-    label: 'Logout',
-    icon: 'i-heroicons-arrow-right-start-on-rectangle-20-solid',
-    to: '/webapp/logout'
-  }]
-]
-
-useHead({
-    script: [{
-                src: 'https://media04.tetraserver.com/app/flowbite.min.js',
-            }],
-    link: [
-        {
-            rel: 'stylesheet',
-            href: 'https://media04.tetraserver.com/app/flowbite.min.css',
-
-        }
-    ]
-});
-
 </script>
 
-<style scoped></style>
+<style scoped>
+.app-header {
+    min-height: 72px;
+}
+
+.app-sidebar {
+    width: 184px;
+}
+
+.app-main {
+    min-height: 100vh;
+    padding: 16px;
+}
+
+@media (min-width: 640px) {
+    .app-main {
+        margin-left: 184px;
+    }
+}
+</style>

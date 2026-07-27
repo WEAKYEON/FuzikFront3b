@@ -49,16 +49,14 @@
 
 <script setup lang="ts">
 
-const route = useRoute();
-const { code }  = useRoute().params
-
 const cookie_collab_code = useCookie("collab_code");
-var collab_code = cookie_collab_code;
+const collab_code = computed(() => cookie_collab_code.value ?? '');
  
 var video_message = "https://media04.tetraserver.com/app/rotate_your_phone.gif";
 
 definePageMeta({
-    layout: "empty"
+    layout: "empty",
+    alias: ['/collaboration03']
 });
 
 const display = ref('')
@@ -87,7 +85,7 @@ if (email == '') {
 
 if (!allowed) {
   display.value = 'Direct access not allowed'
-  navigateTo('/login')
+  navigateTo('/webapp/login')
 }
 
 </script>
@@ -122,4 +120,3 @@ if (!allowed) {
 }
 
 </style>
-

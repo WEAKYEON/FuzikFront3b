@@ -138,8 +138,6 @@
 </template>
 
 <script setup lang="ts">
-import P from '~/pages/webapp/watch/[p].vue';
-
 const props = defineProps({
   
   owner_display_name: String,

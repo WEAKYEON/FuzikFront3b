@@ -29,13 +29,11 @@
         <Collab_2_04_01>
         </Collab_2_04_01>  
       </div>
-      <div v-if="collab_code?.localeCompare('2_03')==0">
-        <Collab_2_03_01>
-        </Collab_2_03_01>  
+      <div v-if="collab_code === '2_03'">
+        <CollaborationVideoPicker :code="collab_code" :initial-video="collab_video01" />
       </div>
-      <div v-if="collab_code?.localeCompare('2_02')==0">
-        <Collab_2_02_01>
-        </Collab_2_02_01>  
+      <div v-if="collab_code === '2_02'">
+        <CollaborationVideoPicker :code="collab_code" :initial-video="collab_video01" />
       </div>
       <div v-if="collab_code?.localeCompare('2_01')==0">
         <Collab_2_01_01>
@@ -48,8 +46,6 @@
 <script setup lang="ts">
 
 const route = useRoute();
-const { code, video01 }  = useRoute().params
-
 var collab_code = route.query.code?.toString();
 
 var collab_video01 = route.query.video01?.toString();
@@ -61,13 +57,12 @@ if (collab_video01 == null) {
   collab_video01 = '';
 }
 
-console.log("collab_video01 " + collab_video01);
- 
 var video_message = "https://media04.tetraserver.com/app/rotate_your_phone.gif";
 //var main_page_show = true;
 
 definePageMeta({
-    layout: "top"
+    layout: "top",
+    alias: ['/collaboration02']
 });
 
 const display = ref('')
@@ -95,7 +90,7 @@ if (email == '') {
 
 if (!allowed) {
   display.value = 'Direct access not allowed'
-  navigateTo('/login')
+  navigateTo('/webapp/login')
 }
 
 

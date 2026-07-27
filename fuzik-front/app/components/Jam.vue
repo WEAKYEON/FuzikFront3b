@@ -4,10 +4,10 @@
     -->  
     <div class="py-0">
       <NuxtLink :to="video_link">
-        <div v-if="not_empty" class="aspect-w-16 aspect-h-9 bg-black rounded-lg border border-yellow-400">
-          <img :src="jam_preview" class="w-full object-cover object-center rounded-lg">
+        <div v-if="not_empty" class="jam-thumbnail bg-black rounded-lg border border-yellow-400">
+          <img :src="jam_preview" class="w-full object-cover object-center rounded-lg" loading="lazy">
         </div>
-        <div v-else class="aspect-w-16 aspect-h-9 bg-black rounded-lg border border-yellow-400">        
+        <div v-else class="jam-thumbnail bg-black rounded-lg border border-yellow-400">
           <video class="w-full object-cover object-center rounded-lg"
           :src="fuzik_animation" 
           autoplay muted 
@@ -45,11 +45,11 @@
   
   var profile_image = 'https://media04.tetraserver.com/app/music_staff.png';
   
-  if (jam.profile_pic.length != 0 ) {
+  if (jam.profile_pic?.length) {
     profile_image = 'https://media04.tetraserver.com/' + jam.profile_pic
   }
   
-  const video_link = ref('/jam_watch/' + jam.url)
+  const video_link = ref('/webapp/jam_watch/' + jam.url)
   const fuzik_animation = 'https://media04.tetraserver.com/uploads/jam/FuzikAppAnimation.mp4';
   var not_empty = true;
 
@@ -63,7 +63,7 @@
   
   const video_view_count = ref("-");
 
-  let intervalId;
+  let intervalId: ReturnType<typeof setInterval> | undefined;
   onMounted(async () => {
     //premium_coin.value = await get_token(premium_coin_realm_id, props.email);
     
@@ -76,7 +76,9 @@
   });
 
   onUnmounted(() => {
-    clearInterval(intervalId);
+    if (intervalId) {
+      clearInterval(intervalId);
+    }
   });
 
   
@@ -213,7 +215,7 @@ async function get_view(url) {
   }
 
   function countSpaces(str) {
-    return str.match(/\s/g).length;
+    return str.match(/\s/g)?.length ?? 0;
   }
   
   
@@ -221,6 +223,19 @@ async function get_view(url) {
   <style scoped>
   
   /* Tooltip container */
+.jam-thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.jam-thumbnail img,
+.jam-thumbnail video {
+  width: 100%;
+  height: 100%;
+}
+
   .tooltip {
     position: relative;
     display: inline-block;
