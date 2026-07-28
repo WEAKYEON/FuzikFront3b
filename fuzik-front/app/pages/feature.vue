@@ -13,7 +13,6 @@
     </section>
 
     <!-- Features Section -->
-    <!-- Features Section -->
     <section class="section-padding bg-[#1a1a1a]">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-12 text-white">Key <span class="text-[#fff600]">Features</span></h2>
@@ -21,7 +20,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Feature 1: Precision Video Sync -->
                 <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="/images/collab03.png" alt="Precision Video Sync" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab03.png" alt="Precision Video Sync" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Precision Video Sync</h3>
                     <p class="text-gray-300 text-sm flex-grow">
                         Our advanced technology ensures your audio and video are perfectly synchronized, 
@@ -31,7 +30,7 @@
                 
                 <!-- Feature 2: Multi-User Collaboration -->
                 <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="/images/collab02.png" alt="Multi-User Collaboration" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab02.png" alt="Multi-User Collaboration" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Multi-User Collaboration</h3>
                     <p class="text-gray-300 text-sm flex-grow">
                         Invite multiple bandmates or new collaborators to your projects. 
@@ -41,38 +40,11 @@
                 
                 <!-- Feature 3: Intuitive Interface -->
                 <div class="visual-explainer-card text-center bg-[#2a2a2a] p-6 rounded-xl card-hover flex flex-col">
-                    <img src="/images/collab01.png" alt="Intuitive Interface" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab01.png" alt="Intuitive Interface" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Intuitive Interface</h3>
                     <p class="text-gray-300 text-sm flex-grow">
                         Designed for musicians, not tech experts. Our user-friendly interface 
                         makes creating and collaborating simple and enjoyable.
-                    </p>
-                </div>
-                <!-- Feature 4: Cloud Storage -->
-                <div class="visual-explainer-card text-center">
-                    <div class="flex justify-center"><img src="/images/icons/cloud_upload_256.png" class="w-36 p-4"  /></div>
-                    <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Secure Cloud Storage</h3>
-                    <p class="text-gray-300">
-                        Keep all your projects safe and accessible from anywhere with secure cloud storage. 
-                        Never lose a brilliant idea again.
-                    </p>
-                </div>
-                <!-- Feature 5: Flexible Export Options -->
-                <div class="visual-explainer-card text-center">
-                    <div class="flex justify-center"><img src="/images/icons/file_export_256.png" class="w-36 p-4"  /></div>
-                    <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Flexible Export Options</h3>
-                    <p class="text-gray-300">
-                        Export your finished jams in various high-quality formats, ready to share on social media, 
-                        YouTube, or your portfolio.
-                    </p>
-                </div>
-                <!-- Feature 6: Global Community -->
-                <div class="visual-explainer-card text-center">
-                    <div class="flex justify-center"><img src="/images/icons/globe_asia_256.png" class="w-36 p-4"  /></div>
-                    <h3 class="text-2xl font-bold text-[#f8f9fa] mb-3">Global Community</h3>
-                    <p class="text-gray-300">
-                        Connect with a diverse network of musicians from around the world. 
-                        Find new bandmates, producers, or simply jam partners.
                     </p>
                 </div>
             </div>
@@ -88,7 +60,7 @@
                 <!-- Step 1 -->
                 <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
                     <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                        <img src="/images/collab05.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                        <img src="/images/collab06.png" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     </div>
                     <div class="w-full md:w-3/5 text-left">
                         <div class="flex items-center mb-3">
@@ -105,7 +77,7 @@
                 <!-- Step 2 -->
                 <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
                     <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                        <img src="/images/collab02.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                        <img src="/images/collab02.png" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     </div>
                     <div class="w-full md:w-3/5 text-left">
                         <div class="flex items-center mb-3">
@@ -122,7 +94,7 @@
                 <!-- Step 3 -->
                 <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
                     <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                        <img src="/images/collab03.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                        <img src="/images/collab03.png" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     </div>
                     <div class="w-full md:w-3/5 text-left">
                         <div class="flex items-center mb-3">
@@ -139,7 +111,12 @@
                 <!-- Step 4 -->
                 <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
                     <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
-                        <img src="/images/collab04.png" class="w-full h-48 object-cover rounded-lg border border-gray-700 shadow-md" />
+                        <!-- กล่อง Icon สำหรับ Export & Share -->
+                        <div class="w-full h-48 bg-[#2a2a2a] rounded-lg border border-gray-700 shadow-md flex items-center justify-center group hover:border-[#fff600] transition duration-300">
+                            <svg class="w-20 h-20 text-[#fff600] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                            </svg>
+                        </div>
                     </div>
                     <div class="w-full md:w-3/5 text-left">
                         <div class="flex items-center mb-3">

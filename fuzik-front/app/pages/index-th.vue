@@ -41,21 +41,21 @@
             <div class="grid md:grid-cols-3 gap-8 items-stretch">
                 <!-- Card 1: เชื่อมต่อทั่วโลก -->
                 <div class="visual-explainer-card flex flex-col items-center bg-[#2a2a2a] p-6 rounded-xl card-hover h-full">
-                    <img src="/images/collab02.png" alt="เชื่อมต่อทั่วโลก" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab02.png" alt="เชื่อมต่อทั่วโลก" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">เชื่อมต่อทั่วโลก</h3>
                     <p class="text-gray-400 flex-grow">ค้นหาเพื่อนร่วมแจมทั่วโลก เชื่อมต่อกับคอมมูนิตี้ที่หลากหลาย ค้นพบพรสวรรค์ใหม่ๆ และขยายเครือข่ายดนตรีของคุณได้อย่างง่ายดาย</p>
                 </div>
                 
                 <!-- Card 2: สร้างสรรค์ได้อย่างราบรื่น -->
                 <div class="visual-explainer-card flex flex-col items-center bg-[#2a2a2a] p-6 rounded-xl card-hover h-full">
-                    <img src="/images/collab03.png" alt="สร้างสรรค์ได้อย่างราบรื่น" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab03.png" alt="สร้างสรรค์ได้อย่างราบรื่น" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">สร้างสรรค์ได้อย่างราบรื่น</h3>
                     <p class="text-gray-400 flex-grow">ซิงโครไนซ์การแสดงวิดีโอได้อย่างแม่นยำ เทคโนโลยีของเราทำให้การทำงานร่วมกันแบบหลายแทร็กเป็นเรื่องง่าย เหมือนมีเวทมนตร์ โดยไม่ต้องแก้ไขที่ซับซ้อน</p>
                 </div>
                 
                 <!-- Card 3: แสดงออกอย่างอิสระ -->
                 <div class="visual-explainer-card flex flex-col items-center bg-[#2a2a2a] p-6 rounded-xl card-hover h-full">
-                    <img src="/images/collab05.png" alt="แสดงออกอย่างอิสระ" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab05.png" alt="แสดงออกอย่างอิสระ" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     <h3 class="text-2xl font-semibold text-[#fff600] mb-2">แสดงออกอย่างอิสระ</h3>
                     <p class="text-gray-400 flex-grow">แจมเพลงที่แต่งเองหรือเพลงสาธารณะได้อย่างไร้ขีดจำกัด ปลดปล่อยความคิดของคุณและทำงานร่วมกันในโปรเจกต์ที่ไม่ซ้ำใคร และเป็นมิตรกับลิขสิทธิ์</p>
                 </div>

@@ -41,21 +41,21 @@
             <div class="grid md:grid-cols-3 gap-8 items-stretch">
                 <!-- Card 1: Connect Globally -->
                 <div class="visual-explainer-card flex flex-col items-center bg-[#2a2a2a] p-6 rounded-xl card-hover h-full">
-                    <img src="/images/collab02.png" alt="Connect Globally" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab02.png" alt="Connect Globally" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">Connect Globally</h3>
                     <p class="text-gray-400 flex-grow">Find your jam partners worldwide. Connect with a diverse community, discover new talents, and expand your musical network effortlessly.</p>
                 </div>
                 
                 <!-- Card 2: Create Seamlessly -->
                 <div class="visual-explainer-card flex flex-col items-center bg-[#2a2a2a] p-6 rounded-xl card-hover h-full">
-                    <img src="/images/collab03.png" alt="Create Seamlessly" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab03.png" alt="Create Seamlessly" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">Create Seamlessly</h3>
                     <p class="text-gray-400 flex-grow">Synchronize video performances with precision. Our tech makes multi-track collaboration feel like magic, eliminating complex editing.</p>
                 </div>
                 
                 <!-- Card 3: Express Freely -->
                 <div class="visual-explainer-card flex flex-col items-center bg-[#2a2a2a] p-6 rounded-xl card-hover h-full">
-                    <img src="/images/collab05.png" alt="Express Freely" class="w-full h-48 object-cover rounded-lg mb-6 border border-gray-700 shadow-md" />
+                    <img src="/images/collab05.png" alt="Express Freely" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     <h3 class="text-2xl font-bold text-[#fff600] mb-2">Express Freely</h3>
                     <p class="text-gray-400 flex-grow">Jam on original riffs or public domain music without limitations. Unleash your ideas and collaborate on unique, copyright-friendly projects.</p>
                 </div>
