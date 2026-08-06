@@ -135,111 +135,25 @@
 </template>
 
 <script setup lang="ts">
-// Check Cookie
-
-
-//import nuxtStorage from 'nuxt-storage'
-
 const is_auth = ref(false);
-//const profile_image = ref('images\music_staff.png');
-
 const client = useSupabaseClient();
-
-//const { data, error } = await client.auth.refreshSession();
-const { data, error } = await client.auth.getSession();
+const { musician, profileImage: profile_image, refresh } = useCurrentUser();
+const { data } = await client.auth.getSession();
 const { session } = data;
+const email = computed(() => session?.user.email || '');
+const display_name = computed(() => musician.value?.display_name || '');
+const first_name = computed(() => musician.value?.first_name || '');
+const last_name = computed(() => musician.value?.last_name || '');
 
-var data_musician: any;
-
-var display_name = '';
-var first_name = '';
-var last_name = '';
-
-var profile_image = 'https://media04.tetraserver.com/app/music_staff.png';
-var your_video = 'inventory'
-
-//const user = await client.auth.getUser();
-//console.log('session');
-//console.log(session);
-
-var email = '';
-//var is_link_from_email = false;
-is_auth.value = false;
-
-
-if (session == null) {
-    console.log('No user session');
-} else {
-    //console.log('is_auth3');
-//console.log(is_auth);
-
-    const user = await client.auth.getUser();
-    // User login
-    if (user.data.user?.email != undefined) {
-        email = user.data.user?.email;    
-        //console.log(email)
-    }
-
-    if (email == '') {
-        is_auth.value = false;
-    //} else if (is_link_from_email) {
-        // Link from email
-    //    is_auth.value = true;
-
-    } else {        
-        const url = '/api/musician2_detail?email=' + email;
-        //console.log('url')
-        //console.log(url)
-
-        const { data: musician, pending, error, refresh } = await useFetch(url, {
-            server: true,
-        });
-        data_musician = musician
-
-        //console.log('email')
-        //console.log(email)
-        //console.log('data_musician')
-        //console.log(data_musician)
-        //console.log('data_musician.value')
-        //console.log(data_musician.value)
-
-        if (data_musician.value == null) {
-            // Link from email
-            //console.log('Hello');
-            //nuxtStorage.localStorage.setData('current_user_email', email);
-            navigateTo('/webapp/login_success')
-
-        } else {
-
-            //console.log(data_musician.value[0]['profile_pic']);
-            var picture_file = data_musician.value[0]['profile_pic'];
-
-            if ((picture_file.localeCompare('')!=0)&&(picture_file.localeCompare('stream/image_stream.php?code=U537BBBB')!=0)) {
-                profile_image = 'https://media04.tetraserver.com/' + picture_file;
-            }
-
-            display_name = data_musician.value[0]['display_name'];
-            first_name = data_musician.value[0]['first_name'];
-            last_name = data_musician.value[0]['last_name'];
+if (email.value) {
+    try {
+        if (!musician.value || musician.value.email !== email.value) {
+            await refresh(email.value);
         }
-        //nuxtStorage.localStorage.setData('current_user_email', email);
-        
         is_auth.value = true;
-
-        //try {
-        //    var raw_value = JSON.parse(JSON.stringify(data_musician))._rawValue[0];
-
-        //    if (raw_value.profile_pic != '') {
-        //        profile_image = 'https://media04.tetraserver.com/' + raw_value.profile_pic;
-        //    }
-        //} catch(err) {
-        //    if (err instanceof Error) console.log(err.message)
-
-        //}
+    } catch {
+        await navigateTo('/webapp/login_success');
     }
-    //console.log('is_auth2');
-    //fuzik_token.value = await get_token(fuzik_token_realm_id, email);
-    //premium_coin.value = await get_token(premium_coin_realm_id, email);
 }
 
 </script>
