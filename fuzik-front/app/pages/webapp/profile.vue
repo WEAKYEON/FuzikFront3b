@@ -14,31 +14,22 @@
       <button type="button" aria-label="Dismiss notification" @click="toast = null">&times;</button>
     </div>
 
-    <h1 class="text-3xl font-bold pb-10 px-2 text-white">Profile Setting</h1>
+    <h1 class="profile-settings__title">Profile Setting</h1>
 
     <form novalidate @submit.prevent="saveChanges">
-      <div class="flex flex-col lg:flex-row justify-start items-start gap-6">
-        <div class="w-1/2 sm:w-1/5 mx-auto flex flex-col">
-          <div v-if="previewUrl" class="profile-picture-preview">
-            <img :src="previewUrl" alt="New profile picture preview">
-            <span class="profile-picture-preview__label">Preview</span>
-          </div>
-          <div v-else-if="hasCurrentPicture" class="profile-picture-preview">
-            <img :src="currentPictureUrl" alt="Current profile picture">
-          </div>
-
+      <div class="profile-settings__layout">
+        <section class="profile-picture-section" aria-label="Profile picture">
           <label
-            class="drop-zone"
+            class="profile-picture"
             :class="{ 'drop-zone--active': isDragging }"
             @dragenter.prevent="isDragging = true"
             @dragover.prevent="isDragging = true"
             @dragleave.prevent="isDragging = false"
             @drop.prevent="selectDroppedFile"
           >
-            <span>Drop your photo</span>
-            <span class="material-symbols-outlined text-5xl" aria-hidden="true">place_item</span>
-            <span>or</span>
-            <span class="select-file-button">Select File</span>
+            <img :src="previewUrl || currentPictureUrl" alt="Profile picture">
+            <span class="profile-picture__edit material-symbols-outlined" aria-hidden="true">edit</span>
+            <span class="sr-only">Select a new profile picture</span>
             <input
               ref="fileInput"
               type="file"
@@ -48,68 +39,34 @@
             >
           </label>
 
-          <button
-            v-if="selectedImage"
-            type="button"
-            class="secondary-button mt-3"
-            @click="discardSelectedImage"
-          >
-            Cancel new picture
-          </button>
-          <button
-            v-else-if="hasCurrentPicture && !removePicture"
-            type="button"
-            class="secondary-button mt-3"
-            @click="removePicture = true"
-          >
-            Remove picture
-          </button>
-          <button
-            v-else-if="removePicture"
-            type="button"
-            class="secondary-button mt-3"
-            @click="removePicture = false"
-          >
-            Keep current picture
-          </button>
+          <p v-if="selectedImage" class="picture-status">New photo selected</p>
+          <p class="profile-email">{{ form.email }}</p>
 
-          <p v-if="imageError" class="field-error text-center mt-2">{{ imageError }}</p>
-
-          <div class="flex flex-row justify-center items-center py-4">
-            <div class="relative flex flex-row justify-start items-center text-sm bg-black rounded-full pl-6 pr-4">
-              <div class="absolute -left-3 w-8 h-8">
-                <img src="https://media04.tetraserver.com/app/rank_performer.png" alt="">
-              </div>
-              <div class="flex flex-wrap justify-center items-center space-x-2">
-                <span class="text-white">Rank:</span>
-                <span class="text-yellow-200">Musician</span>
-              </div>
-            </div>
+          <div class="picture-actions">
+            <button v-if="selectedImage" type="button" @click="discardSelectedImage">Cancel new photo</button>
+            <button v-else-if="hasCurrentPicture && !removePicture" type="button" @click="removePicture = true">Remove photo</button>
+            <button v-else-if="removePicture" type="button" @click="removePicture = false">Keep current photo</button>
           </div>
-        </div>
 
-        <div class="w-full lg:w-4/6 mx-auto flex flex-col px-2">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-4">
+          <p v-if="imageError" class="field-error">{{ imageError }}</p>
+
+          <div class="rank-badge">
+            <img src="https://media04.tetraserver.com/app/rank_performer.png" alt="">
+            <span>Rank: <strong>Musician</strong></span>
+          </div>
+        </section>
+
+        <section class="profile-fields">
+          <div class="profile-fields__grid">
             <ProfileField v-model="form.first_name" label="First Name" placeholder="Your first name" required :error="errors.first_name" />
             <ProfileField v-model="form.last_name" label="Last Name" placeholder="Your last name" required :error="errors.last_name" />
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-4">
-            <ProfileField v-model="form.email" label="Email" placeholder="Your email" readonly />
-            <ProfileField v-model="form.tel" label="Phone Number" placeholder="Phone number" :error="errors.tel" />
-          </div>
-
-          <div class="pb-4">
             <ProfileField v-model="form.display_name" label="Display Name" placeholder="Your display name" required :error="errors.display_name" />
-          </div>
-          <div class="pb-4">
+            <ProfileField v-model="form.tel" label="Phone Number" placeholder="Phone number" :error="errors.tel" />
             <ProfileField v-model="form.music_genre" label="Music Genre" placeholder="Your music genre" required :error="errors.music_genre" />
-          </div>
-          <div class="pb-4">
-            <ProfileField v-model="form.music_inst" label="Musical Instruments" placeholder="Your musical instruments" required :error="errors.music_inst" />
+            <ProfileField v-model="form.music_inst" label="Instrument" placeholder="Your musical instruments" required :error="errors.music_inst" />
           </div>
 
-          <div class="flex justify-end pt-4">
+          <div class="profile-fields__footer">
             <button
               type="submit"
               class="save-button"
@@ -119,7 +76,7 @@
               {{ isSaving ? 'Saving…' : 'Save Changes' }}
             </button>
           </div>
-        </div>
+        </section>
       </div>
     </form>
   </div>
@@ -324,22 +281,48 @@ if (!authData.session) {
 </script>
 
 <style scoped>
-.drop-zone { display:flex; flex-direction:column; align-items:center; gap:.35rem; width:100%; padding:1.25rem .75rem; color:#fff; border:4px dashed #facc15; border-radius:1.5rem; cursor:pointer; transition:.2s ease; }
-.drop-zone:hover,.drop-zone--active { background:rgb(250 204 21 / 12%); border-color:#fde047; }
-.select-file-button,.secondary-button,.save-button { color:#000; background:#fde047; border:2px solid #e5e7eb; border-radius:.5rem; font-weight:700; }
-.select-file-button { padding:.5rem 1.5rem; }
-.secondary-button { align-self:center; padding:.45rem 1rem; font-size:.875rem; }
-.profile-picture-preview { position:relative; width:100%; aspect-ratio:1; margin-bottom:1rem; overflow:hidden; background:#111827; border:2px solid #facc15; border-radius:1.5rem; }
-.profile-picture-preview img { width:100%; height:100%; object-fit:cover; }
-.profile-picture-preview__label { position:absolute; right:.5rem; bottom:.5rem; padding:.2rem .55rem; color:#000; background:#fde047; border-radius:999px; font-size:.75rem; font-weight:700; }
-.save-button { display:flex; min-width:150px; min-height:44px; align-items:center; justify-content:center; gap:.5rem; padding:.65rem 1.5rem; transition:.2s ease; }
-.save-button:not(:disabled):hover { background:#facc15; transform:translateY(-1px); }
+.profile-settings { width:100%; max-width:1220px; margin:0 auto; padding:2rem clamp(.25rem,2vw,1.5rem) 4rem; }
+.profile-settings__title { margin:0 0 2.25rem; color:#fde047; font-size:clamp(2rem,4vw,2.75rem); font-weight:800; line-height:1.1; }
+.profile-settings__layout { display:grid; grid-template-columns:minmax(220px,300px) minmax(0,1fr); align-items:start; gap:clamp(3rem,7vw,7rem); }
+.profile-picture-section { display:flex; min-width:0; flex-direction:column; align-items:center; }
+.profile-picture { position:relative; display:block; width:min(100%,260px); aspect-ratio:1; cursor:pointer; }
+.profile-picture > img { width:100%; height:100%; object-fit:cover; background:#fff; border:3px solid #fde047; border-radius:50%; transition:filter .2s ease, box-shadow .2s ease; }
+.profile-picture:hover > img,.drop-zone--active > img { filter:brightness(.9); box-shadow:0 0 0 6px rgb(253 224 71 / 18%); }
+.profile-picture__edit { position:absolute; right:3%; bottom:3%; display:grid; width:58px; height:58px; place-items:center; color:#000; background:#fde047; border:4px solid #000; border-radius:50%; font-size:1.9rem; font-variation-settings:'FILL' 1; }
+.picture-status { margin-top:1rem; color:#fde047; font-size:.8rem; font-weight:700; }
+.profile-email { width:100%; margin-top:1.15rem; overflow-wrap:anywhere; color:#fff; text-align:center; font-size:.95rem; font-weight:600; }
+.picture-actions { display:flex; justify-content:center; margin-top:.6rem; }
+.picture-actions button { color:#fde047; text-decoration:underline; text-underline-offset:3px; font-size:.8rem; }
+.picture-actions button:hover { color:#facc15; }
+.rank-badge { display:flex; align-items:center; justify-content:center; gap:.5rem; margin-top:1.3rem; color:#fff; font-size:1rem; font-weight:700; }
+.rank-badge img { width:34px; height:34px; object-fit:contain; }
+.rank-badge strong { color:#fde047; }
+.profile-fields { min-width:0; padding-top:3.2rem; }
+.profile-fields__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:clamp(3rem,8vw,7rem); row-gap:4.25rem; }
+.profile-fields__footer { display:flex; justify-content:center; padding-top:5rem; }
+.save-button { display:flex; min-width:170px; min-height:50px; align-items:center; justify-content:center; gap:.5rem; padding:.75rem 1.5rem; color:#000; background:#fde047; border-radius:.7rem; box-shadow:0 0 18px rgb(250 204 21 / 45%); font-size:1.05rem; font-weight:800; transition:.2s ease; }
+.save-button:not(:disabled):hover { background:#facc15; box-shadow:0 0 24px rgb(250 204 21 / 65%); transform:translateY(-1px); }
 .save-button:disabled { cursor:not-allowed; opacity:.45; }
 .save-button__spinner { width:1rem; height:1rem; border:2px solid rgb(0 0 0 / 25%); border-top-color:#000; border-radius:50%; animation:spin .7s linear infinite; }
-.field-error { color:#fca5a5; font-size:.8rem; }
+.field-error { margin-top:.5rem; color:#fca5a5; text-align:center; font-size:.8rem; }
 .profile-toast { position:fixed; top:5.5rem; right:1rem; z-index:100; display:flex; max-width:min(420px,calc(100vw - 2rem)); align-items:center; gap:.65rem; padding:.85rem 1rem; color:#fff; border:1px solid; border-radius:.75rem; box-shadow:0 12px 35px rgb(0 0 0 / 45%); }
-.profile-toast--success { color:#000; background:#fde047; border-color:#facc15; }
+.profile-toast--success { color:#fff; background:#16a34a; border-color:#4ade80; }
 .profile-toast--error { background:#991b1b; border-color:#f87171; }
 .profile-toast button { margin-left:auto; padding:0 .25rem; font-size:1.5rem; line-height:1; }
 @keyframes spin { to { transform:rotate(360deg); } }
+
+@media (max-width:900px) {
+  .profile-settings__layout { grid-template-columns:1fr; gap:1rem; }
+  .profile-picture { width:min(64vw,240px); }
+  .profile-fields { width:100%; padding-top:2rem; }
+}
+
+@media (max-width:640px) {
+  .profile-settings { padding-top:1.25rem; }
+  .profile-settings__title { margin-bottom:1.75rem; }
+  .profile-picture__edit { width:50px; height:50px; font-size:1.6rem; }
+  .profile-fields__grid { grid-template-columns:1fr; row-gap:2.25rem; }
+  .profile-fields__footer { padding-top:3rem; }
+  .save-button { width:100%; }
+}
 </style>
