@@ -29,10 +29,26 @@
                             <MenuItems class="bg-gray-600 absolute right-0 z-10 mt-2 w-28 origin-top-right rounded-md bg-black shadow-lg outline-1 outline-black/5">
                                 <div class="py-1">
                                 <MenuItem v-slot="{ active }">
-                                    <a href="#" :class="[active ? 'bg-[#111111] text-[#fff600] outline-hidden' : 'text-[#fff600] ', 'block px-4 py-2 text-sm']">English</a>
+                                    <a href="#" 
+                                    @click.prevent="changeLanguage('en')" 
+                                    :class="[
+                                        active ? 'bg-[#111111]' : '', 
+                                        !$route.path.endsWith('-th') ? 'text-[#fff600]' : 'text-white hover:text-[#fff600]', 
+                                        'block px-4 py-2 text-sm outline-hidden transition-colors'
+                                    ]">
+                                    English
+                                    </a>
                                 </MenuItem>
                                 <MenuItem v-slot="{ active }">
-                                    <a href="#" :class="[active ? 'bg-[#111111] text-white outline-hidden' : 'text-white ', 'block px-4 py-2 text-sm']">ภาษาไทย</a>
+                                    <a href="#" 
+                                    @click.prevent="changeLanguage('th')" 
+                                    :class="[
+                                        active ? 'bg-[#111111]' : '', 
+                                        $route.path.endsWith('-th') ? 'text-[#fff600]' : 'text-white hover:text-[#fff600]', 
+                                        'block px-4 py-2 text-sm outline-hidden transition-colors'
+                                    ]">
+                                    ภาษาไทย
+                                    </a>
                                 </MenuItem>
                                 </div>
                             </MenuItems>
@@ -41,7 +57,7 @@
                     
 
                         <a href="/webapp" target="_blank" class="bg-[#fff600] text-black visited:text-[#111111] font-semi-bold rounded-full px-6 py-2">
-                            Launch<span class="text-[#fff600]">_</span>App
+                            <span>เริ่มใช้งาน</span>
                         </a>
                         
                     </div>
@@ -61,7 +77,43 @@
 
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/20/solid'
+import { useRoute, useRouter } from 'vue-router'
 
+const route = useRoute()
+const router = useRouter()
+
+const changeLanguage = (lang: 'en' | 'th') => {
+  let currentPath = route.path
+
+  if (currentPath.startsWith('/blog/') || currentPath.startsWith('/blog-th/')) {
+    if (lang === 'th') {
+      router.push('/blog-th')
+    } else {
+      router.push('/blog')
+    }
+    return
+  }
+
+  if (currentPath === '/' && lang === 'th') {
+    router.push('/index-th')
+    return
+  }
+  if (currentPath === '/index-th' && lang === 'en') {
+    router.push('/')
+    return
+  }
+
+  if (lang === 'th') {
+    if (!currentPath.endsWith('-th')) {
+      router.push(`${currentPath}-th`)
+    }
+  } else if (lang === 'en') {
+    if (currentPath.endsWith('-th')) {
+      const newPath = currentPath.replace(/-th$/, '')
+      router.push(newPath)
+    }
+  }
+}
 
     const items = [
     [{

@@ -14,7 +14,7 @@
                 </p>
                 
                 <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                    <a href="https://www.fuzikapp.com" class="btn-primary pulse-yellow">
+                    <a href="/webapp" class="btn-primary pulse-yellow">
                         <div class="flex items-center gap-x-2">
                         <span><img src="/images/icons/play_circle_black.png" class="w-6 h-6" ></span><span>เริ่มการแจมระดับโลกของคุณ</span>
                         </div>
