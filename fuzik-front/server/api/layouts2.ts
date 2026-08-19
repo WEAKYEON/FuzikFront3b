@@ -4,7 +4,7 @@ export default defineEventHandler((event) => {
     const { p_layout } = getQuery(event);    
 
     //var path = 'https://fuzik03.tetraserver.com/layouts?q=a';
-    var path = 'https://fuzik03.tetraserver.com/layouts2?q=a';
+    var path = 'https://engine01.fuzikapp.com/layouts2?q=a';
     
     if (l_layout==undefined) {
 
