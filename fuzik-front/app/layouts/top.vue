@@ -15,11 +15,7 @@
                             <span class="sr-only">Open sidebar</span>
                             <span class="material-symbols-outlined">menu_open</span>                       
                         </button> -->
-                        <NuxtLink to="/webapp" class="flex ms-2 md:me-24">
-                            <img src="/logo.webp" class="h-8 me-3" alt="Fuzik Logo" />
-                            <span
-                                class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white"></span>
-                        </NuxtLink>
+                        <BackToWebsiteButton class="ms-2 md:me-24" />
                     </div>
                     <div class="flex items-center">
                         <div v-if="!is_auth" class="px-2 flex">
