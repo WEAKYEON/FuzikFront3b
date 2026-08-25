@@ -43,14 +43,14 @@
   
   //console.log( play.musician_profile_pic.length )
   
-  var profile_image = 'https://media04.tetraserver.com/app/music_staff.png';
+  var profile_image = 'https://media05.fuzikapp.com/app/music_staff.png';
   
   if (jam.profile_pic?.length) {
-    profile_image = 'https://media04.tetraserver.com/' + jam.profile_pic
+    profile_image = 'https://media05.fuzikapp.com/' + jam.profile_pic
   }
   
   const video_link = ref('/webapp/jam_watch/' + jam.url)
-  const fuzik_animation = 'https://media04.tetraserver.com/uploads/jam/FuzikAppAnimation.mp4';
+  const fuzik_animation = 'https://media05.fuzikapp.com/uploads/jam/FuzikAppAnimation.mp4';
   var not_empty = true;
 
   if (jam.url.localeCompare('')==0) {
@@ -58,7 +58,7 @@
     not_empty = false;
   }
 
-  var jam_preview = 'https://media04.tetraserver.com/' + jam.preview;
+  var jam_preview = 'https://media05.fuzikapp.com/' + jam.preview;
 
   
   const video_view_count = ref("-");

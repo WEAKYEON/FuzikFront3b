@@ -15,7 +15,7 @@ export default defineEventHandler((event) => {
 
 
 
-    var path = "https://fuzik03.tetraserver.com/upload_playvideo2?video_title=" +
+    var path = "https://engine01.fuzikapp.com/upload_playvideo2?video_title=" +
     video_title + 
     "&description=" + description +
     "&music_title=" + music_title +

@@ -186,7 +186,7 @@ async function upload_file(e:DragEvent) {
         
     if (element_drag_upload_file != null) {
         //element_drag_upload_file.innerHTML = "<br /><p>Uploading...</p><p><img :src='uploading_icon'></p>";
-        element_drag_upload_file.innerHTML = "<img width='250' src='https://media04.tetraserver.com/app/QU3H.gif' class='object-center'>";
+        element_drag_upload_file.innerHTML = "<img width='250' src='https://media05.fuzikapp.com/app/QU3H.gif' class='object-center'>";
         
         fileobj = e.dataTransfer?.files[0];
         //console.log("upload_file02");
@@ -212,12 +212,12 @@ function ajax_file_upload(file_obj: any) {
             var form_data = new FormData();
             form_data.append('file', file_obj);
             var xhttp = new XMLHttpRequest();
-            xhttp.open("POST", "https://media04.tetraserver.com/ajax_video.php", true);
+            xhttp.open("POST", "https://media05.fuzikapp.com/ajax_video.php", true);
             xhttp.onload = function(event) {
 
                 var oOutput = <HTMLFormElement>document.getElementById('drop_file_zone')
                 if (xhttp.status == 200) {
-                    //oOutput.innerHTML = '<img width="180" height="180" src="https://media04.tetraserver.com/' + this.responseText + '" alt="Profile picture" />';
+                    //oOutput.innerHTML = '<img width="180" height="180" src="https://media05.fuzikapp.com/' + this.responseText + '" alt="Profile picture" />';
                     oOutput.innerHTML='Processing'
 
                     console.log("this.responseText");

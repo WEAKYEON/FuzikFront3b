@@ -27,7 +27,7 @@ const client = useSupabaseClient();
 const { data, error } = await client.auth.getSession();
 const { session } = data;
 
-const logo2 = ref('https://media04.tetraserver.com/app/fuzik_logo04_01.png')
+const logo2 = ref('https://media05.fuzikapp.com/app/fuzik_logo04_01.png')
 
 var display_message1 = 'Checking ...';
 var display_message2 = '';

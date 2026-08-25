@@ -11,7 +11,7 @@ export async function uploadProfileImage(file: File): Promise<string> {
   const body = new FormData()
   body.append('file', file)
 
-  const response = await fetch('https://media04.tetraserver.com/ajax.php', {
+  const response = await fetch('https://media05.fuzikapp.com/ajax.php', {
     method: 'POST',
     body
   })

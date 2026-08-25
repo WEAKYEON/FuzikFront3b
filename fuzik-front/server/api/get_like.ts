@@ -3,7 +3,7 @@ export default defineEventHandler((event) => {
     const { play2_url } = getQuery(event);
     const { user_email } = getQuery(event);
 
-    var path = 'https://fuzik03.tetraserver.com/get_like?q=a';
+    var path = 'https://engine01.fuzikapp.com/get_like?q=a';
 
     if (play2_url==undefined) {
 

@@ -171,9 +171,9 @@ var lll = display_name.value.trim() +
 
 //alert('Height: ' + this_video.videoHeight)
 
-var video_source2 = 'https://media04.tetraserver.com/uploads/videos/1702955307_01-piano.mp4';
-//var preview_source2= 'https://media04.tetraserver.com/uploads/videos/1703490031_VID_20230228_214520.png'
-var video_source = 'https://media04.tetraserver.com/' + await encrypt_video_location(video_location);
+var video_source2 = 'https://media05.fuzikapp.com/uploads/videos/1702955307_01-piano.mp4';
+//var preview_source2= 'https://media05.fuzikapp.com/uploads/videos/1703490031_VID_20230228_214520.png'
+var video_source = 'https://media05.fuzikapp.com/' + await encrypt_video_location(video_location);
 //' 'uploads/videos/1702955307_01-piano.mp4'
 //var this_video = document.getElementById('my_video')
 
@@ -346,7 +346,7 @@ async function encrypt_video_location(original_location:string) {
 async function check_rotaion(file_location) {
 
   const response_text = ref('');
-  var url = 'https://media04.tetraserver.com/rotation_check.php?video_location=' + file_location;
+  var url = 'https://media05.fuzikapp.com/rotation_check.php?video_location=' + file_location;
       //console.log('check rotation: ' + url);
       //alert(url);
 

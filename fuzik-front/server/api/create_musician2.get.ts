@@ -8,7 +8,7 @@ export default defineEventHandler((event) => {
     const { instrument } = getQuery(event);
     const { tel } = getQuery(event);
 
-    var path = "https://fuzik03.tetraserver.com/create_musician2?display_name=" +
+    var path = "https://engine01.fuzikapp.com/create_musician2?display_name=" +
     display_name + 
     "&email=" + email +
     "&first_name=" + first_name +

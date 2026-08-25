@@ -51,7 +51,7 @@
           <p v-if="imageError" class="field-error">{{ imageError }}</p>
 
           <div class="rank-badge">
-            <img src="https://media04.tetraserver.com/app/rank_performer.png" alt="">
+            <img src="https://media05.fuzikapp.com/app/rank_performer.png" alt="">
             <span>Rank: <strong>Musician</strong></span>
           </div>
         </section>

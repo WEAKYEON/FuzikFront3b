@@ -6,7 +6,7 @@
       class="w-full flex flex-col justify-center items-center space-y-10 border-4 border-dashed border-gray-200 rounded-xl p-10"
     >
       <div class="w-2/3 sm:w-1/3 lg:w-1/4 mx-auto py-4">
-        <img src="https://media04.tetraserver.com/app/upload.png">
+        <img src="https://media05.fuzikapp.com/app/upload.png">
       </div>
       
       <div class="flex flex-col items-center">

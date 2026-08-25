@@ -32,19 +32,19 @@ const { p_videos_num } = defineProps(['p_videos_num']);
 //    const p_videos_num = ref(0);
   */  
 
-var layout_image = 'https://media04.tetraserver.com/' + layout2.layout_file_location;
+var layout_image = 'https://media05.fuzikapp.com/' + layout2.layout_file_location;
 var description = layout2.description
 var target = "/collaboration03?code=" + layout2.layout_name 
 
 
 useHead({
     script: [{
-                src: 'https://media04.tetraserver.com/app/flowbite.min.js',
+                src: 'https://media05.fuzikapp.com/app/flowbite.min.js',
             }],
     link: [
         {
             rel: 'stylesheet',
-            href: 'https://media04.tetraserver.com/app/flowbite.min.css',
+            href: 'https://media05.fuzikapp.com/app/flowbite.min.css',
 
         }
     ]

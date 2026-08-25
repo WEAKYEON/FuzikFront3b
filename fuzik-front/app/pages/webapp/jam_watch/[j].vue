@@ -37,7 +37,7 @@
 //import nuxtStorage from 'nuxt-storage'
 
 var app_location = 'https://www.fuzikapp.com/';
-var media_location = 'https://media04.tetraserver.com/';
+var media_location = 'https://media05.fuzikapp.com/';
 
 definePageMeta({
     layout: "mainyellow",
@@ -48,7 +48,7 @@ const file_location = ref('');
 const owner_display_name = ref('');
 const owner_display_pic = ref('');
 
-//const profile_pic = ref('https://media04.tetraserver.com/app/music_staff.png')
+//const profile_pic = ref('https://media05.fuzikapp.com/app/music_staff.png')
 
 //const view_count = ref(0)
 const is_fans = ref(true)
@@ -118,7 +118,7 @@ try {
     file_location.value = media_location + song[0].file_location
     owner_display_name.value = song[0].owner_display_name
 
-    owner_display_pic.value = 'https://media04.tetraserver.com/app/music_staff.png';
+    owner_display_pic.value = 'https://media05.fuzikapp.com/app/music_staff.png';
     if (song[0].owner_display_pic.length > 0) {
         owner_display_pic.value = media_location + song[0].owner_display_pic;
     }

@@ -15,7 +15,7 @@ const client = useSupabaseClient();
 
 const { error } = await client.auth.signOut();
 
-var loading_image = 'https://media04.tetraserver.com/app/loading.gif';
+var loading_image = 'https://media05.fuzikapp.com/app/loading.gif';
 
 
 definePageMeta({

@@ -9,11 +9,11 @@
             @click="toggleSideMenu()"
             class="w-10 lg:w-20 flex flex-row justify-center items-center cursor-pointer"
           >
-            <img src="https://media04.tetraserver.com/app/menu_icon.png" class="w-5 mx-auto py-4">
+            <img src="https://media05.fuzikapp.com/app/menu_icon.png" class="w-5 mx-auto py-4">
           </div>
 
           <div class="py-2">
-            <NuxtLink to="/"><img src="https://media04.tetraserver.com/app/logo.png" class="w-20"></NuxtLink>
+            <NuxtLink to="/"><img src="https://media05.fuzikapp.com/app/logo.png" class="w-20"></NuxtLink>
           </div>
         </div>
         

@@ -27,13 +27,13 @@ const { play } = defineProps(['play']);
 
 //console.log( play.musician_profile_pic.length )
 
-var profile_image = 'https://media04.tetraserver.com/app/music_staff.png';
+var profile_image = 'https://media05.fuzikapp.com/app/music_staff.png';
 
 if (play.musician_profile_pic.length != 0 ) {
-  profile_image = 'https://media04.tetraserver.com/' + play.musician_profile_pic
+  profile_image = 'https://media05.fuzikapp.com/' + play.musician_profile_pic
 }
 
-const video_link = ref('/watch/' + play.url)
+const video_link = ref('/webapp/watch/' + play.url)
 
 const video_view_count = ref("0")
 

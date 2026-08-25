@@ -118,7 +118,7 @@ const instruction = ref('Instructions: Search and Drag videos to the number pane
 var init_location = '/api/play2s_l/?limit=10&ready=1'
 var plays = await $fetch(init_location);  
 
-var staff = 'https://media04.tetraserver.com/app/music_staff.png';
+var staff = 'https://media05.fuzikapp.com/app/music_staff.png';
 
 const number1 = ref('1');
 const hidden1 = ref(true);
@@ -253,7 +253,7 @@ async function drop(ev, number) {
             // message gets narrowed to string!
             if (play_data != null) { 
                 //alert(source_image1);
-                source_image1.value = 'https://media04.tetraserver.com/' + play_data[0].preview; 
+                source_image1.value = 'https://media05.fuzikapp.com/' + play_data[0].preview; 
                 
 
             }
@@ -279,7 +279,7 @@ async function drop(ev, number) {
             // message gets narrowed to string!
             if (play_data != null) { 
                 //alert(source_image1);
-                source_image2.value = 'https://media04.tetraserver.com/' + play_data[0].preview; 
+                source_image2.value = 'https://media05.fuzikapp.com/' + play_data[0].preview; 
             }
 
         }
@@ -301,7 +301,7 @@ async function drop(ev, number) {
             // message gets narrowed to string!
             if (play_data != null) { 
                 //alert(source_image1);
-                source_image3.value = 'https://media04.tetraserver.com/' + play_data[0].preview; 
+                source_image3.value = 'https://media05.fuzikapp.com/' + play_data[0].preview; 
             }
 
         }
@@ -323,7 +323,7 @@ async function drop(ev, number) {
             // message gets narrowed to string!
             if (play_data != null) { 
                 //alert(source_image1);
-                source_image4.value = 'https://media04.tetraserver.com/' + play_data[0].preview; 
+                source_image4.value = 'https://media05.fuzikapp.com/' + play_data[0].preview; 
             }
 
         }

@@ -5,7 +5,7 @@
 
       <div class="hidden lg:flex w-full lg:w-1/2">
         <div class="max-h-screen overflow-hidden lg:rounded-l-xl">
-          <img src="https://media04.tetraserver.com/app/sing_banner.png" class="object-center">
+          <img src="https://media05.fuzikapp.com/app/sing_banner.png" class="object-center">
         </div>
       </div>
 
@@ -14,7 +14,7 @@
           <div class="w-full lg:w-3/5 mx-auto flex flex-col justify-start items-center space-y-6 pt-2 pb-10 px-4 lg:px-10">
 
             <div class="text-2xl font-bold px-20 py-10">
-              <img src="https://media04.tetraserver.com/app/logo_round.png">
+              <img src="https://media05.fuzikapp.com/app/logo_round.png">
             </div>
 
             <div class="w-full flex flex-col space-y-2">

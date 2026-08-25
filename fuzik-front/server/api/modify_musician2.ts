@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
   }
 
   try {
-    return await $fetch('https://fuzik03.tetraserver.com/modify_musician2', {
+    return await $fetch('https://engine01.fuzikapp.com/modify_musician2', {
       query: { email, field, new_value: newValue }
     })
   } catch (error: any) {

@@ -116,12 +116,12 @@ function ajax_file_upload(file_obj: any) {
             var form_data = new FormData();
             form_data.append('file', file_obj);
             var xhttp = new XMLHttpRequest();
-            xhttp.open("POST", "https://media04.tetraserver.com/ajax.php", true);
+            xhttp.open("POST", "https://media05.fuzikapp.com/ajax.php", true);
             xhttp.onload = function(event) {
 
                 var oOutput = <HTMLFormElement>document.getElementById('drop_file_zone')
                 if (xhttp.status == 200) {
-                    oOutput.innerHTML = '<img width="180" height="180" src="https://media04.tetraserver.com/' + this.responseText + '" alt="Profile picture" />';
+                    oOutput.innerHTML = '<img width="180" height="180" src="https://media05.fuzikapp.com/' + this.responseText + '" alt="Profile picture" />';
                     var element_profile_pic = <HTMLFormElement>document.getElementById('profile_pic');
                     if (element_profile_pic != null) {
                         element_profile_pic.value = this.responseText;

@@ -47,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-const logo2 = ref('https://media04.tetraserver.com/app/fuzik_logo04_01.png')
+const logo2 = ref('https://media05.fuzikapp.com/app/fuzik_logo04_01.png')
 
 definePageMeta({
   layout: "empty2"

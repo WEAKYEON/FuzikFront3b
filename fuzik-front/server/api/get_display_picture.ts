@@ -3,7 +3,7 @@ export default defineEventHandler((event) => {
     const { musician_name } = getQuery(event);
     
     
-    var path = 'https://fuzik03.tetraserver.com/get_display_picture';
+    var path = 'https://engine01.fuzikapp.com/get_display_picture';
 
     if (musician_name==undefined) {
 

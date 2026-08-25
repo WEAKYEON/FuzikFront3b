@@ -230,7 +230,7 @@ var file_location_2_120 = '';
 var file_location_3_120 = '';
 var file_location_4_120 = '';
 
-var verticle_line_location = 'https://media04.tetraserver.com/' + 'app/vertical_line01.png';
+var verticle_line_location = 'https://media05.fuzikapp.com/' + 'app/vertical_line01.png';
 //var vertical_line_hidden = true;
 var ruler_checked = false;
 
@@ -251,7 +251,7 @@ if (typeof play_data1 === "object" ) {
         //alert(source_image1);
         file_location_1_120 = play_data1[0].video_location_120; 
         file_location_1 = play_data1[0].video_location; 
-        pic1 = 'https://media04.tetraserver.com/' + play_data1[0].preview;
+        pic1 = 'https://media05.fuzikapp.com/' + play_data1[0].preview;
 
         //console.log('file_location_1_120');
         //console.log(file_location_1_120);
@@ -268,11 +268,11 @@ if (typeof play_data2 === "object" ) {
         //alert(source_image1);
         file_location_2_120 = play_data2[0].video_location_120; 
         file_location_2 = play_data2[0].video_location; 
-        pic2 = 'https://media04.tetraserver.com/' + play_data2[0].preview;
+        pic2 = 'https://media05.fuzikapp.com/' + play_data2[0].preview;
     }
 }
 
-var layout_2_03_location = 'https://media04.tetraserver.com/' + 'uploads/layout/2_03_NUM.png';
+var layout_2_03_location = 'https://media05.fuzikapp.com/' + 'uploads/layout/2_03_NUM.png';
 
 const text01 = ref('-0.00s');
 const text02 = ref('-0.00s');
@@ -329,7 +329,7 @@ const line3_x2 = ref(40);
 const line4_x1 = ref(5);
 const line4_x2 = ref(40);
 
-const preview_location = ref(''); // ref('https://media04.tetraserver.com/uploads/jam/Omie_06102022135409.mp4');
+const preview_location = ref(''); // ref('https://media05.fuzikapp.com/uploads/jam/Omie_06102022135409.mp4');
 const loading = ref(false);
 const finished = ref(false);
 
@@ -367,7 +367,7 @@ WaveSurfer.create({
   container: '#waveform',
   waveColor: '#4F4A85',
   progressColor: '#383351',
-  url: 'https://media04.tetraserver.com/uploads/jam/Omie_06102022135409.mp4',
+  url: 'https://media05.fuzikapp.com/uploads/jam/Omie_06102022135409.mp4',
 });*/
 
 onMounted(() => {
@@ -947,13 +947,13 @@ async function generate_preview() {
     //var preview_location = "";
     var preview_disabled = true;
 
-    var media_location = "https://media04.tetraserver.com/";
+    var media_location = "https://media05.fuzikapp.com/";
 
     //Jazz
-    var video_filename01 = file_location_1.replace("https://media04.tetraserver.com/stream/video_stream.php?code=",""); //"1709263790_Jazz-01-Piano.mp4";
-    var video_filename02 = file_location_2.replace("https://media04.tetraserver.com/stream/video_stream.php?code=",""); //"1709264086_Jazz-02-Drum.mp4";
-    //var video_filename03 = file_location_3.replace("https://media04.tetraserver.com/stream/video_stream.php?code=",""); //"1708352056_Jazz-03-Saxophone.mp4";
-    //var video_filename04 = file_location_4.replace("https://media04.tetraserver.com/stream/video_stream.php?code=",""); //"1709264537_Jazz-04-DoubleBass.mp4";
+    var video_filename01 = file_location_1.replace("https://media05.fuzikapp.com/stream/video_stream.php?code=",""); //"1709263790_Jazz-01-Piano.mp4";
+    var video_filename02 = file_location_2.replace("https://media05.fuzikapp.com/stream/video_stream.php?code=",""); //"1709264086_Jazz-02-Drum.mp4";
+    //var video_filename03 = file_location_3.replace("https://media05.fuzikapp.com/stream/video_stream.php?code=",""); //"1708352056_Jazz-03-Saxophone.mp4";
+    //var video_filename04 = file_location_4.replace("https://media05.fuzikapp.com/stream/video_stream.php?code=",""); //"1709264537_Jazz-04-DoubleBass.mp4";
 
     var clip1 = "L";
     var clip2 = "L";
@@ -1021,7 +1021,7 @@ async function generate_preview() {
 
     var result = await $fetch(preview);
 
-    var media = "https://media04.tetraserver.com/";
+    var media = "https://media05.fuzikapp.com/";
     //console.log('result');
     //console.log(result);
 

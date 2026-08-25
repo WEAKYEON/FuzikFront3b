@@ -19,7 +19,7 @@
                      </svg>
                   </button>
                   <a href="" class="flex ms-2 md:me-24">
-                     <img src="https://media04.tetraserver.com/app/logo.png" class="h-8 me-3" alt="Fuzik Logo" />
+                     <img src="https://media05.fuzikapp.com/app/logo.png" class="h-8 me-3" alt="Fuzik Logo" />
                      <span
                         class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"></span>
                   </a>

@@ -56,14 +56,14 @@
                 <div class="flex flex-row">
                     <div @click="toggleDesktopSideMenu()"
                         class="w-20 flex flex-row justify-center items-center cursor-pointer py-5">
-                        <img src="https://media04.tetraserver.com/app/menu_icon.png" class="w-5 mx-auto">
+                        <img src="https://media05.fuzikapp.com/app/menu_icon.png" class="w-5 mx-auto">
                     </div>
 
                 <div
             v-if="showDesktopSideMenu"
             class="py-2"
           >
-            <NuxtLink to="/"><img src="https://media04.tetraserver.com/app/logo.png" class="w-20"></NuxtLink>
+            <NuxtLink to="/"><img src="https://media05.fuzikapp.com/app/logo.png" class="w-20"></NuxtLink>
           </div>
 
                 </div>

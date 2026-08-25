@@ -76,8 +76,8 @@
 
   //import nuxtStorage from 'nuxt-storage'
 
-  var app_location = 'https://www.fuzikapp.com/';
-  var media_location = 'https://media04.tetraserver.com/';
+  var app_location = 'https://www.fuzikapp.com/webapp/';
+  var media_location = 'https://media05.fuzikapp.com/';
 
 
     definePageMeta({
@@ -88,7 +88,7 @@
 
    const video_title = ref('')
    const musician_name = ref('')
-   //const profile_pic = ref('https://media04.tetraserver.com/app/music_staff.png')
+   //const profile_pic = ref('https://media05.fuzikapp.com/app/music_staff.png')
 
    //const view_count = ref(0)
    const is_fans= ref(true)

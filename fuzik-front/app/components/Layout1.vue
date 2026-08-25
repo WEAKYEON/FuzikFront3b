@@ -18,7 +18,7 @@ const { layout, video01_p } = defineProps(['layout', 'video01_p']);
 
 console.log(video01_p);
 
-var layout_image = 'https://media04.tetraserver.com/' + layout.layout_file_location;
+var layout_image = 'https://media05.fuzikapp.com/' + layout.layout_file_location;
 
 var  description = layout.description
 const target = {

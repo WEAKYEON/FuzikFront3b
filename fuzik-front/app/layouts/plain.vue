@@ -19,7 +19,7 @@
                             </svg>
                         </button>
                         <a href="" class="flex ms-2 md:me-24">
-                            <img src="https://media04.tetraserver.com/app/fuzik_logo03_02.png" class="h-8 me-3" alt="Fuzik Logo" />
+                            <img src="https://media05.fuzikapp.com/app/fuzik_logo03_02.png" class="h-8 me-3" alt="Fuzik Logo" />
                             <span
                                 class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white"></span>
                         </a>
@@ -219,7 +219,7 @@ if (user.data.user?.email != undefined) {
     }
 var data_musician: any;
 
-var profile_image = 'https://media04.tetraserver.com/app/music_staff.png';
+var profile_image = 'https://media05.fuzikapp.com/app/music_staff.png';
 var your_video = 'inventory'
 
 if (email == '') {
@@ -238,7 +238,7 @@ if (email == '') {
     var raw_value = data_musician.value[0];
 
     if (raw_value.profile_pic != '') {
-        profile_image = 'https://media04.tetraserver.com/' + raw_value.profile_pic;
+        profile_image = 'https://media05.fuzikapp.com/' + raw_value.profile_pic;
     }
     //console.log(profile_image);
 

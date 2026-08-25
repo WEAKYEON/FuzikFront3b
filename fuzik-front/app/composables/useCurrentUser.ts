@@ -9,8 +9,8 @@ export interface CurrentMusician {
   profile_pic: string
 }
 
-export const DEFAULT_PROFILE_IMAGE = 'https://media04.tetraserver.com/app/music_staff.png'
-export const PROFILE_IMAGE_BASE_URL = 'https://media04.tetraserver.com/'
+export const DEFAULT_PROFILE_IMAGE = 'https://media05.fuzikapp.com/app/music_staff.png'
+export const PROFILE_IMAGE_BASE_URL = 'https://media05.fuzikapp.com/'
 
 export function useCurrentUser() {
   const musician = useState<CurrentMusician | null>('current-musician', () => null)

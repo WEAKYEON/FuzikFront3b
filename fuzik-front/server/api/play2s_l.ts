@@ -11,7 +11,7 @@ export default defineEventHandler((event) => {
     const { ex4 } = getQuery(event);
     const { ex5 } = getQuery(event);
 
-    var path = 'https://fuzik03.tetraserver.com/play2s_l/';
+    var path = 'https://engine01.fuzikapp.com/play2s_l/';
 
     if (start == undefined) {
       path = path + '?start=1'

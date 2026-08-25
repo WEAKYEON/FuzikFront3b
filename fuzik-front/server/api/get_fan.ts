@@ -3,7 +3,7 @@ export default defineEventHandler((event) => {
     const { musician_email } = getQuery(event);
     const { user_email } = getQuery(event);
 
-    var path = 'https://fuzik03.tetraserver.com/get_fan?q=a';
+    var path = 'https://engine01.fuzikapp.com/get_fan?q=a';
 
     if (musician_email==undefined) {
 

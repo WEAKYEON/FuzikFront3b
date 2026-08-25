@@ -357,7 +357,7 @@ async function get_profile_pic(musician_display_name: any) {
 
   var uri = '/api/get_display_picture?musician_name=' + musician_display_name
 
-  var default_image = 'https://media04.tetraserver.com/app/music_staff.png';
+  var default_image = 'https://media05.fuzikapp.com/app/music_staff.png';
 
   try {
     const response = await fetch(uri);
@@ -368,7 +368,7 @@ async function get_profile_pic(musician_display_name: any) {
     //const song = await response.json();
     if (pic.length > 0) {
       if (pic[0].profile_pic.length > 0) {
-        return 'https://media04.tetraserver.com/' + pic[0].profile_pic
+        return 'https://media05.fuzikapp.com/' + pic[0].profile_pic
       } else {
         return default_image;
       }
@@ -610,12 +610,12 @@ if (process.client) {
 /*
 useHead({
     script: [{
-                src: 'https://media04.tetraserver.com/app/flowbite.min.js',
+                src: 'https://media05.fuzikapp.com/app/flowbite.min.js',
             }],
     link: [
         {
             rel: 'stylesheet',
-            href: 'https://media04.tetraserver.com/app/flowbite.min.css',
+            href: 'https://media05.fuzikapp.com/app/flowbite.min.css',
 
         }
     ]

@@ -18,7 +18,7 @@ const { layout } = defineProps(['layout']);
 
 //console.log( play.musician_profile_pic.length )
 
-var layout_image = 'https://media04.tetraserver.com/' + layout.layout_file_location;
+var layout_image = 'https://media05.fuzikapp.com/' + layout.layout_file_location;
 
 var  description = layout.description
 const target = {

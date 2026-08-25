@@ -81,7 +81,7 @@
             @click="toggleDesktopSideMenu()"
             class="w-20 flex flex-row justify-center items-center cursor-pointer py-5"
           >
-            <img src="https://media04.tetraserver.com/app/menu_icon.png" class="w-5 mx-auto">
+            <img src="https://media05.fuzikapp.com/app/menu_icon.png" class="w-5 mx-auto">
           </div>
 
 

@@ -20,7 +20,7 @@ export default defineEventHandler((event) => {
     const { audio03 } = getQuery(event);
     const { audio04 } = getQuery(event);
     
-    var path = 'https://fuzik03.tetraserver.com/submit_batch2?email=' +
+    var path = 'https://engine01.fuzikapp.com/submit_batch2?email=' +
     email +
     '&layout_code=' + layout_code +
     '&clip1=' + clip1 +

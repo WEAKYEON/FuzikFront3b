@@ -132,7 +132,7 @@ async function lookupPlay(url: string): Promise<SelectedPlay | null> {
       url,
       preview: play.preview?.startsWith('http')
         ? play.preview
-        : `https://media04.tetraserver.com/${play.preview}`
+        : `https://media05.fuzikapp.com/${play.preview}`
     }
   } catch {
     return null

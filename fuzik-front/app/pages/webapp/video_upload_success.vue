@@ -51,7 +51,7 @@ export default {
 
 //alert('Height: ' + this_video.videoHeight)
 
-//var preview_source = 'https://media04.tetraserver.com/uploads/videos/1702955307_01-piano.png';
+//var preview_source = 'https://media05.fuzikapp.com/uploads/videos/1702955307_01-piano.png';
 
 //const cookie_video_location = useCookie("video_location");
 
@@ -77,14 +77,14 @@ var preview_source2= '';
 var extention = video_location.substring(video_location.length - 4, video_location.length); 
 
 if (extention.localeCompare('.mp4') == 0) {
-  preview_source2= 'https://media04.tetraserver.com/' + video_location.replace('.mp4','.png') 
+  preview_source2= 'https://media05.fuzikapp.com/' + video_location.replace('.mp4','.png') 
 }
 
 if (extention.localeCompare('.mov') == 0) {
-  preview_source2= 'https://media04.tetraserver.com/' + video_location.replace('.mov','.png') 
+  preview_source2= 'https://media05.fuzikapp.com/' + video_location.replace('.mov','.png') 
 }
 //uploads/videos/1703490031_VID_20230228_214520.png'
-//var video_source = 'https://media04.tetraserver.com/uploads/videos/1702955307_01-piano.mp4'
+//var video_source = 'https://media05.fuzikapp.com/uploads/videos/1702955307_01-piano.mp4'
 //var this_video = document.getElementById('my_video')
 
 console.log('preview_source2');

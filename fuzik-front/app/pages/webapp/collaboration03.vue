@@ -52,7 +52,7 @@
 const cookie_collab_code = useCookie("collab_code");
 const collab_code = computed(() => cookie_collab_code.value ?? '');
  
-var video_message = "https://media04.tetraserver.com/app/rotate_your_phone.gif";
+var video_message = "https://media05.fuzikapp.com/app/rotate_your_phone.gif";
 
 definePageMeta({
     layout: "empty",

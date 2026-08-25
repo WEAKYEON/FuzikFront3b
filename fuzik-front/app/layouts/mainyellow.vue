@@ -143,7 +143,7 @@ var display_name = '';
 var first_name = '';
 var last_name = '';
 
-var profile_image = 'https://media04.tetraserver.com/app/music_staff.png';
+var profile_image = 'https://media05.fuzikapp.com/app/music_staff.png';
 var your_video = 'inventory'
 
 //const user = await client.auth.getUser();
@@ -204,7 +204,7 @@ if (session == null) {
             var picture_file = data_musician.value[0]['profile_pic'];
 
             if (picture_file != '') {
-                profile_image = 'https://media04.tetraserver.com/' + picture_file;
+                profile_image = 'https://media05.fuzikapp.com/' + picture_file;
             }
 
             display_name = data_musician.value[0]['display_name'];
@@ -219,7 +219,7 @@ if (session == null) {
         //    var raw_value = JSON.parse(JSON.stringify(data_musician))._rawValue[0];
 
         //    if (raw_value.profile_pic != '') {
-        //        profile_image = 'https://media04.tetraserver.com/' + raw_value.profile_pic;
+        //        profile_image = 'https://media05.fuzikapp.com/' + raw_value.profile_pic;
         //    }
         //} catch(err) {
         //    if (err instanceof Error) console.log(err.message)

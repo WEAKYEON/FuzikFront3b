@@ -57,7 +57,7 @@ if (collab_video01 == null) {
   collab_video01 = '';
 }
 
-var video_message = "https://media04.tetraserver.com/app/rotate_your_phone.gif";
+var video_message = "https://media05.fuzikapp.com/app/rotate_your_phone.gif";
 //var main_page_show = true;
 
 definePageMeta({
@@ -97,7 +97,7 @@ if (!allowed) {
 useHead({
     script: [
       {
-        src: 'https://media04.tetraserver.com/app/DragDropTouch.js',
+        src: 'https://media05.fuzikapp.com/app/DragDropTouch.js',
       }]
 
 })

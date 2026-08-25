@@ -31,15 +31,15 @@ const emit = defineEmits<{
   select: [play: any]
 }>()
 
-var profile_image = 'https://media04.tetraserver.com/app/music_staff.png';
+var profile_image = 'https://media05.fuzikapp.com/app/music_staff.png';
 
 //console.log('profile_pic');
 //console.log(play.musician_profile_pic);
 
 if (play.musician_profile_pic?.length) {
-  profile_image = 'https://media04.tetraserver.com/' + play.musician_profile_pic
+  profile_image = 'https://media05.fuzikapp.com/' + play.musician_profile_pic
 } else {
-  profile_image = 'https://media04.tetraserver.com/app/music_staff.png';
+  profile_image = 'https://media05.fuzikapp.com/app/music_staff.png';
 }
 
 function drag(ev:any, url:any) {

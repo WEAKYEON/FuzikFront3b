@@ -48,12 +48,12 @@
     title:'Popup Cookie Consent Box',
 
     script: [{
-                src: 'https://media04.tetraserver.com/app/flowbite.min.js',
+                src: 'https://media05.fuzikapp.com/app/flowbite.min.js',
             }],
     link: [
         {
             rel: 'stylesheet',
-            href: 'https://media04.tetraserver.com/app/flowbite.min.css',
+            href: 'https://media05.fuzikapp.com/app/flowbite.min.css',
 
         }
     ]

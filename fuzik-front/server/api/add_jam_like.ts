@@ -4,7 +4,7 @@ export default defineEventHandler((event) => {
     const { like_value } = getQuery(event);
     const { user_email } = getQuery(event);
 
-    var path = 'https://fuzik03.tetraserver.com/add_fan?q=a';
+    var path = 'https://engine01.fuzikapp.com/add_fan?q=a';
 
     if (like_value==undefined) {
 

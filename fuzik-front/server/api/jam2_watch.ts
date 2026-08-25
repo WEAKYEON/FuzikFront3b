@@ -2,7 +2,7 @@ export default defineEventHandler((event) => {
 
     const { j } = getQuery(event);
 
-    var path = 'https://fuzik03.tetraserver.com/jam2_watch?j=' + j;
+    var path = 'https://engine01.fuzikapp.com/jam2_watch?j=' + j;
 
     const response = fetch(path);
     

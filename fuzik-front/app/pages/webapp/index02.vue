@@ -11,7 +11,7 @@
         @click=""
         class="flex-1 text-center rounded-lg cursor-pointer bg-yellow-300 text-black"
         >
-        <NuxtLink to="/index02">
+        <NuxtLink to="/webapp/index02">
           Solo
         </NuxtLink>
         </div>
@@ -21,7 +21,7 @@
         @click=""
         class="flex-1 text-center rounded-lg cursor-pointer bg-black text-yellow-300"
         >
-        <NuxtLink to="/">
+        <NuxtLink to="/webapp">
         Collaboration
         </NuxtLink>
         </div>        

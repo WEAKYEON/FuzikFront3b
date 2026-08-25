@@ -3,7 +3,7 @@ export default defineEventHandler((event) => {
     const { q } = getQuery(event);
     const { musician } = getQuery(event);
     
-    var path = 'https://fuzik03.tetraserver.com/jam2s?b=a';
+    var path = 'https://engine01.fuzikapp.com/jam2s?b=a';
 
     if (q==undefined) {
 

@@ -55,7 +55,7 @@
 
     //const { error } = await client.auth.signOut()
     
-    const logo2 = ref('https://media04.tetraserver.com/app/fuzik_logo04_01.png')
+    const logo2 = ref('https://media05.fuzikapp.com/app/fuzik_logo04_01.png')
     
     async function signIn() {
       //alert(isAlphanumeric(first_name.value));

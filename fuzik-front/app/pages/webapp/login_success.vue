@@ -1,5 +1,5 @@
 <template>
-    <meta http-equiv="refresh" content="1;url=/" />
+    <meta http-equiv="refresh" content="1;url=/webapp" />
     <div class="bg-black text-white h-screen text-center">
         Welcome, {{ user?.email }}
         <br />
@@ -17,7 +17,7 @@ const client = useSupabaseClient();
 const { data, error } = await client.auth.refreshSession()
 const { session, user } = data
 
-var loading_image = 'https://media04.tetraserver.com/app/loading.gif';
+var loading_image = 'https://media05.fuzikapp.com/app/loading.gif';
 
 definePageMeta({
     layout: "empty"
