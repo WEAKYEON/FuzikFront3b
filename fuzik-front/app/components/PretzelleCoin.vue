@@ -1,5 +1,5 @@
 <template>
-    <div class="ms-3 flex flex-row justify-center items-center space-x-2 text-black bg-blue-300 px-4 lg:px-4 py-1 rounded-xl cursor-pointer transition-all hover:bg-yellow/90">
+    <div class="ms-3 flex flex-row justify-center items-center space-x-2 text-black bg-blue-300 px-4 lg:px-4 py-1 rounded-xl cursor-pointer transition-all hover:bg-yellow/90" @click="navigateTo('/webapp/wallet')">
         PR {{premium_coin}}/&#x221E;
     </div>
 </template>
@@ -7,7 +7,7 @@
 <script setup lang="ts">
 
 const props = defineProps({
-    email: {type: String, require: true}
+    email: {type: String, required: true}
 });
 
 var premium_coin_realm_id = 'REALM00000002';
@@ -15,7 +15,7 @@ var premium_coin_realm_id = 'REALM00000002';
 const premium_coin = ref('waiting'); //await get_coin(realm_id, email);
 //premium_coin.value = await get_token(premium_coin_realm_id, props.email);
 
-let intervalId;
+let intervalId:any;
 onMounted(async () => {
     //premium_coin.value = await get_token(premium_coin_realm_id, props.email);
     
@@ -31,7 +31,7 @@ onUnmounted(() => {
     clearInterval(intervalId);
 });
 
-async function get_token(realm_id, user_email) {
+async function get_token(realm_id:string, user_email:string) {
 
   var uri = '/api/get_token?realm_id=' + realm_id + '&user_email=' + user_email;
   //console.log("uri: " + uri);

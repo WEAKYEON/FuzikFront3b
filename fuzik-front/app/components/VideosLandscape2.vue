@@ -3,15 +3,14 @@
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-1">
   -->  
   <div class="py-0 sm:py-2">
-    <NuxtLink :to="video_link">
       <div class="aspect-w-16 aspect-h-9 bg-slate-100 rounded-lg">
         
-        <img :src="`${play.preview}`" class="w-full object-cover object-center rounded-lg">
+        <VideoThumbnail :to="video_link" :preview="play.preview" :title="play.video_title">
         <div v-if="is_artist" class="absolute top-0 left-0 right-0 w-24 h-24 ">          
           <img :src="artist_image" alt="">
         </div>
+        </VideoThumbnail>
       </div>
-    </NuxtLink>
     </div>
       <div class="space-x-2">
         
@@ -47,7 +46,7 @@ const video_link = ref('/webapp/watch/' + play.url)
 
 const video_view_count = ref("-");
 
-let intervalId;
+let intervalId:any;
 onMounted(async () => {
   //premium_coin.value = await get_token(premium_coin_realm_id, props.email);
   
@@ -64,7 +63,7 @@ onUnmounted(() => {
 });
 
   
-async function get_view(url) {
+async function get_view(url:string) {
 
   var uri = '/api/get_play2_count?p=' + url;
   //console.log("uri: " + uri);
@@ -94,7 +93,7 @@ if (play.artist == 'Yes') {
   is_artist = true;
 }
 
-function adjustDate(dateString) {
+function adjustDate(dateString:string) {
   const date = new Date(Date.parse(dateString));
   const d = new Date()
   let diff = d.getTimezoneOffset();
@@ -105,7 +104,7 @@ function adjustDate(dateString) {
 
 }
 
-function durationTime(dateString) {
+function durationTime(dateString:string) {
   // Server is UTC +0000
   const date = new Date(Date.parse(dateString));
   //console.log(date);

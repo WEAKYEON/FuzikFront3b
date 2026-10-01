@@ -14,7 +14,7 @@ if (cookie_consent_form.value.localeCompare('Yes')==0) {
     //cookie_form_visible.value = false;
     // Do nothing
 } else {
-    navigateTo('/cookie_warning');
+    navigateTo('/webapp/cookie_warning');
 }
 
 useHead({

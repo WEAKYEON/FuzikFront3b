@@ -1,52 +1,52 @@
-<template>
-   <div class="lg:container lg:mx-auto px-0 lg:px-2 py-0 lg:py-4">  
-    <ClientOnly>
-      <VideoPanel2 :video_location="video_location" />
-      <VideoDescription2
-        :video_location="video_location"
-        :title="video_title"
-        :musician_name="musician_name"
-      
-        :desc="desc"
-        :url="url"
-        :updated_time="updated_time"
+  <template>
+    <div class="lg:container lg:mx-auto px-0 lg:px-2 py-0 lg:py-4">  
+      <ClientOnly>
+        <VideoPanel2 :video_location="video_location" :youtube-url="youtube_url" :preview="preview" :title="video_title" />
+        <VideoDescription2
+          :video_location="video_location"
+          :title="video_title"
+          :musician_name="musician_name"
+        
+          :desc="desc"
+          :url="url"
+          :updated_time="updated_time"
 
-        :musician_email="musician_email"
-        :user_email="current_user_email"
+          :musician_email="musician_email"
+          :user_email="current_user_email"
 
-        :created_time="created_time"
-        :resized="resized"
-    />
-    </ClientOnly>  
-    <CollabWatch 
-      :dimension="dimension"
-      :video01_url="video01_url" >
-    </CollabWatch>
+          :created_time="created_time"
+          :resized="resized"
+      />
+      </ClientOnly>  
+      <CollabWatch 
+        :dimension="dimension"
+        :video01_url="video01_url" >
+      </CollabWatch>
 
 
-    <div id="consent_form" v-show="cookie_form_visible" class="fixed w-3/4 bottom-4 right-1 lg:right-4 p-4 bg-white border-t-4 shadow-lg">
-	    <h2 class="text-lg lg:text-xl mb-4 block font-bold leading-tight text-gray-600">Cookie Policy</h2>
-	    <div class="lg:flex lg:space-x-5">
-		    <p class="mb-5 font-medium text-gray-600">
-          We collect cookies to analyze our website traffic and performance. This website use cookies to help you have a superior and more relevant browsing experience. To find out more about the cookies we use, check out our <a href="/cookie" target="_blank"><u>Cookie Policy</u></a> and <a href="/privacy" target="_blank"><u>Privacy Policy</u></a>.
-        </p>
-		    <button @click="accept()" 
-		      class="w-full lg:w-48 px-3 py-1 bg-yellow-300 hover:bg-gray-200 hover:underline rounded text-gray-700 mr-2 mb-5 uppercase tracking-widest text-xs font-bold">
-			    Accept
-		    </button>
-        <!-- 
-        <button @click="decline()"
-		      class="w-full lg:w-48 px-3 py-1 bg-gray-300 hover:bg-gray-200 hover:underline rounded text-gray-700 mr-2 mb-5 uppercase tracking-widest text-xs font-bold">
-			    Decline
-		    </button>
-        -->
-	    </div>
+      <div id="consent_form" v-show="cookie_form_visible" class="fixed w-3/4 bottom-4 right-1 lg:right-4 p-4 bg-white border-t-4 shadow-lg">
+        <h2 class="text-lg lg:text-xl mb-4 block font-bold leading-tight text-gray-600">Cookie Policy</h2>
+        <div class="lg:flex lg:space-x-5">
+          <p class="mb-5 font-medium text-gray-600">
+            We collect cookies to analyze our website traffic and performance. This website use cookies to help you have a superior and more relevant browsing experience. To find out more about the cookies we use, check out our <a href="/cookie" target="_blank"><u>Cookie Policy</u></a> and <a href="/privacy" target="_blank"><u>Privacy Policy</u></a>.
+          </p>
+          <button @click="accept()" 
+            class="w-full lg:w-48 px-3 py-1 bg-yellow-300 hover:bg-gray-200 hover:underline rounded text-gray-700 mr-2 mb-5 uppercase tracking-widest text-xs font-bold">
+            Accept
+          </button>
+          <!-- 
+          <button @click="decline()"
+            class="w-full lg:w-48 px-3 py-1 bg-gray-300 hover:bg-gray-200 hover:underline rounded text-gray-700 mr-2 mb-5 uppercase tracking-widest text-xs font-bold">
+            Decline
+          </button>
+          -->
+        </div>
+      </div>
+
+    
+    
     </div>
-
-  
-   
-   </div>
-</template>
+  </template>
    
 <script setup lang="ts">
 
@@ -85,6 +85,7 @@
     })
    
    const video_location = ref('')
+   const youtube_url = ref('')
 
    const video_title = ref('')
    const musician_name = ref('')
@@ -159,6 +160,7 @@
   //data_song = song
 
   video_location.value = song[0].video_location
+  youtube_url.value = song[0].youtube_url || ''
   musician_name.value = song[0].musician_name
 
   //console.log(musician_name.value)

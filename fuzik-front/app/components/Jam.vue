@@ -82,7 +82,7 @@
   });
 
   
-async function get_view(url) {
+async function get_view(url:string) {
 
   var uri = '/api/get_jam2_count?j=' + url;
   //console.log("uri: " + uri);
@@ -132,7 +132,7 @@ async function get_view(url) {
 
   var short_desc = jam.description.substring(0,location) + "...(Jamming)";
   
-  function adjustDate(dateString) {
+  function adjustDate(dateString:string) {
     const date = new Date(Date.parse(dateString));
     const d = new Date()
     let diff = d.getTimezoneOffset();
@@ -143,7 +143,7 @@ async function get_view(url) {
   
   }
   
-  function durationTime(dateString) {
+  function durationTime(dateString:string) {
     // Server is UTC +0000
     const date = new Date(Date.parse(dateString));
     //console.log(date);
@@ -214,7 +214,7 @@ async function get_view(url) {
     return str_time;
   }
 
-  function countSpaces(str) {
+  function countSpaces(str:string) {
     return str.match(/\s/g)?.length ?? 0;
   }
   
