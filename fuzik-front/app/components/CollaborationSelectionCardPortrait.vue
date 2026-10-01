@@ -2,11 +2,11 @@
   <div class="m-2 ">
     <div class="py-0 sm:py-2">
 
-      <div class="aspect-w-9 aspect-h-16 bg-slate-100 rounded-lg" 
+      <div class="aspect-w-9 aspect-h-16 overflow-hidden bg-black rounded-lg"
       
 
         >
-        <img :src="`${play.preview}`" class="w-full object-cover object-center rounded-lg"
+        <img :src="`${play.preview}`" class="w-full h-full object-contain object-center rounded-lg"
         draggable="true"
         
         @dragstart="drag($event, play.url)"

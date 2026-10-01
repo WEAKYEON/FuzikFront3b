@@ -1,6 +1,6 @@
 
 <template>
-  <div class="">
+  <div class="collaboration-editor">
     <div id="orientation-message" class="orientation-message">
         <img :src="video_message"  >
         <p>For a better experience, please rotate your device to landscape mode.</p>
@@ -13,6 +13,22 @@
         <Collab_4_01_02>
         </Collab_4_01_02>
       </div>
+      <div v-if="collab_code?.localeCompare('3_07')==0">
+        <Collab_3_07_02>
+        </Collab_3_07_02>
+      </div>
+      <div v-if="collab_code?.localeCompare('3_06')==0">
+        <Collab_3_06_02>
+        </Collab_3_06_02>
+      </div>
+      <div v-if="collab_code?.localeCompare('3_05')==0">
+        <Collab_3_05_02>
+        </Collab_3_05_02>
+      </div>
+      <div v-if="collab_code?.localeCompare('3_04')==0">
+        <Collab_3_04_02>
+        </Collab_3_04_02>
+      </div>
       <div v-if="collab_code?.localeCompare('3_03')==0">
         <Collab_3_03_02>
         </Collab_3_03_02>
@@ -24,6 +40,22 @@
       <div v-if="collab_code?.localeCompare('3_01')==0">
         <Collab_3_01_02>
         </Collab_3_01_02>
+      </div>
+      <div v-if="collab_code?.localeCompare('2_08')==0">
+        <Collab_2_08_02>
+        </Collab_2_08_02>
+      </div>      
+      <div v-if="collab_code?.localeCompare('2_07')==0">
+        <Collab_2_07_02>
+        </Collab_2_07_02>
+      </div>      
+      <div v-if="collab_code?.localeCompare('2_06')==0">
+        <Collab_2_06_02>
+        </Collab_2_06_02>
+      </div>      
+      <div v-if="collab_code?.localeCompare('2_05')==0">
+        <Collab_2_05_02>
+        </Collab_2_05_02>
       </div>      
       <div v-if="collab_code?.localeCompare('2_04')==0">
         <Collab_2_04_02>

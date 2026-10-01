@@ -71,7 +71,8 @@ function drag(ev:any, url:any) {
 .selection-card__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #000;
 }
 
 .selection-card__title {

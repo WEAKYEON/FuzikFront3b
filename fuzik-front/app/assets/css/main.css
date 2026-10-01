@@ -15,3 +15,70 @@
     }
 
 }
+
+/*
+ * Shared media sizing for every legacy collaboration editor layout.
+ *
+ * Some layout components assign one column to individual thumbnails and two
+ * columns to others, which also makes the adjacent waveform lengths differ.
+ * Identify both halves by their contents rather than their position so this
+ * continues to cover every 2-, 3-, and 4-video layout variation.
+ */
+@media (min-width: 640px) {
+  .collaboration-editor #wavepanel > div:not(:first-child):has(> img:first-child) {
+    grid-column: span 2 / span 2;
+    align-self: stretch;
+  }
+
+  .collaboration-editor #wavepanel > div:has(> div[id^="waveform"]) {
+    grid-column: span 7 / span 7;
+    min-width: 0;
+  }
+}
+
+/*
+ * A few legacy layouts offset only their first card with margin/padding,
+ * making that preview narrower than the remaining cards. Always make every
+ * media card occupy its complete grid track at every responsive breakpoint.
+ */
+.collaboration-editor #wavepanel > div:not(:first-child):has(> img:first-child) {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  margin-inline: 0;
+  padding-inline: 0;
+  overflow: hidden;
+}
+
+/*
+ * Every source thumbnail uses the same responsive viewport. Contain keeps the
+ * full source frame visible; portrait and square media are letterboxed instead
+ * of being enlarged and cropped.
+ */
+.collaboration-editor #wavepanel > div:not(:first-child):has(> img:first-child) > img:first-child {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  object-position: center;
+  background: #000;
+}
+
+/* Keep empty, loading, and playable render-preview states the same size. */
+.collaboration-editor #wavepanel form > p + div {
+  width: 91.666667%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.collaboration-editor #wavepanel form > p + div > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #000;
+}

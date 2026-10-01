@@ -62,7 +62,7 @@
                     </form>
             </div>
             
-            <div class="lg:col-span-2 xl:col-span-2 2xl:col-span-2 text-base 2xl:text-lg object-cover rounded-lg border-4 border-white bg-white dark:bg-white text-red-600 dark:text-red-600 pl-2 ml-10 2xl:ml-20"  >
+            <div class="lg:col-span-2 xl:col-span-2 2xl:col-span-2 text-lg object-cover rounded-lg border-4 border-white bg-white dark:bg-white text-red-600 dark:text-red-600">
             
                 <img class="border-2 border-white h-32" :src="pic1">{{ text01 }}                
                 <input type="text" id="text01_id" ref="text01_element" v-model="text01_input" :hidden="text01_input_hidden" @blur="textinput01_blur" @keyup.enter.native="textinput01_blur" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-20 p-2.5 h-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -181,7 +181,7 @@
         <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
             <div class="relative p-4 w-full max-w-md max-h-full">
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                    <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
+                    <button type="button" class="absolute top-3 inset-e-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                         </svg>                        
@@ -273,7 +273,7 @@ if (typeof play_data2 === "object" ) {
     }
 }
 
-var layout_2_01_location = 'https://media05.fuzikapp.com/' + 'uploads/layout/2_01_NUM.png';
+var layout_2_01_location = 'https://media05.fuzikapp.com/' + 'uploads/layout2/2_01_NUM.png';
 
 const text01 = ref('-0.00s');
 const text02 = ref('-0.00s');
