@@ -1,9 +1,27 @@
 <template>
   <div class="py-0 sm:py-2">
-      <div class="aspect-w-9 aspect-h-16 bg-slate-100 rounded-lg ">
-        <VideoThumbnail :to="video_link" :preview="play.preview" :title="play.video_title" portrait />
+      <div 
+        class="relative aspect-w-9 aspect-h-16 bg-slate-100 rounded-lg"
+        :class="{ 'opacity-50': play.void === '1' }"
+      >
+        <VideoThumbnail
+          :to="video_link"
+          :preview="play.preview"
+          :title="play.video_title"
+          portrait
+        />
+
+        <div
+          v-if="play.void === '1'"
+          class="absolute bottom-2 right-2"
+        >
+          <span class="bg-black/70 text-white px-3 py-1 rounded-lg font-bold">
+            UNPUBLISHED
+          </span>
+        </div>
       </div>
     </div>
+    
     <div class="space-x-2">
 
       <div class="flex text-gray-400 dark:text-gray-400">

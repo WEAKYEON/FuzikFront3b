@@ -3,9 +3,91 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
   <div class="flex flex-col divide-y divide-slate-200">
+      <div class="flex flex-col justify-start items-start space-y-4 py-6 px-3 lg:px-0 text-white dark:text-white">
+        <div class="flex flex-row items-center gap-4">
+          <div class="text-xl">{{ title }}</div>
 
-    <div class="flex flex-col justify-start items-start space-y-4 py-6 px-3 lg:px-0 text-white dark:text-white">
-      <div class="text-xl">{{ title }}</div>
+          <div class="flex flex-row items-center gap-1">
+            <button
+              type="button"
+              @click="emit('modify')"
+              class="w-8 h-8 flex items-center justify-center text-yellow-300 hover:text-yellow-400"
+              title="Modify"
+            >
+              <span class="material-symbols-outlined text-[20px]">edit</span>
+            </button>
+
+           
+          </div>
+        </div>
+
+
+      <div
+        v-if="showUnpublishConfirm"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+      >
+        <div class="w-full max-w-md rounded-lg bg-gray-900 p-6 text-white shadow-xl">
+          <div class="text-lg font-semibold mb-3">
+            Unpublish video?
+          </div>
+
+          <div class="text-sm text-gray-400 mb-6">
+            Your video will no longer be publicly available.
+          </div>
+
+          <div class="flex justify-end gap-2">
+            <button
+              type="button"
+              @click="showUnpublishConfirm = false"
+              class="px-4 py-2 rounded bg-gray-600 hover:bg-gray-500"
+            >
+              Cancel
+            </button>
+
+            <button
+              type="button"
+              @click="unpublishVideo"
+              class="px-4 py-2 rounded bg-red-500 hover:bg-red-400 text-white"
+            >
+              Unpublish
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        v-if="showPublishConfirm"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+      >
+        <div class="w-full max-w-md rounded-lg bg-gray-900 p-6 text-white shadow-xl">
+          <div class="text-lg font-semibold mb-3">
+            Publish video?
+          </div>
+
+          <div class="text-sm text-gray-400 mb-6">
+            Your video will become publicly available.
+          </div>
+
+          <div class="flex justify-end gap-2">
+            <button
+              type="button"
+              @click="showPublishConfirm = false"
+              class="px-4 py-2 rounded bg-gray-600 hover:bg-gray-500"
+            >
+              Cancel
+            </button>
+
+            <button
+              type="button"
+              @click="publishVideo"
+              class="px-4 py-2 rounded bg-green-500 hover:bg-green-400 text-white"
+            >
+              Publish
+            </button>
+          </div>
+        </div>
+      </div>
+
 
       <div class="flex flex-col lg:flex-row justify-start items-start space-y-4 lg:space-y-0 space-x-0 lg:space-x-20">
 
@@ -105,6 +187,7 @@
 
           <div @click="showModal()"
             class="flex flex-row justify-center items-center space-x-2 px-4 py-2 text-yellow-600 bg-gray-200 rounded-xl cursor-pointer trasition-all duration-500 hover:lg:bg-black hover:lg:text-yellow-600 hover:lg:fill-white">
+            
             <div class="w-6 h-6">
               <span class="material-symbols-outlined">
                 Share
@@ -119,6 +202,48 @@
             </div>
             <div>Share</div>
           </div>
+          <div class="relative">
+            <button
+              type="button"
+              @click="showMenu = !showMenu"
+              class="w-10 h-10 flex items-center justify-center text-yellow-600 bg-gray-200 rounded-xl hover:lg:bg-black hover:lg:text-yellow-600"
+              title="More"
+            >
+              <span class="material-symbols-outlined text-[22px]">more_vert</span>
+            </button>
+
+            <div
+              v-if="showMenu"
+              class="absolute left-14 bottom-0 z-50 w-40 rounded-lg bg-gray-950 shadow-lg border border-gray-700 py-1"
+            >
+              <div class="px-3 py-2 text-sm">
+                <button
+                  class="flex items-center w-full py-2 text-left"
+                  :class="isPublished ? 'font-semibold text-white' : 'text-gray-500'"
+                  :disabled="isPublished"
+                  @click="showPublishConfirm = true; showMenu = false"
+                >
+                  <span class="material-symbols-outlined mr-2 text-[18px]">
+                    {{ isPublished ? 'radio_button_checked' : 'radio_button_unchecked' }}
+                  </span>
+                  Publish
+                </button>
+
+                <button
+                  class="flex items-center w-full py-2 text-left"
+                  :class="!isPublished ? 'font-semibold text-white' : 'text-gray-500'"
+                  :disabled="!isPublished"
+                  @click="showUnpublishConfirm = true; showMenu = false"
+                >
+                  <span class="material-symbols-outlined mr-2 text-[18px]">
+                    {{ !isPublished ? 'radio_button_checked' : 'radio_button_unchecked' }}
+                  </span>
+                  Unpublish
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -147,6 +272,12 @@
         <p class="dark:bg-white bg-white dark:text-gray-900 text-gray-900">The video's url is copied to clipboard.</p>
       </div>
     </UModal>
+
+    <div v-if="showToast"
+      class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] bg-gray-900 text-white px-5 py-3 rounded-lg shadow-lg"
+    >
+      {{ toastMessage }}
+    </div>
   </div>
 </template>
 
@@ -171,11 +302,30 @@ const props = defineProps({
   created_time: String,
 
   resized: Boolean,
+  isPublished: Boolean,
 
   owner_display_name: String,
   owner_display_pic: String,
 
 })
+
+const emit = defineEmits(['modify', 'menu']);
+const showMenu = ref(false);
+const showUnpublishConfirm = ref(false);
+const showPublishConfirm = ref(false);
+const isPublished = ref(props.isPublished);
+
+const showToast = ref(false);
+const toastMessage = ref('');
+
+function showToastMessage(message: string) {
+  toastMessage.value = message;
+  showToast.value = true;
+
+  setTimeout(() => {
+    showToast.value = false;
+  }, 3000);
+}
 
 //const video_location = ref('')
 //const musician_name = ref('')
@@ -211,6 +361,7 @@ const this_views = ref('-');
 var formatted_created_time = durationTime(this_created_time);
 
 var url = props['url'];
+var musician_email = props['musician_email'];
 
 //console.log('current_user_email');
 //console.log(current_user_email);
@@ -600,6 +751,107 @@ function durationTime(dateString: any) {
   //console.log(str_time);
   return str_time;
 }
+
+async function unpublishVideo() {
+  console.log('UNPUBLISH CLICKED');
+
+  const params = new URLSearchParams();
+
+  params.append('p', url);
+  params.append('musician2_email', musician_email);
+
+  try {
+    const result = await $fetch('/api/unpublish_playvideo2?' + params.toString());
+
+    console.log('Unpublish result:', result);
+
+    if (result.status === 200) {
+      let backendResult;
+
+      try {
+        backendResult = JSON.parse(result.response);
+      } catch {
+        console.log('Backend returned non-JSON response:', result.response);
+        showToastMessage('Failed to unpublish video. Please try again.');
+        return;
+      }
+
+      console.log('Backend result:', backendResult);
+
+      if (backendResult[0]?.result === 'Success') {
+        showToastMessage('Video unpublished successfully!');
+        isPublished.value = false;
+        showUnpublishConfirm.value = false;
+        showMenu.value = false;
+      } else {
+        console.log('Backend unpublish failed:', backendResult);
+        showToastMessage('Failed to unpublish video. Please try again.');
+      }
+    } else {
+      console.log(
+        'Unpublish API failed:',
+        result.status,
+        result.response
+      );
+
+      showToastMessage('Failed to unpublish video. Please try again.');
+    }
+  } catch (error) {
+    console.error('Unpublish request error:', error);
+    showToastMessage('Failed to unpublish video. Please try again.');
+  }
+}
+
+async function publishVideo() {
+  console.log('PUBLISH CLICKED');
+
+  const params = new URLSearchParams();
+
+  params.append('p', url);
+  params.append('musician2_email', musician_email);
+
+  try {
+    const result = await $fetch('/api/publish_playvideo2?' + params.toString());
+
+    console.log('Publish result:', result);
+
+    if (result.status === 200) {
+      let backendResult;
+
+      try {
+        backendResult = JSON.parse(result.response);
+      } catch {
+        console.log('Backend returned non-JSON response:', result.response);
+        showToastMessage('Failed to publish video. Please try again.');
+        return;
+      }
+
+      console.log('Backend result:', backendResult);
+
+      if (backendResult[0]?.result === 'Success') {
+        showToastMessage('Video published successfully!');
+        isPublished.value = true;
+        showPublishConfirm.value = false;
+        showMenu.value = false;
+      } else {
+        console.log('Backend publish failed:', backendResult);
+        showToastMessage('Failed to publish video. Please try again.');
+      }
+    } else {
+      console.log(
+        'Publish API failed:',
+        result.status,
+        result.response
+      );
+
+      showToastMessage('Failed to publish video. Please try again.');
+    }
+  } catch (error) {
+    console.error('Publish request error:', error);
+    showToastMessage('Failed to publish video. Please try again.');
+  }
+}
+
 
 // run after page load
 /*

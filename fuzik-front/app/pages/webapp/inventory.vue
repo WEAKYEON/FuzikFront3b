@@ -41,14 +41,14 @@
 
     <div class="flex flex-col space-y-2">
       <div  v-show="show_landscape"  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-1">
-        <div v-for="p in plays">
+        <div v-for="p in my_plays">
           <VideosLandscape2 :play="p"/>
         </div>
       </div>
       <div class="text-right"><button class="btn" @click="togglePortrait" v-show="show_landscape_only_button"> {{ landscape_button }}</button></div>
 
       <div  v-show="show_portrait"  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-2 sm:gap-1">
-        <div v-for="p in plays_p">
+        <div v-for="p in my_plays_p">
           <VideosPortrait2 :play="p"/>
         </div>
       </div>
@@ -149,10 +149,11 @@
   const show_portrait_only_button = ref(true);
   const show_landscape_only_button = ref(true);
 
-  const { data: plays } = await   useFetch('/api/play2s_l/?limit=12&musician=' + display_name + '&q=' + q_address_bar)
+  const { data: plays } = await useFetch('/api/play2s_l/?limit=12&musician=' + display_name + '&q=' + q_address_bar)
   const { data: plays_p } = await useFetch('/api/play2s_p/?musician=' + display_name + '&q=' + q_address_bar)
   const { data: plays_cont } = await useFetch('/api/play2s_l/?start=13&musician=' + display_name + '&q=' + q_address_bar);
-
+  const { data: my_plays } = await useFetch('/api/my_play2s_l/?musician2_email=' + email)
+  const { data: my_plays_p } = await useFetch('/api/my_play2s_p/?musician2_email=' + email)
 
   var landscape_button = "Landscape videos only";
   var portrait_button = "Portrait videos only";
