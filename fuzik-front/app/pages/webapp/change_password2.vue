@@ -1,5 +1,4 @@
 <template>
-    <meta http-equiv="refresh" content="2;url=/" />
     <div class="bg-black text-white h-screen text-center">
         Password changed
         <br />
@@ -11,14 +10,16 @@
 
 <script setup lang="ts">
 
+useHead({ meta: [{ 'http-equiv': 'refresh', content: '2;url=/' }] });
+
 const client = useSupabaseClient();
 
-const { data, error } = await client.auth.refreshSession()
+const { data, error } = await client.auth.getSession()
 const { session, user } = data
 
 var loading_image = 'https://media05.fuzikapp.com/app/loading.gif';
 
-//client.auth.signOut();
+//await client.auth.signOut();
 
 definePageMeta({
   layout: "empty"

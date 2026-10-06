@@ -159,12 +159,12 @@ if (rotate_value.localeCompare('Rotate')==0) {
 
 /*
 var lll = display_name.value.trim() + 
-        "&email=" + email.value.trim() +
-        "&first_name=" + first_name.value.trim() +
-        "&last_name=" + last_name.value.trim() + 
-        "&genre=" + genre.value.trim() +
-        "&instrument=" + instrument.value.trim() +
-        "&tel=" + tel.value.trim();
+        "&email=" + encodeURIComponent(String(email.value.trim())) +
+        "&first_name=" + encodeURIComponent(String(first_name.value.trim())) +
+        "&last_name=" + encodeURIComponent(String(last_name.value.trim())) +
+        "&genre=" + encodeURIComponent(String(genre.value.trim())) +
+        "&instrument=" + encodeURIComponent(String(instrument.value.trim())) +
+        "&tel=" + encodeURIComponent(String(tel.value.trim()));
 */
 
 //var this_video = document.getElementById('my_video')
@@ -223,18 +223,18 @@ async function send_data() {
   if (main_form != null) {
 
     if (allowed) {
-      var input = '?video_title=' + video_title.value +
-        '&description=' + description.value +
-        '&music_title=' + music_title.value +
-        '&video_location=' + video_location +
-        '&original=' + original.value +
-        '&instrument=' + instrument.value +
-        '&musician2_email=' + email +
-        '&dimension=' + dimension +
-        '&width=' + upload_width +
-        '&height=' + upload_height +
-        '&accept=' + accept +
-        '&public_domain=' + public_domain;
+      var input = '?video_title=' + encodeURIComponent(String(video_title.value)) +
+        '&description=' + encodeURIComponent(String(description.value)) +
+        '&music_title=' + encodeURIComponent(String(music_title.value)) +
+        '&video_location=' + encodeURIComponent(String(video_location)) +
+        '&original=' + encodeURIComponent(String(original.value)) +
+        '&instrument=' + encodeURIComponent(String(instrument.value)) +
+        '&musician2_email=' + encodeURIComponent(String(email)) +
+        '&dimension=' + encodeURIComponent(String(dimension)) +
+        '&width=' + encodeURIComponent(String(upload_width)) +
+        '&height=' + encodeURIComponent(String(upload_height)) +
+        '&accept=' + encodeURIComponent(String(accept)) +
+        '&public_domain=' + encodeURIComponent(String(public_domain));
 
       //alert(input);
       var url = '/api/upload_playvideo2' + input;
@@ -338,7 +338,7 @@ async function encrypt_video_location(original_location:string) {
 
   }
   
-  result = 'stream/video_stream.php?code=' + code;
+  result = 'stream/video_stream.php?code=' + encodeURIComponent(String(code));
 
   return result;
 }
@@ -346,7 +346,7 @@ async function encrypt_video_location(original_location:string) {
 async function check_rotaion(file_location) {
 
   const response_text = ref('');
-  var url = 'https://media05.fuzikapp.com/rotation_check.php?video_location=' + file_location;
+  var url = 'https://media05.fuzikapp.com/rotation_check.php?video_location=' + encodeURIComponent(String(file_location));
       //console.log('check rotation: ' + url);
       //alert(url);
 

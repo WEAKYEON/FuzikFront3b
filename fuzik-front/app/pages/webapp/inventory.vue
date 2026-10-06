@@ -8,7 +8,7 @@
             @click=""
             class="flex-1 text-center rounded-lg cursor-pointer bg-yellow-300 text-black"
           >
-          <NuxtLink to="/inventory">
+          <NuxtLink to="/webapp/inventory">
             Solo
           </NuxtLink>          
           </div>
@@ -16,7 +16,7 @@
             @click=""
             class="flex-1 text-center rounded-lg cursor-pointer bg-black text-yellow-300"
           >
-          <NuxtLink to="/inventory02">
+          <NuxtLink to="/webapp/inventory02">
             Collaboration
           </NuxtLink>
           </div>
@@ -113,7 +113,7 @@
 
   if (!allowed) {
     //display.value = 'Direct access not allowed'
-    navigateTo('/login')
+    navigateTo('/webapp/login')
   }
 
   if (q_address_bar == undefined) {
@@ -129,7 +129,7 @@
   } else {
 
     const url = '';
-    const { data: musician, pending, error, refresh } = await useFetch('/api/musician2_detail/?email=' + email);
+    const { data: musician, pending, error, refresh } = await useFetch('/api/musician2_detail/?email=' + encodeURIComponent(String(email)));
     
     data_musician = musician
 
@@ -149,11 +149,11 @@
   const show_portrait_only_button = ref(true);
   const show_landscape_only_button = ref(true);
 
-  const { data: plays } = await useFetch('/api/play2s_l/?limit=12&musician=' + display_name + '&q=' + q_address_bar)
-  const { data: plays_p } = await useFetch('/api/play2s_p/?musician=' + display_name + '&q=' + q_address_bar)
-  const { data: plays_cont } = await useFetch('/api/play2s_l/?start=13&musician=' + display_name + '&q=' + q_address_bar);
-  const { data: my_plays } = await useFetch('/api/my_play2s_l/?musician2_email=' + email)
-  const { data: my_plays_p } = await useFetch('/api/my_play2s_p/?musician2_email=' + email)
+  const { data: plays } = await useFetch('/api/play2s_l/?limit=12&musician=' + encodeURIComponent(String(display_name)) + '&q=' + encodeURIComponent(String(q_address_bar)))
+  const { data: plays_p } = await useFetch('/api/play2s_p/?musician=' + encodeURIComponent(String(display_name)) + '&q=' + encodeURIComponent(String(q_address_bar)))
+  const { data: plays_cont } = await useFetch('/api/play2s_l/?start=13&musician=' + encodeURIComponent(String(display_name)) + '&q=' + encodeURIComponent(String(q_address_bar)));
+  const { data: my_plays } = await useFetch('/api/my_play2s_l/?musician2_email=' + encodeURIComponent(String(email)))
+  const { data: my_plays_p } = await useFetch('/api/my_play2s_p/?musician2_email=' + encodeURIComponent(String(email)))
 
   var landscape_button = "Landscape videos only";
   var portrait_button = "Portrait videos only";

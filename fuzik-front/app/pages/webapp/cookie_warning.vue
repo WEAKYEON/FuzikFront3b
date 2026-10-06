@@ -1,5 +1,4 @@
 <template>
-<meta http-equiv="refresh" content="5;url=/" />
 <div class="min-h-screen py-40 text-gray-900" style="background-image: linear-gradient(115deg, #FDFD33, #FFFFFF)">
 
     <div class="container mx-auto">
@@ -19,6 +18,8 @@
 </template>
 
 <script setup lang="ts">
+
+useHead({ meta: [{ 'http-equiv': 'refresh', content: '5;url=/' }] });
 const logo2 = ref('https://media05.fuzikapp.com/app/fuzik_logo04_01.png')
 
 definePageMeta({

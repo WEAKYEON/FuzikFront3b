@@ -1,18 +1,28 @@
 <template>
-    <meta http-equiv="refresh" content="2;url=/login" />
     <div class="bg-black text-white h-screen text-center">
-        Update password success
+        {{ errorMsg || 'Update password success' }}
     </div>
 </template>
 
 <script setup lang="ts">
 
+
+
 const client = useSupabaseClient();
 
-const { data, error } = await client.auth.refreshSession()
-const { session, user } = data
-
-client.auth.signOut();
+const errorMsg = ref('');
+const complete = ref(false);
+const musician = useState('current-musician');
+useHead(() => ({ meta: complete.value ? [{ 'http-equiv': 'refresh', content: '2;url=/webapp/login' }] : [] }));
+onMounted(async () => {
+    const { error } = await client.auth.signOut();
+    if (error) {
+        errorMsg.value = error.message;
+        return;
+    }
+    musician.value = null;
+    complete.value = true;
+});
 
 definePageMeta({
   layout: "empty"

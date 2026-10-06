@@ -8,14 +8,13 @@ export default defineEventHandler((event) => {
     const { instrument } = getQuery(event);
     const { tel } = getQuery(event);
 
-    var path = "https://engine01.fuzikapp.com/create_musician2?display_name=" +
-    display_name + 
-    "&email=" + email +
-    "&first_name=" + first_name +
-    "&last_name=" + last_name + 
-    "&genre=" + genre +
-    "&instrument=" + instrument +
-    "&tel=" + tel;
+    var path = useRuntimeConfig(event).engineBaseUrl + '/create_musician2?display_name=' + encodeURIComponent(String(display_name)) +
+    "&email=" + encodeURIComponent(String(email)) +
+    "&first_name=" + encodeURIComponent(String(first_name)) +
+    "&last_name=" + encodeURIComponent(String(last_name)) +
+    "&genre=" + encodeURIComponent(String(genre)) +
+    "&instrument=" + encodeURIComponent(String(instrument)) +
+    "&tel=" + encodeURIComponent(String(tel));
 
     const response = $fetch(path);
     

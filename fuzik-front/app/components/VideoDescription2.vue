@@ -267,10 +267,12 @@
       -->
       
     </div>
-    <UModal v-model="isOpen" :overlay="false">
+    <UModal v-model:open="isOpen" :overlay="false" title="Share video" description="Copy the video link to share it.">
+      <template #content>
       <div class="p-4 text-center bg-white rounded-lg">
-        <p class="dark:bg-white bg-white dark:text-gray-900 text-gray-900">The video's url is copied to clipboard.</p>
+        <p class="dark:bg-white bg-white dark:text-gray-900 text-gray-900">{{ shareMessage }}</p>
       </div>
+      </template>
     </UModal>
 
     <div v-if="showToast"
@@ -344,6 +346,7 @@ const is_liked = ref(false)
 
 // Share
 const isOpen = ref(false);
+const shareMessage = ref('');
 //const display_time = ref('')
 
 //const display_time = durationTime(props['updated_time']);
@@ -424,7 +427,7 @@ let intervalId: any;
   
 async function get_view(url: any) {
 
-  var uri = '/api/get_play2_count?p=' + url;
+  var uri = '/api/get_play2_count?p=' + encodeURIComponent(String(url));
   //console.log("uri: " + uri);
 
   var output;
@@ -491,13 +494,13 @@ async function toggleLike() {
 }
 
 async function showModal() {
-  /*
-  this.visibleModal = true
-  this.$modal.show('share-modal')
-  */
-
-  var front_url = 'https://www.fuzikapp.com'; 
-  navigator.clipboard.writeText(front_url + '/watch/' + url);
+  const shareUrl = new URL('/webapp/watch/' + encodeURIComponent(String(url)), window.location.origin).href;
+  try {
+    await navigator.clipboard.writeText(shareUrl);
+    shareMessage.value = "The video's url is copied to clipboard.";
+  } catch {
+    shareMessage.value = 'Unable to access the clipboard. Copy this link: ' + shareUrl;
+  }
   isOpen.value = true;
 }
 
@@ -510,7 +513,7 @@ async function closeModal() {
 
 async function get_profile_pic(musician_display_name: any) {
 
-  var uri = '/api/get_display_picture?musician_name=' + musician_display_name
+  var uri = '/api/get_display_picture?musician_name=' + encodeURIComponent(String(musician_display_name))
 
   var default_image = 'https://media05.fuzikapp.com/app/music_staff.png';
 
@@ -537,7 +540,7 @@ async function get_profile_pic(musician_display_name: any) {
 
 async function get_fan(musician_email: any, user_email: any) {
 
-  var uri = '/api/get_fan?musician_email=' + musician_email + '&user_email=' + user_email;
+  var uri = '/api/get_fan?musician_email=' + encodeURIComponent(String(musician_email)) + '&user_email=' + encodeURIComponent(String(user_email));
 
 
   try {
@@ -569,7 +572,7 @@ async function get_fan(musician_email: any, user_email: any) {
 
 async function add_fan(musician_email: any, user_email: any, fan_value: any) {
 
-  var uri = '/api/add_fan?musician_email=' + musician_email + '&user_email=' + user_email + '&fan=' + fan_value;
+  var uri = '/api/add_fan?musician_email=' + encodeURIComponent(String(musician_email)) + '&user_email=' + encodeURIComponent(String(user_email)) + '&fan=' + encodeURIComponent(String(fan_value));
 
   try {
     const response = await fetch(uri);
@@ -604,7 +607,7 @@ async function add_fan(musician_email: any, user_email: any, fan_value: any) {
 
 async function get_like(play2_url: any, user_email: any) {
 
-  var uri = '/api/get_like?play2_url=' + play2_url + '&user_email=' + user_email
+  var uri = '/api/get_like?play2_url=' + encodeURIComponent(String(play2_url)) + '&user_email=' + encodeURIComponent(String(user_email))
 
   try {
     const response = await fetch(uri);
@@ -636,7 +639,7 @@ async function get_like(play2_url: any, user_email: any) {
 
 async function add_like(play2_url: any, user_email: any, like_value: any) {
 
-var uri = '/api/add_like?play2_url=' + play2_url + '&user_email=' + user_email + '&like=' + like_value;
+var uri = '/api/add_like?play2_url=' + encodeURIComponent(String(play2_url)) + '&user_email=' + encodeURIComponent(String(user_email)) + '&like=' + encodeURIComponent(String(like_value));
 console.group("uri" + uri);
 
 try {

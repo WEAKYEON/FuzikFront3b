@@ -36,7 +36,7 @@
 
 //import nuxtStorage from 'nuxt-storage'
 
-var app_location = 'https://www.fuzikapp.com/';
+var app_location = 'https://www.fuzikapp.com/webapp/';
 var media_location = 'https://media05.fuzikapp.com/';
 
 definePageMeta({
@@ -106,7 +106,7 @@ const route = useRoute();
 
 const { j } = useRoute().params
 
-var uri = '/api/jam2_watch?j=' + j;
+var uri = '/api/jam2_watch?j=' + encodeURIComponent(String(j));
 
 var jam_url = j;
 //var video2_url = ''
@@ -160,7 +160,7 @@ try {
     preview.value = song[0].preview
 
     //setTimeout(count_view,5000);
-    var url_add_count = '/api/add_jam2_count?j=' + j + '&email=' + current_user_email
+    var url_add_count = '/api/add_jam2_count?j=' + encodeURIComponent(String(j)) + '&email=' + encodeURIComponent(String(current_user_email))
     //const response2 = await fetch(url_count);
 
 
@@ -179,7 +179,7 @@ var data_view_count: any;
 
 
 try {
-    var url_count = '/api/get_jam2_count?j=' + j;
+    var url_count = '/api/get_jam2_count?j=' + encodeURIComponent(String(j));
     //const response2 = await fetch(url_count);
 
     const { data: get_view, pending, error, refresh } = await useFetch(url_count, {
@@ -262,7 +262,7 @@ useHead({
     },
     {
         property: 'og:url',
-        content: app_location + 'watch/' + url.value
+        content: app_location + 'jam_watch/' + url.value
     },
     {
         property: 'og:site_name',

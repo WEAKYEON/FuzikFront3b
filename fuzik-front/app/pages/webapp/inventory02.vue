@@ -6,12 +6,12 @@
         <div
           class="flex flex-row justify-center items-center  bg-black p-1 rounded-xl divide divide-white text-white border-2 border-white">
           <div @click="" class="flex-1 text-center rounded-lg cursor-pointer bg-black text-yellow-300">
-            <NuxtLink to="/inventory">
+            <NuxtLink to="/webapp/inventory">
               Solo
             </NuxtLink>
           </div>
           <div @click="" class="flex-1 text-center rounded-lg cursor-pointer bg-yellow-300 text-black">
-            <NuxtLink to="/inventory02">
+            <NuxtLink to="/webapp/inventory02">
               Collaboration
             </NuxtLink>
           </div>
@@ -101,7 +101,7 @@ if (email == null) {
 
 if (!allowed) {
   //display.value = 'Direct access not allowed'
-  navigateTo('/login')
+  navigateTo('/webapp/login')
 }
 
 
@@ -111,7 +111,7 @@ if (email == null) {
 } else {
 
   const url = '';
-  const { data: musician, pending, error, refresh } = await useFetch('/api/musician2_detail?email=' + email);
+  const { data: musician, pending, error, refresh } = await useFetch('/api/musician2_detail?email=' + encodeURIComponent(String(email)));
   data_musician = musician
 
   is_auth.value = true;
@@ -129,7 +129,7 @@ const show_landscape = ref(true);
 const show_portrait_only_button = ref(true);
 const show_landscape_only_button = ref(true);
 
-const { data: jams } = await useFetch('/api/jam2s/?q=' + q_address_bar + '&musician=' + display_name);
+const { data: jams } = await useFetch('/api/jam2s/?q=' + encodeURIComponent(String(q_address_bar)) + '&musician=' + encodeURIComponent(String(display_name)));
 
 //const isEmptyArray = jams.value && jams.value.length === 0;
 

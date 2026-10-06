@@ -1,27 +1,27 @@
 export default defineEventHandler((event) => {
 
     const { jam2_url } = getQuery(event);
-    const { like_value } = getQuery(event);
+    const { like } = getQuery(event);
     const { user_email } = getQuery(event);
 
-    var path = 'https://engine01.fuzikapp.com/add_fan?q=a';
+    var path = useRuntimeConfig(event).engineBaseUrl + '/add_jam_like?q=a';
 
-    if (like_value==undefined) {
+    if (like==undefined) {
 
     } else {
-        path = path + '&like_value=' + like_value;
+        path = path + '&like=' + encodeURIComponent(String(like));
     }
 
     if (user_email==undefined) {
 
     } else {
-        path = path + '&user_email=' + user_email;
+        path = path + '&user_email=' + encodeURIComponent(String(user_email));
     }
 
     if (jam2_url==undefined) {
 
     } else {
-        path = path + '&jam2_url=' + jam2_url;
+        path = path + '&jam2_url=' + encodeURIComponent(String(jam2_url));
     }
 
 

@@ -65,7 +65,7 @@ if (cookie_video_location.value != undefined) {
 //console.log(video_location)
 if ((video_location == null) || (video_location.length==0)) {
   display.value = 'Direct access is not allowed'
-  navigateTo('/index02')
+  navigateTo('/webapp/index02')
 
 } else {
   display.value = 'Upload success';
@@ -112,7 +112,7 @@ function hello() {
   //nuxtStorage.localStorage.setData('upload_width', img.width);
   //nuxtStorage.localStorage.setData('upload_height', img.height);
   
-  navigateTo('/video_upload_info')
+  navigateTo('/webapp/video_upload_info')
 
 }
 

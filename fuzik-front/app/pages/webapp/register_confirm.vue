@@ -1,5 +1,4 @@
 <template>
-    <meta http-equiv="refresh" content="10;url=/login" />
     <div>
         <div class="min-h-screen py-40" style="background-image: linear-gradient(115deg, #FDFD33, #FFFFFF)">
             <div class="container mx-auto dark:text-black text-black">
@@ -37,6 +36,8 @@
 </template>
 
 <script setup lang="ts">
+
+useHead({ meta: [{ 'http-equiv': 'refresh', content: '10;url=/webapp/login' }] });
 
 const logo2 = ref("https://media05.fuzikapp.com/app/fuzik_logo04_01.png");
 

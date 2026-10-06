@@ -15,19 +15,18 @@ export default defineEventHandler((event) => {
 
 
 
-    var path = "https://engine01.fuzikapp.com/upload_playvideo2?video_title=" +
-    video_title + 
-    "&description=" + description +
-    "&music_title=" + music_title +
-    "&video_location=" + video_location + 
-    "&original=" + original +
-    "&instrument=" + instrument +
-    "&musician2_email=" + musician2_email +
-    "&dimension=" + dimension +
-    "&width=" + width +
-    "&height=" + height +
-    "&accept=" + accept +
-    "&public_domain=" + public_domain;
+    var path = useRuntimeConfig(event).engineBaseUrl + '/upload_playvideo2?video_title=' + encodeURIComponent(String(video_title)) +
+    "&description=" + encodeURIComponent(String(description)) +
+    "&music_title=" + encodeURIComponent(String(music_title)) +
+    "&video_location=" + encodeURIComponent(String(video_location)) +
+    "&original=" + encodeURIComponent(String(original)) +
+    "&instrument=" + encodeURIComponent(String(instrument)) +
+    "&musician2_email=" + encodeURIComponent(String(musician2_email)) +
+    "&dimension=" + encodeURIComponent(String(dimension)) +
+    "&width=" + encodeURIComponent(String(width)) +
+    "&height=" + encodeURIComponent(String(height)) +
+    "&accept=" + encodeURIComponent(String(accept)) +
+    "&public_domain=" + encodeURIComponent(String(public_domain));
 
 
     const response = fetch(path);

@@ -68,7 +68,6 @@
                     email: email.value,
                     password: password.value,
                 });
-                console.log(data.user);
                 if (error) {
                     errorMsg.value = error.message;
                     successMsg.value = "";
@@ -78,13 +77,11 @@
                 successMsg.value = "Logged in";
                 errorMsg.value = "";
     
-                var main_form = <HTMLFormElement>document.getElementById('main_form');
-    
-                main_form.submit();
+                await navigateTo('/webapp/login_success');
     
             } catch ( error ) {
                 //alert(errorMsg);
-                console.log(errorMsg);
+                errorMsg.value = error instanceof Error ? error.message : 'Unable to sign in. Please try again.';
             }
         }
     

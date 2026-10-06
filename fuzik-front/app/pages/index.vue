@@ -68,57 +68,7 @@
     <section id="features-highlight" class="section-padding bg-black">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="container mx-auto h-full ">
-                    <div class="w-full h-fullitems-center ">
-                        <div class="w-full bg-black rounded-xl overflow-hidden shadow-2xl ">
-                        
-                            <!-- Video Container -->
-                            <div class="relative aspect-video ">
-                                <iframe
-                                class="absolute inset-0 w-full h-full"
-                                :src="`https://www.youtube.com/embed/${videoIds[currentIndex]}`"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                                ></iframe>
-                            </div>
-
-                            <!-- Controls -->
-                            <div class="flex items-center justify-between p-6 bg-gray-800">
-                                <button 
-                                @click="prevVideo"
-                                class="px-6 py-2 bg-yellow-300 hover:bg-[#fff600] text-[#111111] transition rounded-full font-semibold"
-                                >
-                                Previous
-                                </button>
-
-                                <div class="text-sm font-mono">
-                                Video {{ currentIndex + 1 }} of {{ videoIds.length }}
-                                </div>
-
-                                <button 
-                                @click="nextVideo"
-                                class="px-6 py-2 bg-yellow-300 hover:bg-[#fff600] text-[#111111] transition rounded-full font-semibold"
-                                >
-                                Next
-                                </button>
-                            </div>
-                        
-                            <!-- Navigation Dots -->
-                            <div class="flex justify-center gap-2 mt-6">
-                                <button 
-                                    v-for="(id, index) in videoIds" 
-                                    :key="id"
-                                    @click="currentIndex = index"
-                                    :class="[
-                                    'w-3 h-3 rounded-full transition-all',
-                                    currentIndex === index ? 'bg-[#fff600] scale-125' : 'bg-gray-600'
-                                    ]"
-                                ></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <VideoCarousel />
 
                 <div>
                     <h2 class="text-5xl font-bold mb-6">Unleash Your Creativity with <span class="text-[#fff600]">Powerful Features</span></h2>
@@ -208,115 +158,11 @@
         </div>
     </section>
 
-    <section class="section-padding bg-[#fff600] text-black text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold mb-6 text-[#111111]" >Ready to Start Your <span class="text-[#1a1a1a]">Global Jam?</span></h2>
-            <p class="text-xl mb-8 opacity-90">
-                Join thousands of hobbyist musicians already connecting, playing, and creating on Fuzik Collaborate. Your next musical adventure is just a click away!
-            </p>
-            <a href="/webapp" target="_blank" class="btn-primary btn-final-cta pulse-yellow">
-                <img src="/images/icons/rocket_launch_256.png" class="w-16 px-4"  />Launch Fuzik App Now!
-            </a>
-        </div>
-    </section>
+    <GlobalJamBanner />
     </div>
 
     <!-- footer -->
-    <div class="bg-black py-16">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-12">
-                <div class="col-span-1 md:col-span-2 lg:col-span-1">
-                    <a href="/index" class="flex items-center space-x-2 mb-4">
-                        <img src="/images/logo/FuzikLogo.png" alt="Fuzik Collaborate Logo" class="h-10 w-auto">
-                        <span class="text-2xl font-bold text-[#f8f9fa]">Fuzik Collaborate</span>
-                    </a>
-                    <p class="text-gray-400 text-sm mb-6">
-                        Empowering musicians worldwide to connect, create, and jam together through 
-                        innovative video synchronization technology.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://discord.gg/US2hz9FvsV" target="_blank" class="footer-social-icon">
-                            <img src="/images/icons/Discord-Symbol-White.png" class="w-12 px-2 py-4"  />
-                        </a>
-                        <a href="https://www.facebook.com/fuzikcollaboration" target="_blank" class="footer-social-icon">
-                            <img src="/images/icons/Facebook_Logo_Primary.png" class="w-12 px-2 py-4"  />
-                        </a>
-                        <a href="https://www.instagram.com/fuzikmusiccollaboration/?fbclid=IwY2xjawLQ4BlleHRuA2FlbQIxMQBicmlkETFFSWFvdmFUWHBoWDZKSUUzAR4gMnSxq6J0Et494YOLIXkFBcFRXuzNzUzUA9IOjXjgx35lKgKVSUWqPgfW3ALQ_aem_sQYkD7FbPk-RJEMRy7VyWQ" target="_blank" class="footer-social-icon">
-                            <img src="/images/icons/Instagram_icon.png" class="w-12 px-2 py-4"  />
-                        </a>
-                        <a href="https://www.youtube.com/@fuzikapplication" target="_blank" class="footer-social-icon">
-                            <img src="/images/icons/yt_icon_red_digital.png" class="w-20 px-2 py-2"  />
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold text-lg mb-5 text-[#fff600]">The Platform</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><a href="/feature" class="nav-link-hover-effect">Features</a></li>
-                        <li><a href="/pricing" class="nav-link-hover-effect">Pricing</a></li>
-                        <li><a href="/webapp" target="_blank" class="nav-link-hover-effect">Web App</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold text-lg mb-5 text-[#fff600]">Resources</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><a href="/contact" class="nav-link-hover-effect">Contact Us</a></li>
-                        <li><a href="/faq" class="nav-link-hover-effect">FAQ</a></li>
-                        <li><a href="/blog" class="nav-link-hover-effect">Blog</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-lg mb-5 text-[#fff600]">Legal</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><a href="/privacy_policy" class="nav-link-hover-effect">Privacy Policy</a></li>
-                        <li><a href="/terms" class="nav-link-hover-effect">Terms of Service</a></li>
-                        <li><a href="/cookie" class="nav-link-hover-effect">Cookie Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-[#aaaaaa] pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-                <p>
-                    © 2024 Fuzik Collaborate by Fuzik Connex Co., Ltd. All rights reserved.
-                </p>
-                <p class="mt-2 md:mt-0">
-                    Connect. Play. Collaborate. Jam.
-                </p>
-            </div>
-        </div>
-    
-        <div id="cookie-consent-modal" class="cookie-modal-overlay">
-            <div class="cookie-modal-content">
-                <h2 class="text-2xl font-bold mb-4 text-[#f8f9fa]">We Value Your Privacy</h2>
-                <p class="text-gray-300 mb-6">
-                    This website (<a href="https://fuzikapp.com" class="text-[#fff600] hover:underline">www.fuzik.co</a>) uses cookies to enhance your experience and analyze site traffic. By clicking "Accept All Cookies", you consent to the use of all cookies. For more information or to manage your preferences, click "Manage Preferences".
-                </p>
-                <div id="initial-buttons" class="flex justify-center space-x-4">
-                    <button onclick="acceptAllCookies()" class="btn-primary px-6 py-3">Accept All Cookies</button>
-                    <button onclick="showPreferenceManager()" class="btn-secondary px-6 py-3">Manage Preferences</button>
-                </div>
-
-                <div id="cookie-preferences" class="cookie-preferences-section hidden">
-                    <h3 class="text-xl font-bold mb-4 text-[#f8f9fa]">Manage Your Cookie Preferences</h3>
-                    
-                    <div class="cookie-preference-item">
-                        <input type="checkbox" id="essential-cookies" checked disabled>
-                        <label for="essential-cookies">Essential Cookies</label>
-                        <p class="text-gray-400">These cookies are necessary for the website to function and cannot be switched off.</p>
-                    </div>
-
-                   
-
-                    <div class="flex justify-center mt-6">
-                        <button onclick="saveCookiePreferences()" class="btn-primary px-6 py-3">Save Preferences</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <WebsiteFooter home-href="/index" :social-circles="false" :optional-cookies="false" />
 </template>
 
 <script setup lang="ts">
@@ -340,62 +186,13 @@ definePageMeta({
   layout: "front"
 });
 
-// Replace these IDs with your actual YouTube video IDs
-const videoIds = ref([
-        'KzYq0T5ur0s',
-        'c1VWzb_o_-M',
-        'DrILeGU-BEw',
-        'WsnFdLQsnsM',
-        'kbvhGo8kfFY',
-        'tXvd3IUJ6oc',
-        'jomFkAWR6zw'
-])
-
-const currentIndex = ref(0)
-
-const nextVideo = () => {
-  if (currentIndex.value < videoIds.value.length - 1) {
-    currentIndex.value++
-  } else {
-    currentIndex.value = 0 // Loop back to start
-  }
-}
-
-const prevVideo = () => {
-  if (currentIndex.value > 0) {
-    currentIndex.value--
-  } else {
-    currentIndex.value = videoIds.value.length - 1 // Loop to end
-  }
-}
-
 </script>
 
-<style scoped>
-    .section-padding {
-        padding: 100px 0;
-    }
-        
-    /* Custom button styles for consistency */
-    .btn-primary {
-        background-color: #fff600;
-        color: #111111;
-        padding: 1rem 2.5rem;
-        border-radius: 9999px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid transparent;
-        text-decoration: none;
-        box-shadow: 0 5px 15px rgba(255, 246, 0, 0.3);
-    }
+<style scoped src="~/assets/css/buttons.css"></style>
 
-    .btn-primary:hover {
-        background-color: #ffe000;
-        transform: translateY(-3px) scale(1.03);
-        box-shadow: 0 8px 20px rgba(255, 246, 0, 0.5);
+<style scoped>
+.section-padding {
+        padding: 100px 0;
     }
 
     .pulse-yellow {
@@ -406,27 +203,6 @@ const prevVideo = () => {
     @keyframes pulse-yellow {
         0%, 100% { box-shadow: 0 0 0 0 rgba(255, 246, 0, 0.5); }
         50% { box-shadow: 0 0 0 25px rgba(255, 246, 0, 0); }
-    }
-
-    .btn-secondary {
-        border: 2px solid #fff600;
-        color: #fff600;
-        background-color: transparent;
-        padding: 1rem 2.5rem;
-        border-radius: 9999px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-    }
-
-    .btn-secondary:hover {
-        background-color: #fff600;
-        color: #111111;
-        transform: translateY(-3px) scale(1.03);
-        box-shadow: 0 8px 20px rgba(255, 246, 0, 0.2);
     }
 
     /* Visual Explainer Icons */
@@ -524,61 +300,6 @@ const prevVideo = () => {
         right: 1rem;
     }
 
-    /* Specific styles for the "Launch Fuzik App Now!" button in the final CTA */
-    .btn-final-cta {
-        background-color: #111111 !important;
-        color: #fff600 !important;
-        font-weight: 800;
-        text-shadow: 0 0 3px rgba(255, 246, 0, 0.2);
-        border: 2px solid #fff600 !important;
-    }
-
-    .btn-final-cta:hover {
-        background-color: #fff600 !important;
-        color: #111111!important;
-        text-shadow: none !important;
-        transform: translateY(-3px) scale(1.03);
-    }
-
-    /* --- Hover Underline and Color for Nav/Footer Links --- */
-    .nav-link-hover-effect {
-        position: relative;
-        display: inline-block;
-        text-decoration: none;
-        transition: color 0.3s ease-out;
-        color: #e2e8f0; /* Default text color for links */
-    }
-
-    .nav-link-hover-effect::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: -4px;
-        left: 0;
-        background-color: #fff600;
-        transform-origin: bottom center;
-        transition: transform 0.3s ease-out;
-    }
-
-    .nav-link-hover-effect:hover {
-        color: #fff600; /* Change color on hover */
-    }
-
-    .nav-link-hover-effect:hover::after {
-        transform: scaleX(1); /* Expand on hover */
-    }
-
-    /* Active link state for current page */
-    .nav-link-active {
-        color: #fff600;
-        font-weight: 600;
-    }
-    .nav-link-active::after {
-        transform: scaleX(1);
-    }
-
     /* Back to Top Button Styling */
     #back-to-top-btn {
         position: fixed;
@@ -611,83 +332,4 @@ const prevVideo = () => {
         transform: translateY(-5px) scale(1.05);
         box-shadow: 0 6px 15px rgba(255, 246, 0, 0.6);
     }
-
-    /* Cookie Consent Modal Specific Styles (Fuzik Theme) */
-    .cookie-modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-
-    .cookie-modal-overlay.show {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .cookie-modal-content {
-        background-color: #2a2a2a;
-        padding: 2rem;
-        border-radius: 0.75rem;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-        max-width: 500px;
-        width: 90%;
-        text-align: center;
-        position: relative;
-        transform: translateY(20px);
-        opacity: 0;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-        color: #e2e8f0;
-    }
-
-    .cookie-modal-overlay.show .cookie-modal-content {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    .cookie-preferences-section {
-        text-align: left;
-        margin-top: 1.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .cookie-preference-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-    }
-
-    .cookie-preference-item input[type="checkbox"] {
-        margin-right: 0.75rem;
-        width: 1.25rem;
-        height: 1.25rem;
-        accent-color: #fff600; /* Sets checkbox color to fuzik-yellow */
-    }
-    
-    .cookie-preference-item label {
-        flex-grow: 1;
-        font-weight: 500;
-        color: #e2e8f0;
-    }
-
-    .cookie-preference-item p {
-        font-size: 0.875rem;
-        color: #b0b0b0;
-        margin-top: 0.25rem;
-        margin-left: calc(1.25rem + 0.75rem); /* Align with label text */
-    }
-
-
-
-
 </style>

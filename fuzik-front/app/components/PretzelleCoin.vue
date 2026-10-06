@@ -33,7 +33,7 @@ onUnmounted(() => {
 
 async function get_token(realm_id:string, user_email:string) {
 
-  var uri = '/api/get_token?realm_id=' + realm_id + '&user_email=' + user_email;
+  var uri = '/api/get_token?realm_id=' + encodeURIComponent(String(realm_id)) + '&user_email=' + encodeURIComponent(String(user_email));
   //console.log("uri: " + uri);
 
   var output;

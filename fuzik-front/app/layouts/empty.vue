@@ -6,11 +6,12 @@
 
 <script setup lang="ts">
 
-const cookie_form_visible = ref(true);
+const route = useRoute();
+const isAuthCallback = ['/webapp/forget_password', '/webapp/login_success'].includes(route.path);
 const cookie_consent_form = useCookie("visitor");
 cookie_consent_form.value = cookie_consent_form.value || ('No');
   
-if (cookie_consent_form.value.localeCompare('Yes')==0) {
+if (cookie_consent_form.value === 'Yes' || isAuthCallback) {
     //cookie_form_visible.value = false;
     // Do nothing
 } else {

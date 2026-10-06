@@ -59,7 +59,7 @@
               </div>
               <div class="mt-5">  
               
-                <p class="text-black text-center">Already has an account? <NuxtLink to="/login" >Login</NuxtLink></p>
+                <p class="text-black text-center">Already has an account? <NuxtLink to="/webapp/login" >Login</NuxtLink></p>
               </div>
               <div class="mt-5 border-0 h-24">  
                 <p class="text-red-300">{{ errorMsg }}</p>
@@ -98,6 +98,8 @@ const logo2 = ref('https://media05.fuzikapp.com/app/fuzik_logo04_01.png')
     
 const client = useSupabaseClient();
 
+const requestURL = useRequestURL();
+
 async function signUp() {
   //alert(isAlphanumeric(first_name.value));
 
@@ -110,7 +112,7 @@ async function signUp() {
         email: email.value,
         password: password.value,
         options: {
-          emailRedirectTo: 'https://media05.fuzikapp.com'
+          emailRedirectTo: new URL('/webapp/login_success', requestURL.origin).href
         }
 
       });
@@ -126,24 +128,24 @@ async function signUp() {
       //alert("Check your email to confirm your account.");
       var main_form = <HTMLFormElement>document.getElementById('main_form');
       if (main_form != null) {
-        var url = "/api/create_musician2?display_name=" +
-        display_name.value.trim() + 
-        "&email=" + email.value.trim() +
-        "&first_name=" + first_name.value.trim() +
-        "&last_name=" + last_name.value.trim() + 
-        "&genre=" + genre.value.trim() +
-        "&instrument=" + instrument.value.trim() +
-        "&tel=" + tel.value.trim();
+        var url = "/api/create_musician2?display_name=" + encodeURIComponent(String(display_name.value.trim())) +
+        "&email=" + encodeURIComponent(String(email.value.trim())) +
+        "&first_name=" + encodeURIComponent(String(first_name.value.trim())) +
+        "&last_name=" + encodeURIComponent(String(last_name.value.trim())) +
+        "&genre=" + encodeURIComponent(String(genre.value.trim())) +
+        "&instrument=" + encodeURIComponent(String(instrument.value.trim())) +
+        "&tel=" + encodeURIComponent(String(tel.value.trim()));
 
         const response = await $fetch(url);
         //const movies = await response.json();
         //console.log(movies);
 
-        main_form.submit();
+        await navigateTo('/webapp/register_confirm');
       }
         
     } catch ( error ) {
-      alert(errorMsg);
+      errorMsg.value = error instanceof Error ? error.message : 'Unable to complete registration. Please try again.';
+      successMsg.value = '';
       //console.log(errorMsg);
     }
   }
@@ -343,7 +345,7 @@ async function check_display_name() {
     return false;
   }
   //check display name
-  var url_check_display_name = "/api/musician_check_display_name?display_name=" + display_name.value;
+  var url_check_display_name = "/api/musician_check_display_name?display_name=" + encodeURIComponent(String(display_name.value));
   var respone_display_name = await fetch(url_check_display_name);
   const result_display_name = await respone_display_name.json();
 
@@ -376,7 +378,7 @@ async function check_display_name() {
 async function check_email() {
   var allowed = false;
   //check display name
-  var url_check = "/api/musician_check_email?email=" + email.value;
+  var url_check = "/api/musician_check_email?email=" + encodeURIComponent(String(email.value));
   var respone = await fetch(url_check);
   const result = await respone.json();
 

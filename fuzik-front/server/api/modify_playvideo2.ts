@@ -40,13 +40,11 @@ export default defineEventHandler(async (event) => {
   }
 
   const response = await fetch(
-    'https://engine01.fuzikapp.com/modify_playvideo2?' + params.toString()
+    useRuntimeConfig(event).engineBaseUrl + '/modify_playvideo2?' + params.toString()
   );
 
   const text = await response.text();
 
-  console.log('Backend status:', response.status);
-  console.log('Backend response:', text);
 
   return {
     status: response.status,

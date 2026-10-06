@@ -327,7 +327,7 @@ const is_auth = ref(false);
 
 const client = useSupabaseClient();
 
-const { data, error } = await client.auth.refreshSession()
+const { data, error } = await client.auth.getSession()
 const { session, user } = data
 
 var email = user?.email;
@@ -338,7 +338,7 @@ if (email == null) {
 } else {
 
     const url = '';
-    const { data: musician } = await useFetch('/api/musician2_detail?email=' + user?.email);
+    const { data: musician } = await useFetch('/api/musician2_detail?email=' + encodeURIComponent(String(user))?.email);
     data_musician = musician
 
     is_auth.value = true;

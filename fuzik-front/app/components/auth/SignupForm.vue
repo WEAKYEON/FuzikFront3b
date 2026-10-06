@@ -80,7 +80,7 @@
               <div class="flex flex-row space-x-2">
                 <div class="text-slate-400">or</div>
                 <div class="">
-                  <NuxtLink to="/signin">Login</NuxtLink>
+                  <NuxtLink to="/webapp/signin">Login</NuxtLink>
                 </div>
               </div>
               <div class="w-full border-t mt-3"></div>

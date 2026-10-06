@@ -14,3 +14,6 @@ export default {
 <style>
 
 </style>
+<script setup>
+definePageMeta({ redirect: "/webapp/login" });
+</script>

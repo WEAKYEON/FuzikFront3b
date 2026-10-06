@@ -152,11 +152,11 @@
   //console.log(q_address_bar);
 
 
-  const { data: plays } = await useFetch('/api/play2s_l/?limit=8&q=' + q_address_bar); 
-  
-  const { data: plays_p } = await useFetch('/api/play2s_p/?limit=6&q=' + q_address_bar);
+  const { data: plays } = await useFetch('/api/play2s_l/?limit=8&q=' + encodeURIComponent(String(q_address_bar)));
 
-  const { data: plays_cont } = await useFetch('/api/play2s_l/?start=9&q=' + q_address_bar);
+  const { data: plays_p } = await useFetch('/api/play2s_p/?limit=6&q=' + encodeURIComponent(String(q_address_bar)));
+
+  const { data: plays_cont } = await useFetch('/api/play2s_l/?start=9&q=' + encodeURIComponent(String(q_address_bar)));
 
   //  var lanscape_button = "Horizontal & Vertical";
   var landscape_button = "Landscape videos only";

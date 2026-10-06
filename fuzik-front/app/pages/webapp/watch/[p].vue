@@ -121,7 +121,7 @@
         <h2 class="text-lg lg:text-xl mb-4 block font-bold leading-tight text-gray-600">Cookie Policy</h2>
         <div class="lg:flex lg:space-x-5">
           <p class="mb-5 font-medium text-gray-600">
-            We collect cookies to analyze our website traffic and performance. This website use cookies to help you have a superior and more relevant browsing experience. To find out more about the cookies we use, check out our <a href="/cookie" target="_blank"><u>Cookie Policy</u></a> and <a href="/privacy" target="_blank"><u>Privacy Policy</u></a>.
+            We collect cookies to analyze our website traffic and performance. This website use cookies to help you have a superior and more relevant browsing experience. To find out more about the cookies we use, check out our <a href="/cookie" target="_blank"><u>Cookie Policy</u></a> and <a href="/webapp/privacy" target="_blank"><u>Privacy Policy</u></a>.
           </p>
           <button @click="accept()" 
             class="w-full lg:w-48 px-3 py-1 bg-yellow-300 hover:bg-gray-200 hover:underline rounded text-gray-700 mr-2 mb-5 uppercase tracking-widest text-xs font-bold">
@@ -329,7 +329,7 @@
    
    const { p }  = useRoute().params
 
-   var uri = '/api/play2_watch?p=' +  p
+   var uri = '/api/play2_watch?p=' +  encodeURIComponent(String(p))
   
    var video2_url = '';
    var video01_url = p;
@@ -426,7 +426,7 @@
   if (isPublished.value) {
 
   //setTimeout(count_view,5000);
-    var url_add_count = '/api/add_play2_count?p=' + video2_url + '&email=' + current_user_email
+    var url_add_count = '/api/add_play2_count?p=' + encodeURIComponent(String(video2_url)) + '&email=' + encodeURIComponent(String(current_user_email))
   //const response2 = await fetch(url_count);
   
     const { data, pending, error, refresh } = await useFetch(url_add_count,  {
@@ -443,7 +443,7 @@
 var data_view_count: any;
 
 try {
-  var url_count = '/api/get_play2_count?p=' + video2_url
+  var url_count = '/api/get_play2_count?p=' + encodeURIComponent(String(video2_url))
   //const response2 = await fetch(url_count);
   
   const { data: get_view, pending, error, refresh } = await useFetch(url_count,  {

@@ -73,7 +73,7 @@ let intervalId:any;
   
 async function get_view(url:string) {
 
-  var uri = '/api/get_play2_count?p=' + url;
+  var uri = '/api/get_play2_count?p=' + encodeURIComponent(String(url));
   //console.log("uri: " + uri);
 
   var output;

@@ -1,5 +1,4 @@
 <template>
-    <meta http-equiv="refresh"  />
     <div class="min-h-screen py-40 text-gray-900" style="background-image: linear-gradient(115deg, #FDFD33, #FFFFFF)">
         <div class="container mx-auto">
                 <div class="absolute left-5 top-5 h-24 w-24">
