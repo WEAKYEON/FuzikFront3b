@@ -3,7 +3,7 @@ export default defineEventHandler((event) => {
     const { realm_id } = getQuery(event);
     const { user_email } = getQuery(event);
 
-    var path = useRuntimeConfig(event).engineBaseUrl + '/check_balance_by_email.php?q=a';
+    var path = useRuntimeConfig(event).engineBaseUrl + '/check_balance?q=a';
 
     if (realm_id==undefined) {
 
