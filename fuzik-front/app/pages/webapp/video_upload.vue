@@ -118,7 +118,7 @@ if (email == '') {
 
 if (!allowed) {
   display.value = 'Direct access not allowed'
-  navigateTo('/login')
+  navigateTo('/webapp/login')
 }
 
 const video_location = ref('')
@@ -248,9 +248,9 @@ function ajax_file_upload(file_obj: any) {
                         //console.log('cookie_video_location');
                             //console.log(cookie_video_location);
                     
-                        navigateTo('/video_upload_success')
+                        navigateTo('/webapp/video_upload_success')
                     } else {
-                        navigateTo('/video_upload_error')
+                        navigateTo('/webapp/video_upload_error')
                     }
                     
                     //var element_location = <HTMLFormElement>document.getElementById('video_location');

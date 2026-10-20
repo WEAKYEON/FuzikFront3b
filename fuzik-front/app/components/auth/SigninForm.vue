@@ -54,7 +54,7 @@
               <div class="flex flex-row space-x-2">
                 <div class="text-slate-400">or</div>
                 <div class="">
-                  <NuxtLink to="/signup">Register</NuxtLink>
+                  <NuxtLink to="/webapp/signup">Register</NuxtLink>
                 </div>
               </div>
               <div class="w-full border-t mt-3"></div>

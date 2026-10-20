@@ -3,13 +3,30 @@
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-1">
   -->  
   <div class="py-0 sm:py-2">
-      <div class="aspect-w-16 aspect-h-9 bg-slate-100 rounded-lg">
-        
-        <VideoThumbnail :to="video_link" :preview="play.preview" :title="play.video_title">
+
+      <div
+        class="relative aspect-w-16 aspect-h-9 bg-slate-100 rounded-lg"
+        :class="{ 'opacity-50': play.void === '1' }"
+      >
+        <VideoThumbnail
+          :to="video_link"
+          :preview="play.preview"
+          :title="play.video_title"
+        />
+
+        <div
+          v-if="play.void === '1'"
+          class="absolute bottom-2 right-2"
+        >
+          <span class="bg-black/70 text-white px-3 py-1 rounded-lg font-bold">
+            UNPUBLISHED
+          </span>
+        </div>
+
         <div v-if="is_artist" class="absolute top-0 left-0 right-0 w-24 h-24 ">          
           <img :src="artist_image" alt="">
         </div>
-        </VideoThumbnail>
+        
       </div>
     </div>
       <div class="space-x-2">
@@ -65,7 +82,7 @@ onUnmounted(() => {
   
 async function get_view(url:string) {
 
-  var uri = '/api/get_play2_count?p=' + url;
+  var uri = '/api/get_play2_count?p=' + encodeURIComponent(String(url));
   //console.log("uri: " + uri);
 
   var output;

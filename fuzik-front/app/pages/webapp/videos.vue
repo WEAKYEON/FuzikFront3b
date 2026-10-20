@@ -94,3 +94,7 @@ export default {
 <style>
 
 </style>
+<script setup>
+// The old gallery depends on a removed Vuex store and contains sample videos.
+definePageMeta({ redirect: "/webapp/inventory" });
+</script>

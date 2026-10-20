@@ -24,11 +24,11 @@ var url = '/api/layouts2?q=a';
 const { jam_url, video01_url, video02_url, video03_url, video04_url, layout_l_num, layout_p_num } = defineProps(['jam_url', 'video01_url', 'video02_url', 'video03_url', 'video04_url', 'layout_l_num', 'layout_p_num']);
 
 if (layout_l_num != undefined) {
-  url = url + '&l_layout=' + layout_l_num;  
+  url = url + '&l_layout=' + encodeURIComponent(String(layout_l_num));
 } 
 
 if (layout_p_num != undefined) {
-  url = url + '&p_layout=' + layout_p_num;  
+  url = url + '&p_layout=' + encodeURIComponent(String(layout_p_num));
 }
 
 const { data: layouts } = await useFetch(url);

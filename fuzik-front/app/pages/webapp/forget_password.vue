@@ -49,43 +49,12 @@
 
 
     const client = useSupabaseClient();
-    //await client.auth.refreshSession();
-
-    const route = useRoute();
-    //console.log('route');
-    //console.log(route.query);
-
-    const router = useRouter();
-    //console.log('router');
-    //console.log(router.getRoutes)
-
-    var code = route.query.code?.toString();
-
-    //console.log("code");
-    //console.log(code)
-
-    if (code != null) {
-        //await client.auth.refreshSession();
-
+    onMounted(async () => {
         const { data, error } = await client.auth.getSession();
-        const { session } = data;
-
-        //console.log('session');
-        //console.log(session);
-
-        var email = "";
-
-        if (session != null) {
-            if (session.user.email != undefined) {
-                email = session.user.email;
-            }
+        if (error || !data.session) {
+            errorMsg.value = error?.message || 'This reset link is invalid or expired. Please request another one.';
         }
-
-        //console.log('email');
-        //console.log(email);
-
-        console.log(error);
-    }
+    });
 
 async function validate() {
     var allowed = false;
@@ -119,10 +88,15 @@ async function validate() {
 
 
 async function changePassword() {
-    const { data, error } = await client.auth.updateUser({
-            password: new_password.value
-    });
-    navigateTo("/forget_password2");
+    if (!(await validate())) return;
+    errorMsg.value = '';
+    try {
+        const { error } = await client.auth.updateUser({ password: new_password.value });
+        if (error) throw error;
+        await navigateTo('/webapp/forget_password2');
+    } catch (error) {
+        errorMsg.value = error instanceof Error ? error.message : 'Unable to change your password. Please try again.';
+    }
 }
 
     

@@ -205,8 +205,6 @@
 
 <script setup lang="ts">
 
-import { _scrollMargin, _scrollPadding } from '#tailwind-config/theme';
-import { _scroll } from '#tailwind-config/theme/willChange';
 import WaveSurfer from 'wavesurfer.js';
 import TimelinePlugin from 'wavesurfer.js/dist/plugins/timeline.js';
 
@@ -238,7 +236,7 @@ var ruler_checked = false;
 //console.log('cookie_collab_url1');
 //console.log(cookie_collab_url1.value);
 
-var request_url = '/api/play2_watch?p=' + cookie_collab_url1.value;
+var request_url = '/api/play2_watch?p=' + encodeURIComponent(String(cookie_collab_url1.value));
 
 const data = await $fetch(request_url);  
 var play_data1 = data;
@@ -260,7 +258,7 @@ if (typeof play_data1 === "object" ) {
     }
 }
 
-var request_url2 = '/api/play2_watch?p=' + cookie_collab_url2.value;
+var request_url2 = '/api/play2_watch?p=' + encodeURIComponent(String(cookie_collab_url2.value));
 const data2 = await $fetch(request_url2);  
 var play_data2 = data2;
 if (typeof play_data2 === "object" ) {
@@ -1010,10 +1008,10 @@ async function generate_preview() {
 //            + "&video01_file=" + video_filename01 + "&video02_file=" + video_filename02 + "&video03_file=" + video_filename03 + "&video04_file=" + video_filename04 + "&bar01=" + bar01 + "&bar02=" + bar02 + "&bar03=" + bar03 + "&bar04=" + bar04
 //            + "&audio01=" + audio01 + "&audio02=" + audio02 + "&audio03=" + audio03 + "&audio04=" + audio04 + "&start_time=" + start_time;
 
-    var preview = media_location + "ajax_preview2.php?layout_name=" + layout_name
-            + "&clip1=" + clip1 + "&clip2=" + clip2 + "&clips_num=" + clips_num
-            + "&video01_file=" + video_filename01 + "&video02_file=" + video_filename02 + "&bar01=" + bar01 + "&bar02=" + bar02    
-            + "&audio01=" + audio01 + "&audio02=" + audio02 + "&start_time=" + start_time;
+    var preview = media_location + "ajax_preview2.php?layout_name=" + encodeURIComponent(String(layout_name))
+            + "&clip1=" + encodeURIComponent(String(clip1)) + "&clip2=" + encodeURIComponent(String(clip2)) + "&clips_num=" + encodeURIComponent(String(clips_num))
+            + "&video01_file=" + encodeURIComponent(String(video_filename01)) + "&video02_file=" + encodeURIComponent(String(video_filename02)) + "&bar01=" + encodeURIComponent(String(bar01)) + "&bar02=" + encodeURIComponent(String(bar02))
+            + "&audio01=" + encodeURIComponent(String(audio01)) + "&audio02=" + encodeURIComponent(String(audio02)) + "&start_time=" + encodeURIComponent(String(start_time));
             
     console.log(preview);
     //const { data } = await useFetch(preview);
@@ -1468,11 +1466,11 @@ async function send_to_queue() {
     var layout_name = "2_06";
     var clips_num = 2;
 
-    var script = '/api/submit_batch2?email=' + email + 
-    '&layout_code=' + layout_name + '&clip1=P&clip2=L&clip3=L&clip4=L&clips_num=' + clips_num + '&code01=' + code01 + 
-    '&code02=' + code02 + '&code03=' + code03 + '&code04=' + code04 + 
-    '&bar01=' + bar01 + '&bar02=' + bar02 + '&bar03=' + bar03 + '&bar04=' + bar04 + 
-    '&audio01=' + audio01 + '&audio02=' + audio02 + '&audio03=' + audio03 + '&audio04=' + audio04;
+    var script = '/api/submit_batch2?email=' + encodeURIComponent(String(email)) +
+    '&layout_code=' + encodeURIComponent(String(layout_name)) + '&clip1=P&clip2=L&clip3=L&clip4=L&clips_num=' + encodeURIComponent(String(clips_num)) + '&code01=' + encodeURIComponent(String(code01)) +
+    '&code02=' + encodeURIComponent(String(code02)) + '&code03=' + encodeURIComponent(String(code03)) + '&code04=' + encodeURIComponent(String(code04)) +
+    '&bar01=' + encodeURIComponent(String(bar01)) + '&bar02=' + encodeURIComponent(String(bar02)) + '&bar03=' + encodeURIComponent(String(bar03)) + '&bar04=' + encodeURIComponent(String(bar04)) +
+    '&audio01=' + encodeURIComponent(String(audio01)) + '&audio02=' + encodeURIComponent(String(audio02)) + '&audio03=' + encodeURIComponent(String(audio03)) + '&audio04=' + encodeURIComponent(String(audio04));
 
     console.log("script=" + script);
     
@@ -1480,7 +1478,7 @@ async function send_to_queue() {
 
     console.log("result=" + result);
 
-    await navigateTo('/inventory02');
+    await navigateTo('/webapp/inventory02');
 
 }
 

@@ -224,7 +224,7 @@
 
                     <div class="flex flex-col pt-4"> 
                       <NuxtLink 
-                        to="/profile"
+                        to="/webapp/profile"
                         class="flex flex-row space-x-4 p-2 rounded-lg cursor-pointer transition-all duration-300 hover:bg-yellow"
                       >
                         <div>
@@ -276,6 +276,8 @@
 </template>
 
 <script setup lang="ts" >
+
+withDefaults(defineProps<{ notices?: Noti[] }>(), { notices: () => [] });
 
 const showSearchInput = ref(false);
 const showNotification = ref(false);

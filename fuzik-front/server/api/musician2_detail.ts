@@ -2,12 +2,12 @@ export default defineEventHandler((event) => {
 
     const { email } = getQuery(event);
 
-    var path = "https://engine01.fuzikapp.com/jam2s";
+    var path = useRuntimeConfig(event).engineBaseUrl + '/jam2s';
 
     if (email == undefined) {
 
     } else {
-      path = 'https://engine01.fuzikapp.com/musician2_detail?email=' + email;
+      path = useRuntimeConfig(event).engineBaseUrl + '/musician2_detail?email=' + encodeURIComponent(String(email));
     }
     
     const response = fetch(path);    

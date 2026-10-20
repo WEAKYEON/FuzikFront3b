@@ -89,7 +89,7 @@ if (q_address_bar == undefined) {
 }
 //console.log(q_address_bar);
 
-const { data: jams } = await useFetch('/api/jam2s/?q=' + q_address_bar);
+const { data: jams } = await useFetch('/api/jam2s/?q=' + encodeURIComponent(String(q_address_bar)));
 
 //const isEmptyArray = jams.value && jams.value.length === 0;
 

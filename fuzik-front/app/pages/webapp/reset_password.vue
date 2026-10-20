@@ -28,66 +28,31 @@ const successMsg = ref('');
     
 const logo2 = ref('https://media05.fuzikapp.com/app/fuzik_logo04_01.png');    
 
-//const client = useSupabaseClient();
-
-//var email = 'omiesensei@outlook.com'
-
-/*
-const { data, error } = await client.auth.resetPasswordForEmail(email, {
-  redirectTo: 'http://localhost:3000/update_password',
-})
-
-navigateTo("/reset_password2");
-*/
+const client = useSupabaseClient();
+const requestURL = useRequestURL();
 
 async function check_email() {
-    var allowed = false;
-    if(email.value.length == 0 ){
-        errorMsg.value = "Please input a registered email address."
-        allowed = false;
-
-    } else {
-        if (validateEmail(email.value)) {
-            var url_check = "/api/musician_check_email?email=" + email.value;
-            var respone = await fetch(url_check);
-            const result = await respone.json();
-
-            var result1 = "none";
-
-            if (result.length > 0) {
-                result1 = result[0].result;
-            }
-
-            if (result1.localeCompare("Found")==0) {
-                errorMsg.value = ""
-                allowed = true;
-            } else {                
-                errorMsg.value = "Email: " + email.value + " did not exists.";
-                allowed = false;
-            }
-            
-        } else {
-            errorMsg.value = "Please input a valid email address";
-            allowed = false;
-        }
+    errorMsg.value = '';
+    successMsg.value = '';
+    if (!validateEmail(email.value.trim())) {
+        errorMsg.value = 'Please input a valid email address';
+        return;
     }
-
-    if (allowed) {
-        //(document.getElementById('signup_button') as HTMLButtonElement)!.disabled = false;
-        //(document.getElementById('signup_button') as HTMLButtonElement)!.className="w-full bg-yellow-500 py-3 text-center text-black";
-        successMsg.value = "Please check your email";
-        const client = useSupabaseClient();
-
-        const { data, error } = await client.auth.resetPasswordForEmail(email.value, {
-            redirectTo: 'http://localhost:3000/forget_password',
-        })
-
-        navigateTo("/reset_password2");
-
-    } else {
-        //(document.getElementById('signup_button') as HTMLButtonElement)!.disabled = true;
-        //(document.getElementById('signup_button') as HTMLButtonElement)!.className="w-full bg-gray-500 py-3 text-center text-white";
-        return false;
+    try {
+        const result = await $fetch<Array<{ result: string }>>('/api/musician_check_email', {
+            query: { email: email.value.trim() }
+        });
+        if (result?.[0]?.result !== 'Found') {
+            errorMsg.value = 'This email address is not registered.';
+            return;
+        }
+        const { error } = await client.auth.resetPasswordForEmail(email.value.trim(), {
+            redirectTo: new URL('/webapp/forget_password', requestURL.origin).href
+        });
+        if (error) throw error;
+        await navigateTo('/webapp/reset_password2');
+    } catch (error) {
+        errorMsg.value = error instanceof Error ? error.message : 'Unable to send reset instructions. Please try again.';
     }
 }
 

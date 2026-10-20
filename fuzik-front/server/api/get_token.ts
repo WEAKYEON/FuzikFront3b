@@ -3,18 +3,18 @@ export default defineEventHandler((event) => {
     const { realm_id } = getQuery(event);
     const { user_email } = getQuery(event);
 
-    var path = 'https://engine01.fuzikapp.com/check_balance_by_email.php?q=a';
+    var path = useRuntimeConfig(event).engineBaseUrl + '/check_balance?q=a';
 
     if (realm_id==undefined) {
 
     } else {
-        path = path + '&realm_id=' + realm_id;
+        path = path + '&realm_id=' + encodeURIComponent(String(realm_id));
     }
 
     if (user_email==undefined) {
 
     } else {
-        path = path + '&email_account=' + user_email;
+        path = path + '&email_account=' + encodeURIComponent(String(user_email));
     }
 
     const response = $fetch(path);

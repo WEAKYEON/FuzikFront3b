@@ -3,19 +3,19 @@ export default defineEventHandler((event) => {
     const { l_layout } = getQuery(event);
     const { p_layout } = getQuery(event);    
 
-    //var path = 'https://engine01.fuzikapp.com/layouts?q=a';
-    var path = 'https://engine01.fuzikapp.com/layouts2?q=a';
+    //var path = useRuntimeConfig(event).engineBaseUrl + '/layouts?q=a';
+    var path = useRuntimeConfig(event).engineBaseUrl + '/layouts2?q=a';
     
     if (l_layout==undefined) {
 
     } else {
-        path = path + '&l_layout=' + l_layout;
+        path = path + '&l_layout=' + encodeURIComponent(String(l_layout));
     }
 
     if (p_layout==undefined) {
 
     } else {
-        path = path + '&p_layout=' + p_layout;
+        path = path + '&p_layout=' + encodeURIComponent(String(p_layout));
     }
 
     const response = fetch(path);

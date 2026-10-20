@@ -14,7 +14,7 @@
                 </div>
 
                 <!-- for profile -->
-                <NuxtLink to="/profile" :class="currentMenu === `profile` ? `bg-black text-white` : ``">
+                <NuxtLink to="/webapp/profile" :class="currentMenu === `profile` ? `bg-black text-white` : ``">
                     <div @click="toggleSideMenu()"
                         class="flex flex-row items-center py-1 rounded-md cursor-pointer transition-all duration-300 hover:bg-black hover:text-white">
                         <div class="w-10 flex flex-row justify-center"

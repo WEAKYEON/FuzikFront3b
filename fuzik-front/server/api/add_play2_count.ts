@@ -3,7 +3,7 @@ export default defineEventHandler((event) => {
     const { p } = getQuery(event);
     const { email } = getQuery(event);
 
-    var path = 'https://engine01.fuzikapp.com/add_play2_count?p=' + p + '&email=' + email;
+    var path = useRuntimeConfig(event).engineBaseUrl + '/add_play2_count?p=' + encodeURIComponent(String(p)) + '&email=' + encodeURIComponent(String(email));
 
     const response = fetch(path);
     

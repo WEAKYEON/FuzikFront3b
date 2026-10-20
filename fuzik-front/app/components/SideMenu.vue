@@ -24,7 +24,7 @@
 
         <!-- for profile -->
         <NuxtLink
-          to="/profile"
+          to="/webapp/profile"
           :class="currentMenu === `profile` ? `bg-black text-white` : ``"
       >
           <div

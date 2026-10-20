@@ -1,0 +1,35 @@
+.nav-link-hover-effect {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+  color: #e2e8f0;
+}
+
+.nav-link-hover-effect::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #fff600;
+  transform-origin: bottom center;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-link-hover-effect:hover {
+  color: #fff600;
+}
+
+.nav-link-hover-effect:hover::after {
+  transform: scaleX(1);
+}
+.nav-link-active {
+  color: #fff600;
+  font-weight: 600;
+}
+.nav-link-active::after {
+  transform: scaleX(1);
+}

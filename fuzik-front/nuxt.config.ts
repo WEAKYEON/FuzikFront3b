@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from "@tailwindcss/vite";
 import { library, config } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
@@ -14,8 +13,15 @@ library.add(fas)
 
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    engineBaseUrl: 'https://engine01.fuzikapp.com',
+  },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  components: [
+    { path: '~/components/website_components', pathPrefix: false },
+    '~/components',
+  ],
   modules: ['@nuxtjs/supabase', '@nuxt/image','@nuxt/ui'],
   supabase: {
     redirect: false // Disables global redirects
@@ -40,9 +46,6 @@ export default defineNuxtConfig({
     '~/assets/css/input.css',
   ],
   vite: {
-    plugins: [
-      tailwindcss(),
-    ],
     optimizeDeps: {
       include: [
         '@headlessui/vue',

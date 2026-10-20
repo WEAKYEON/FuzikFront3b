@@ -20,26 +20,25 @@ export default defineEventHandler((event) => {
     const { audio03 } = getQuery(event);
     const { audio04 } = getQuery(event);
     
-    var path = 'https://engine01.fuzikapp.com/submit_batch2?email=' +
-    email +
-    '&layout_code=' + layout_code +
-    '&clip1=' + clip1 +
-    '&clip2=' + clip2 +
-    '&clip3=' + clip3 +
-    '&clip4=' + clip4 +
-    '&clips_num=' + clips_num +
-    '&code01=' + code01 +
-    '&code02=' + code02 +
-    '&code03=' + code03 +
-    '&code04=' + code04 +
-    '&bar01=' + bar01 +
-    '&bar02=' + bar02 +
-    '&bar03=' + bar03 +
-    '&bar04=' + bar04 +
-    '&audio01=' + audio01 +
-    '&audio02=' + audio02 +
-    '&audio03=' + audio03 +
-    '&audio04=' + audio04;
+    var path = useRuntimeConfig(event).engineBaseUrl + '/submit_batch2?email=' + encodeURIComponent(String(email)) +
+    '&layout_code=' + encodeURIComponent(String(layout_code)) +
+    '&clip1=' + encodeURIComponent(String(clip1)) +
+    '&clip2=' + encodeURIComponent(String(clip2)) +
+    '&clip3=' + encodeURIComponent(String(clip3)) +
+    '&clip4=' + encodeURIComponent(String(clip4)) +
+    '&clips_num=' + encodeURIComponent(String(clips_num)) +
+    '&code01=' + encodeURIComponent(String(code01)) +
+    '&code02=' + encodeURIComponent(String(code02)) +
+    '&code03=' + encodeURIComponent(String(code03)) +
+    '&code04=' + encodeURIComponent(String(code04)) +
+    '&bar01=' + encodeURIComponent(String(bar01)) +
+    '&bar02=' + encodeURIComponent(String(bar02)) +
+    '&bar03=' + encodeURIComponent(String(bar03)) +
+    '&bar04=' + encodeURIComponent(String(bar04)) +
+    '&audio01=' + encodeURIComponent(String(audio01)) +
+    '&audio02=' + encodeURIComponent(String(audio02)) +
+    '&audio03=' + encodeURIComponent(String(audio03)) +
+    '&audio04=' + encodeURIComponent(String(audio04));
 
     //console.log("path=" + path);
     

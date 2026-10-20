@@ -49,6 +49,10 @@ const { data, error } = await client.auth.getSession();
 
 const { session } = data;
 
+if (!session) {
+    await navigateTo('/webapp/login');
+}
+
 if (session != null) {
     if (session.user.email != undefined) {
         email.value = session.user.email;
@@ -87,10 +91,15 @@ return allowed;
 }
 
 async function changePassword() {
-    const { data, error } = await client.auth.updateUser({
-            password: new_password.value
-    });
-    navigateTo("/change_password2");
+    if (!(await validate())) return;
+    errorMsg.value = '';
+    try {
+        const { error } = await client.auth.updateUser({ password: new_password.value });
+        if (error) throw error;
+        await navigateTo('/webapp/change_password2');
+    } catch (error) {
+        errorMsg.value = error instanceof Error ? error.message : 'Unable to change your password. Please try again.';
+    }
 }
 
 definePageMeta({

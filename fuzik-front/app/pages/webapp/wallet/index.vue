@@ -6,20 +6,20 @@
     <div class="wallet-summary">
       <div class="wallet-card">
         <div class="wallet-card__top">
-          <span class="wallet-pill wallet-pill--free">FZ</span>
-          <span class="wallet-card__label">Free coins</span>
-        </div>
-        <div class="wallet-card__value">{{ freeBalanceDisplay }}</div>
-        <div class="wallet-card__hint">Next coin in {{ nextFreeCoinDisplay }}</div>
-      </div>
-
-      <div class="wallet-card">
-        <div class="wallet-card__top">
           <span class="wallet-pill wallet-pill--paid">PR</span>
           <span class="wallet-card__label">Paid coins</span>
         </div>
         <div class="wallet-card__value">{{ paidBalanceDisplay }}</div>
         <a href="#buy-coins" class="wallet-card__link" @click.prevent="scrollToPacks">See packs below ↓</a>
+      </div>
+
+      <div class="wallet-card">
+        <div class="wallet-card__top">
+          <span class="wallet-pill wallet-pill--free">FZ</span>
+          <span class="wallet-card__label">Free coins</span>
+        </div>
+        <div class="wallet-card__value">{{ freeBalanceDisplay }}</div>
+        <div class="wallet-card__hint">Next coin in {{ nextFreeCoinDisplay }}</div>
       </div>
     </div>
 
@@ -65,10 +65,10 @@ const client = useSupabaseClient()
 const packsSection = ref<HTMLElement | null>(null)
 
 const email = ref('')
-const freeBalance = ref<number | null>(null)
+const freeBalance = ref<string | null>(null)
 const freeCap = ref<number | null>(null)
 const nextFreeCoinSeconds = ref<number | null>(null)
-const paidBalance = ref<number | null>(null)
+const paidBalance = ref<string | null>(null)
 
 const packs = ref<CoinPack[]>([
   { code: 'test', name: 'Test Pack', baseCoins: 1, bonusCoins: 0, price: 2 },
@@ -82,7 +82,7 @@ const freeBalanceDisplay = computed(() => {
   return `${freeBalance.value} / ${freeCap.value}`
 })
 
-const paidBalanceDisplay = computed(() => paidBalance.value === null ? '—' : `${paidBalance.value}`)
+const paidBalanceDisplay = computed(() => paidBalance.value === null ? '—' : paidBalance.value)
 
 const nextFreeCoinDisplay = computed(() => {
   if (nextFreeCoinSeconds.value === null) return '—'
@@ -96,16 +96,16 @@ async function loadWalletSummary() {
   try {
     const [freeResult, paidResult] = await Promise.all([
       $fetch<{ balance: number | string }>('/api/get_token', {
-        query: { realm_id: 'REALM00000001', user_email: email.value }
+        query: { realm_id: 'REALM00000002', user_email: email.value }
       }),
       $fetch<{ balance: number | string }>('/api/get_token', {
-        query: { realm_id: 'REALM00000002', user_email: email.value }
+        query: { realm_id: 'REALM00000001', user_email: email.value }
       })
     ])
 
-    freeBalance.value = Number(freeResult.balance)
+    freeBalance.value = String(freeResult.balance)
     freeCap.value = 200
-    paidBalance.value = Number(paidResult.balance)
+    paidBalance.value = String(paidResult.balance)
   } catch {
   }
 }
@@ -145,7 +145,7 @@ if (!authData.session?.user.email) {
 </script>
 
 <style scoped>
-.wallet { width:100%; max-width:960px; margin:0 auto; padding:1.5rem clamp(.25rem,2vw,1.5rem) 4rem; }
+.wallet { width:100%; max-width:960px; margin:0 auto; padding:1.5rem clamp(.25rem,2vw,1.5rem) 1.5rem; }
 .wallet__title { margin:0 0 .35rem; color:#fde047; font-size:clamp(1.9rem,4vw,2.5rem); font-weight:800; }
 .wallet__subtitle { margin:0 0 1.75rem; color:#9ca3af; }
 
@@ -153,8 +153,8 @@ if (!authData.session?.user.email) {
 .wallet-card { padding:1.25rem 1.5rem; background:#111214; border-radius:1.25rem; }
 .wallet-card__top { display:flex; align-items:center; justify-content:space-between; margin-bottom:.75rem; }
 .wallet-pill { padding:.15rem .6rem; border-radius:9999px; font-size:.7rem; font-weight:700; }
-.wallet-pill--free { color:#fde047; background:rgb(133 77 14 / 45%); }
-.wallet-pill--paid { color:#c7d2fe; background:rgb(55 48 163 / 55%); }
+.wallet-pill--free { color:#000; background:#93c5fd; }
+.wallet-pill--paid { color:#000; background:#fde047; }
 .wallet-card__label { color:#9ca3af; font-size:.8rem; }
 .wallet-card__value { color:#fff; font-size:1.9rem; font-weight:800; }
 .wallet-card__hint { margin-top:.3rem; color:#fde047; font-size:.8rem; }

@@ -259,10 +259,10 @@ async function search_play2clip() {
         
         /* 
         if (play2_url3.value.length > 0) {
-            location += '&ex3=' + play2_url3.value;
+            location += '&ex3=' + encodeURIComponent(String(play2_url3.value));
         }
         if (play2_url4.value.length > 0) {
-            location += '&ex4=' + play2_url4.value;
+            location += '&ex4=' + encodeURIComponent(String(play2_url4.value));
         }
         */
 
@@ -296,10 +296,10 @@ async function search_play2clip() {
         
         /* 
         if (play2_url3.value.length > 0) {
-            location2 += '&ex3=' + play2_url3.value;
+            location2 += '&ex3=' + encodeURIComponent(String(play2_url3.value));
         }
         if (play2_url4.value.length > 0) {
-            location2 += '&ex4=' + play2_url4.value;
+            location2 += '&ex4=' + encodeURIComponent(String(play2_url4.value));
         }
         */
         
@@ -567,7 +567,7 @@ async function handleVideoClick(play: any, type: string) {
             play2_url1.value = data;         
             number1.value = '';
             
-            var play_data: any = await $fetch('/api/play2_watch?p=' + data).catch(() => null);
+            var play_data: any = await $fetch('/api/play2_watch?p=' + encodeURIComponent(String(data))).catch(() => null);
             if (play_data && play_data[0] && play_data[0].preview) {
                 source_image1.value = 'https://media05.fuzikapp.com/' + play_data[0].preview;
                 hidden1.value = false;
@@ -588,7 +588,7 @@ async function handleVideoClick(play: any, type: string) {
             play2_url2.value = data;
             number2.value = '';
             
-            var play_data: any = await $fetch('/api/play2_watch?p=' + data).catch(() => null);
+            var play_data: any = await $fetch('/api/play2_watch?p=' + encodeURIComponent(String(data))).catch(() => null);
             if (play_data && play_data[0] && play_data[0].preview) {
                 source_image2.value = 'https://media05.fuzikapp.com/' + play_data[0].preview;
                 hidden2.value = false;
@@ -609,7 +609,7 @@ async function handleVideoClick(play: any, type: string) {
             play2_url3.value = data;
             number3.value = '';
             
-            var play_data: any = await $fetch('/api/play2_watch?p=' + data).catch(() => null);
+            var play_data: any = await $fetch('/api/play2_watch?p=' + encodeURIComponent(String(data))).catch(() => null);
             if (play_data && play_data[0] && play_data[0].preview) {
                 source_image3.value = 'https://media05.fuzikapp.com/' + play_data[0].preview;
                 hidden3.value = false;
@@ -632,7 +632,7 @@ async function handleVideoClick(play: any, type: string) {
 
 async function getDimension(url:any) {
     try {
-        var request_url = '/api/play2_watch?p=' + url;
+        var request_url = '/api/play2_watch?p=' + encodeURIComponent(String(url));
         const html = await $fetch<string>(request_url)
         
         // Regex to locate the dimension key/value
@@ -651,7 +651,7 @@ async function getDimension(url:any) {
 }
 
 async function getPicture(url:any) {
-    var request_url = '/api/play2_watch?p=' + url;
+    var request_url = '/api/play2_watch?p=' + encodeURIComponent(String(url));
 
     const data = await fetch(request_url);
 

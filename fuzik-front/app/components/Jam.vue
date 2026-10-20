@@ -84,7 +84,7 @@
   
 async function get_view(url:string) {
 
-  var uri = '/api/get_jam2_count?j=' + url;
+  var uri = '/api/get_jam2_count?j=' + encodeURIComponent(String(url));
   //console.log("uri: " + uri);
 
   var output;

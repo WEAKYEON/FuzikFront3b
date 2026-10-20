@@ -3,8 +3,7 @@ export default defineEventHandler((event) => {
     const { email } = getQuery(event);
   
 
-    var path = "https://engine01.fuzikapp.com/musician_check_email?email=" +
-    email;
+    var path = useRuntimeConfig(event).engineBaseUrl + '/musician_check_email?email=' + encodeURIComponent(String(email));
     
     const response = fetch(path);
     

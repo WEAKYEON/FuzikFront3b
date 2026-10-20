@@ -227,7 +227,7 @@ if (email == '') {
 } else {
 
     const url = '';
-    const { data: musician, pending, error, refresh } = await useFetch('/api/musician2_detail?email=' + email);
+    const { data: musician, pending, error, refresh } = await useFetch('/api/musician2_detail?email=' + encodeURIComponent(String(email)));
     data_musician = musician
 
     //nuxtStorage.localStorage.setData('current_user_email', email);

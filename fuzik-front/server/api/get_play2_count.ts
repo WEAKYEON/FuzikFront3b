@@ -3,12 +3,12 @@ export default defineEventHandler((event) => {
     const { p } = getQuery(event);
     
     
-    var path = 'https://engine01.fuzikapp.com/get_play2_count';
+    var path = useRuntimeConfig(event).engineBaseUrl + '/get_play2_count';
 
     if (p==undefined) {
 
     } else {
-        path = path + '?p=' + p;
+        path = path + '?p=' + encodeURIComponent(String(p));
     }
 
     const response = fetch(path);

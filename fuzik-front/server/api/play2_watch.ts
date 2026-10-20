@@ -2,7 +2,7 @@ export default defineEventHandler((event) => {
 
     const { p } = getQuery(event);
 
-    var path = 'https://engine01.fuzikapp.com/play2_watch?p=' + p;
+    var path = useRuntimeConfig(event).engineBaseUrl + '/play2_watch?p=' + encodeURIComponent(String(p));
 
     const response = fetch(path);
     

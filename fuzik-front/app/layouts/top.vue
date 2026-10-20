@@ -119,7 +119,7 @@ if (session == null) {
     //    is_auth.value = true;
 
     } else {        
-        const url = '/api/musician2_detail?email=' + email;
+        const url = '/api/musician2_detail?email=' + encodeURIComponent(String(email));
         //console.log('url')
         //console.log(url)
 
