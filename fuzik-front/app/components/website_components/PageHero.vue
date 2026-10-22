@@ -22,7 +22,7 @@ withDefaults(
     :class="[
       legal
         ? 'min-h-[50vh] flex items-center relative overflow-hidden pt-20'
-        : 'py-20 md:py-32',
+        : 'py-14 sm:py-20 md:py-32',
       { 'with-gradient': gradient },
     ]"
   >
@@ -54,7 +54,7 @@ withDefaults(
     </template>
     <div :class="containerClass">
       <h1 :class="titleClass"><slot /></h1>
-      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+      <p class="mx-auto max-w-3xl text-lg text-gray-300 sm:text-xl md:text-2xl">
         {{ description }}
       </p>
     </div>

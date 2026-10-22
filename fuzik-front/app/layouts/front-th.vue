@@ -1,6 +1,6 @@
 <template>
   <WebsiteHeader locale="th" />
-  <div>
+  <div class="website-content">
     <slot />
   </div>
   <BackToTop />

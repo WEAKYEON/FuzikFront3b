@@ -1,6 +1,6 @@
 <template>
   <WebsiteHeader />
-  <div>
+  <div class="website-content">
     <slot />
   </div>
   <BackToTop />
