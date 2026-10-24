@@ -1,45 +1,43 @@
 export const JAM_DOWNLOAD_FEE = 150
-export const JAM_DOWNLOAD_REALM_ID = 'REALM00000002' // FZ token realm
-export const JAM_DOWNLOAD_RECIPIENT_EMAIL = 'omiejung@gmail.com' // fixed cash-in-hand account on engine01
-// The engine only allows a transfer through when remark is 'Purchase' or 'Withdraw' (see musicapp/views.py:transfer) - any other value is rejected.
-export const JAM_DOWNLOAD_REMARK = 'Withdraw'
 
 export interface TransferResult {
   success: boolean
+  alreadyCharged?: boolean
+  balance?: string
   error?: string
 }
 
-interface TransferResponse {
+interface DebitFzResponse {
   result: string
-  remark?: string
+  error?: string
   transfer_id?: string
+  amount?: string
+  balance?: string
+  already_charged?: boolean
 }
 
 export function useJamDownload() {
-  async function transferDownloadFee(downloaderEmail: string): Promise<TransferResult> {
+  const { public: { jamDownloadDebitEnabled } } = useRuntimeConfig()
+
+  async function transferDownloadFee(downloaderEmail: string, jamUrl: string): Promise<TransferResult> {
     try {
-      const response = await $fetch<TransferResponse>('/api/transfer_token', {
-        query: {
-          realm_id: JAM_DOWNLOAD_REALM_ID,
-          from_email: downloaderEmail,
-          to_email: JAM_DOWNLOAD_RECIPIENT_EMAIL,
-          amount: JAM_DOWNLOAD_FEE,
-          remark: JAM_DOWNLOAD_REMARK
-        }
+      const response = await $fetch<DebitFzResponse>('/api/debit_fz', {
+        method: 'POST',
+        body: { email_account: downloaderEmail, jam_url: jamUrl }
       })
 
       if (response.result !== 'Success') {
         return {
           success: false,
-          error: 'Unable to complete the transfer. Please check your FZ balance and try again.'
+          error: response.error || 'Unable to complete the charge. Please check your FZ balance and try again.'
         }
       }
 
-      return { success: true }
-    } catch {
+      return { success: true, alreadyCharged: response.already_charged, balance: response.balance }
+    } catch (err: any) {
       return {
         success: false,
-        error: 'Unable to reach the token service. Please try again.'
+        error: err?.data?.error || 'Unable to reach the token service. Please try again.'
       }
     }
   }
@@ -50,5 +48,5 @@ export function useJamDownload() {
     return null
   }
 
-  return { transferDownloadFee, requestDownloadLink, JAM_DOWNLOAD_FEE }
+  return { transferDownloadFee, requestDownloadLink, isEnabled: jamDownloadDebitEnabled, JAM_DOWNLOAD_FEE }
 }
