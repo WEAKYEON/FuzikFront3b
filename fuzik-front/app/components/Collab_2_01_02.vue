@@ -204,6 +204,7 @@
 </template>
 
 <script setup lang="ts">
+import type { PlayVideo } from '~/types/play-video'
 
 import WaveSurfer from 'wavesurfer.js';
 import TimelinePlugin from 'wavesurfer.js/dist/plugins/timeline.js';
@@ -236,31 +237,6 @@ var ruler_checked = false;
 //console.log('cookie_collab_url1');
 //console.log(cookie_collab_url1.value);
 
-interface PlayVideo {
-    video_title: string,
-    video_location: string,
-    description: string,
-    status: string,
-    music_title: string,
-    original_performer: string,
-    instrument: string,
-    url: string,
-    view_count: number,
-    preview: string
-    dimension: string,
-    width: number,
-    height: number,
-    accept: string,
-    public_domain: string,
-    musician_name: string,
-    musician_email: string,
-    youtube_url: string,
-    video_location_120: string,
-    resized: string,
-    updated_time: string,
-    created_time: string
-}
-
 var request_url = '/api/play2_watch?p=' + encodeURIComponent(String(cookie_collab_url1.value));
 
 const data  = await $fetch<PlayVideo[]>(request_url);  
@@ -285,7 +261,7 @@ const data2 = await $fetch<PlayVideo[]>(request_url2);
 var play_data2 = data2;
 if (typeof play_data2 === "object" ) {
     // message gets narrowed to string!
-    if (play_data2 != null) { 
+    if (play_data2?.[0] != null) { 
         //alert(source_image1);
         file_location_2_120 = play_data2[0]?.video_location_120 ?? ""; 
         file_location_2 = play_data2[0]?.video_location ?? ""; 

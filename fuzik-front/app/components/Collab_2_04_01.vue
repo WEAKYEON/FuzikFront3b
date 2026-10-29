@@ -103,6 +103,7 @@
 </template>
 
 <script setup lang="ts">
+import type { PlayVideo } from '~/types/play-video'
 
 const q_input_bar_placeholder = ref('Song name or artist name');
 const q_input_bar = ref('');
@@ -474,7 +475,7 @@ async function handleVideoClick(play: any, type: string) {
             play2_url1.value = data;         
             number1.value = '';
             
-            var play_data: any = await $fetch('/api/play2_watch?p=' + encodeURIComponent(String(data))).catch(() => null);
+            var play_data = await $fetch<PlayVideo[]>('/api/play2_watch?p=' + encodeURIComponent(String(data))).catch(() => null);
             if (play_data && play_data[0] && play_data[0].preview) {
                 source_image1.value = 'https://media05.fuzikapp.com/' + play_data[0].preview;
                 hidden1.value = false;
@@ -493,7 +494,7 @@ async function handleVideoClick(play: any, type: string) {
             play2_url2.value = data;
             number2.value = '';
             
-            var play_data: any = await $fetch('/api/play2_watch?p=' + encodeURIComponent(String(data))).catch(() => null);
+            var play_data = await $fetch<PlayVideo[]>('/api/play2_watch?p=' + encodeURIComponent(String(data))).catch(() => null);
             if (play_data && play_data[0] && play_data[0].preview) {
                 source_image2.value = 'https://media05.fuzikapp.com/' + play_data[0].preview;
                 hidden2.value = false;
@@ -525,7 +526,7 @@ async function getDimension(url:any) {
         const match = html.match(/dimension["']?\s*[:=]\s*["']?([^"'\s,}]*)["']?/)
         
         // Explicitly enforce that the value is a string
-        const dimensionValue: string = match ? String(match[1]) : 'not_found'
+        const dimensionValue: string = match?.[1] ?? 'not_found'
         
         return dimensionValue;
     } catch (err) {
