@@ -33,13 +33,13 @@ const copy = computed(() => websiteContent[props.locale].footer)
     <div :class="[contained ? 'container' : '', 'mx-auto px-6']">
       <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-12">
         <div class="col-span-1 md:col-span-2 lg:col-span-1">
-          <a :href="homeHref" class="flex items-center space-x-2 mb-4">
+          <a :href="homeHref" class="mb-4 flex min-w-0 items-center space-x-2">
             <img
               src="/images/logo/FuzikLogo.png"
               alt="Fuzik Collaborate Logo"
-              class="h-10 w-auto"
+              class="h-9 w-auto shrink-0 object-contain sm:h-10"
             />
-            <span class="text-2xl font-bold text-[#f8f9fa]"
+            <span class="text-lg font-bold text-[#f8f9fa] sm:text-2xl"
               >Fuzik Collaborate</span
             >
           </a>

@@ -15,11 +15,6 @@ library.add(fas)
 export default defineNuxtConfig({
   runtimeConfig: {
     engineBaseUrl: 'https://engine01.fuzikapp.com',
-    fzDebitApiKey: '',
-    jamDownloadSigningKey: '',
-    public: {
-      jamDownloadDebitEnabled: false,
-    },
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },

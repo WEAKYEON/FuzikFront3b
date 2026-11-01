@@ -1,10 +1,11 @@
 <template>
-    <div>
+    <div class="features-page">
         <!-- Hero Section -->
     <PageHero
+        title-class="text-4xl sm:text-5xl md:text-7xl font-black mb-6 text-[#f8f9fa] leading-tight"
         description="Discover the powerful tools and simple steps to create music together."
     >
-        Features & <span class="text-[#fff600] text-glow-subtle">How It Works</span>
+        Features & <br class="sm:hidden" /><span class="text-[#fff600] text-glow-subtle">How It Works</span>
     </PageHero>
 
     <!-- Features Section -->
@@ -53,16 +54,16 @@
             <div class="max-w-5xl mx-auto space-y-8">
                 
                 <!-- Step 1 -->
-                <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
-                    <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                <div class="how-it-works-step flex min-w-0 flex-col items-center rounded-xl border border-gray-800 bg-[#1a1a1a] p-4 shadow-lg sm:p-6 md:flex-row">
+                    <div class="mb-5 w-full min-w-0 md:mb-0 md:mr-8 md:w-2/5 md:flex-shrink-0">
                         <img src="/images/collab06.png" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     </div>
-                    <div class="w-full md:w-3/5 text-left">
+                    <div class="w-full min-w-0 text-left md:w-3/5">
                         <div class="flex items-center mb-3">
                             <span class="text-[#fff600] text-4xl font-black mr-4">01</span>
                             <h3 class="text-2xl font-bold text-[#f8f9fa]">Record Your Track</h3>
                         </div>
-                        <p class="text-gray-300 pl-14">
+                        <p class="pl-0 text-gray-300 sm:pl-14">
                             Start by recording your individual audio or video track directly within Fuzik, 
                             or upload an existing one. Our smart system prepares it for collaboration.
                         </p>
@@ -70,16 +71,16 @@
                 </div>
 
                 <!-- Step 2 -->
-                <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
-                    <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                <div class="how-it-works-step flex min-w-0 flex-col items-center rounded-xl border border-gray-800 bg-[#1a1a1a] p-4 shadow-lg sm:p-6 md:flex-row">
+                    <div class="mb-5 w-full min-w-0 md:mb-0 md:mr-8 md:w-2/5 md:flex-shrink-0">
                         <img src="/images/collab02.png" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     </div>
-                    <div class="w-full md:w-3/5 text-left">
+                    <div class="w-full min-w-0 text-left md:w-3/5">
                         <div class="flex items-center mb-3">
                             <span class="text-[#fff600] text-4xl font-black mr-4">02</span>
                             <h3 class="text-2xl font-bold text-[#f8f9fa]">Invite Collaborators</h3>
                         </div>
-                        <p class="text-gray-300 pl-14">
+                        <p class="pl-0 text-gray-300 sm:pl-14">
                             Share a unique project link with your bandmates or new friends. 
                             They can join instantly, no complex setup required.
                         </p>
@@ -87,16 +88,16 @@
                 </div>
 
                 <!-- Step 3 -->
-                <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
-                    <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                <div class="how-it-works-step flex min-w-0 flex-col items-center rounded-xl border border-gray-800 bg-[#1a1a1a] p-4 shadow-lg sm:p-6 md:flex-row">
+                    <div class="mb-5 w-full min-w-0 md:mb-0 md:mr-8 md:w-2/5 md:flex-shrink-0">
                         <img src="/images/collab03.png" class="w-full h-48 object-cover rounded-lg mb-6 border-2 border-gray-600 hover:border-[#fff600] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)]" />
                     </div>
-                    <div class="w-full md:w-3/5 text-left">
+                    <div class="w-full min-w-0 text-left md:w-3/5">
                         <div class="flex items-center mb-3">
                             <span class="text-[#fff600] text-4xl font-black mr-4">03</span>
                             <h3 class="text-2xl font-bold text-[#f8f9fa]">Jam & Create</h3>
                         </div>
-                        <p class="text-gray-300 pl-14">
+                        <p class="pl-0 text-gray-300 sm:pl-14">
                             Everyone records their parts, perfectly synchronized to the original track. 
                             Watch your collaborative masterpiece come to life in real-time.
                         </p>
@@ -104,8 +105,8 @@
                 </div>
 
                 <!-- Step 4 -->
-                <div class="how-it-works-step flex flex-col md:flex-row items-center bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-gray-800">
-                    <div class="w-full md:w-2/5 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+                <div class="how-it-works-step flex min-w-0 flex-col items-center rounded-xl border border-gray-800 bg-[#1a1a1a] p-4 shadow-lg sm:p-6 md:flex-row">
+                    <div class="mb-5 w-full min-w-0 md:mb-0 md:mr-8 md:w-2/5 md:flex-shrink-0">
                         <!-- กล่อง Icon สำหรับ Export & Share -->
                         <div class="w-full h-48 bg-[#2a2a2a] rounded-lg border border-gray-700 shadow-md flex items-center justify-center group hover:border-[#fff600] transition duration-300">
                             <svg class="w-20 h-20 text-[#fff600] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -113,12 +114,12 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="w-full md:w-3/5 text-left">
+                    <div class="w-full min-w-0 text-left md:w-3/5">
                         <div class="flex items-center mb-3">
                             <span class="text-[#fff600] text-4xl font-black mr-4">04</span>
                             <h3 class="text-2xl font-bold text-[#f8f9fa]">Export & Share</h3>
                         </div>
-                        <p class="text-gray-300 pl-14">
+                        <p class="pl-0 text-gray-300 sm:pl-14">
                             Once your jam is complete, easily export the synchronized video and audio. 
                             Share it with the world or keep it private – it's your music!
                         </p>
@@ -497,5 +498,158 @@
     .how-it-works-step:nth-child(even) .how-it-works-step-number {
         margin-left: 1rem;
         margin-right: 0;
+    }
+
+    @media (max-width: 767px) {
+        .visual-explainer-card {
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
+            padding: 1rem;
+        }
+
+        .section-padding .grid,
+        .section-padding .grid > * {
+            min-width: 0;
+            max-width: 100%;
+        }
+
+        .section-padding .grid {
+            display: grid;
+            width: 100%;
+            max-width: 100%;
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .visual-explainer-card img {
+            width: 100%;
+            min-width: 0;
+            height: auto;
+            max-height: 13rem;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .visual-explainer-card h3,
+        .visual-explainer-card p {
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .how-it-works-step,
+        .how-it-works-step:nth-child(even) {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 1rem;
+            width: 100%;
+            min-width: 0;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+        }
+
+        .how-it-works-step > div {
+            width: 100%;
+            min-width: 0;
+            margin: 0;
+        }
+
+        .how-it-works-step img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 15rem;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .how-it-works-step h3 {
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .how-it-works-step p {
+            padding-left: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .how-it-works-step:hover {
+            transform: none;
+        }
+
+        #back-to-top-btn {
+            right: 1rem;
+            bottom: max(1rem, env(safe-area-inset-bottom));
+            padding: .75rem;
+        }
+
+        .section-padding {
+            padding-block: 3.5rem;
+        }
+
+        .section-padding > .container {
+            width: 100vw;
+            max-width: 100vw;
+            box-sizing: border-box;
+            padding-inline: 1rem;
+        }
+
+        :deep(.hero-gradient) {
+            max-width: 100%;
+            overflow-x: clip;
+        }
+
+        :deep(.hero-gradient > div) {
+            width: 100vw;
+            max-width: 100vw;
+            min-width: 0;
+            padding-inline: 1rem;
+        }
+
+        .features-page,
+        .features-page > section {
+            width: 100%;
+            max-width: 100vw;
+            min-width: 0;
+            overflow-x: clip;
+        }
+
+        .features-page :deep(.section-padding) {
+            padding-block: 3.5rem;
+        }
+
+        .features-page :deep(.section-padding h2) {
+            font-size: clamp(1.75rem, 8vw, 2.25rem);
+            line-height: 1.15;
+            overflow-wrap: anywhere;
+        }
+
+        .features-page :deep(.section-padding p) {
+            font-size: 1rem;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+        }
+
+        :deep(.hero-gradient h1) {
+            max-width: 100%;
+            font-size: clamp(2rem, 9vw, 3rem);
+            line-height: 1.1;
+            overflow-wrap: anywhere;
+        }
+
+        :deep(.hero-gradient p) {
+            max-width: 100%;
+            font-size: 1rem;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+        }
+
+        .section-padding h2 {
+            margin-bottom: 2rem;
+            font-size: clamp(1.75rem, 8vw, 2.25rem);
+            line-height: 1.15;
+            overflow-wrap: anywhere;
+        }
     }
 </style>

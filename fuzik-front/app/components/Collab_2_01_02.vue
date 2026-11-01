@@ -236,21 +236,43 @@ var ruler_checked = false;
 //console.log('cookie_collab_url1');
 //console.log(cookie_collab_url1.value);
 
+interface PlayVideo {
+    video_title: string,
+    video_location: string,
+    description: string,
+    status: string,
+    music_title: string,
+    original_performer: string,
+    instrument: string,
+    url: string,
+    view_count: number,
+    preview: string
+    dimension: string,
+    width: number,
+    height: number,
+    accept: string,
+    public_domain: string,
+    musician_name: string,
+    musician_email: string,
+    youtube_url: string,
+    video_location_120: string,
+    resized: string,
+    updated_time: string,
+    created_time: string
+}
+
 var request_url = '/api/play2_watch?p=' + encodeURIComponent(String(cookie_collab_url1.value));
 
-const data = await $fetch(request_url);  
-var play_data1 = data;
+const data  = await $fetch<PlayVideo[]>(request_url);  
+//var play_data1 = data;
 
-//alert(play_data);
-//hidden1.value = false;
-
-if (typeof play_data1 === "object" ) {
+if (typeof data === "object" ) {
     // message gets narrowed to string!
-    if (play_data1 != null) { 
+    if (data != null) { 
         //alert(source_image1);
-        file_location_1_120 = play_data1[0].video_location_120; 
-        file_location_1 = play_data1[0].video_location; 
-        pic1 = 'https://media05.fuzikapp.com/' + play_data1[0].preview;
+        file_location_1_120 = data[0]?.video_location_120 ?? "" ; 
+        file_location_1 = data[0]?.video_location ?? ""; 
+        pic1 = 'https://media05.fuzikapp.com/' + data[0]?.preview;
 
         //console.log('file_location_1_120');
         //console.log(file_location_1_120);
@@ -259,15 +281,15 @@ if (typeof play_data1 === "object" ) {
 }
 
 var request_url2 = '/api/play2_watch?p=' + encodeURIComponent(String(cookie_collab_url2.value));
-const data2 = await $fetch(request_url2);  
+const data2 = await $fetch<PlayVideo[]>(request_url2);  
 var play_data2 = data2;
 if (typeof play_data2 === "object" ) {
     // message gets narrowed to string!
     if (play_data2 != null) { 
         //alert(source_image1);
-        file_location_2_120 = play_data2[0].video_location_120; 
-        file_location_2 = play_data2[0].video_location; 
-        pic2 = 'https://media05.fuzikapp.com/' + play_data2[0].preview;
+        file_location_2_120 = play_data2[0]?.video_location_120 ?? ""; 
+        file_location_2 = play_data2[0]?.video_location ?? ""; 
+        pic2 = 'https://media05.fuzikapp.com/' + play_data2[0]?.preview;
     }
 }
 
@@ -736,7 +758,7 @@ function show_ruler() {
             line.style.opacity = '0.05';
         } else {
             line.style.opacity = '1';
-            var x,y = 0;
+            var x=0,y = 0;
             var waveform1 = document.getElementById('waveform01');
             if (waveform1 != null) {
                 var rect = waveform1.getBoundingClientRect();
@@ -1163,36 +1185,29 @@ async function textinput01_forward() {
     }   */
 }
 
-function hasTwoDecimals(text) {
-  // Check if the input is a number
-  if (isNaN(text)) {
-    //console.log('Y');
-    return false;
-  }
+function hasTwoDecimals(text:string) {
+  var result = false;
 
-  //console.log('X');
-  //console.log('text');
-  //console.log(text);
-
-  // Convert the text to a number to use split method
   const number = parseFloat(text);
+  // Check if the input is a number
+  if (isNaN(number)) {
+    result = false;
+  } else {
+    var fraction = number - Math.floor(number);
+        if (fraction == 0) {
+            result = true;
+        } else {
+            var n2 = fraction * 100;
 
-  var fraction = number - Math.floor(number);
-
-  if (fraction == 0) {
-    return true;
+            var f2 = n2 - Math.floor(n2);
+            if (f2 == 0) {
+                result = true;
+            } else {
+                result = false;
+            }
+        }
   }
-
-  // Split the number into an array by the decimal point
-  const parts = number.toString().split(".");
-
-  //console.log('parts.length');
-  //console.log(parts.length);
-  
-  //console.log('parts[1].length');
-  //console.log(parts[1].length);
-  
-  return parts.length === 2 && (parts[1].length <= 2);
+  return result;
 }
 
 function textinput02_edit() {    

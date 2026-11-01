@@ -4,7 +4,7 @@
       <div class="container mx-auto">
         <div class="absolute left-5 top-5 h-24 w-24"><NuxtLink to="/"><img :src="logo2" alt="Fuzik Logo" /></NuxtLink></div>
         <div class="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-white rounded-xl mx-auto shadow-lg overflow-hidden">
-          <div class="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center " style="background-image: url('images/guitar01.jpg');">
+          <div class="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center " style="background-image: url('/images/guitar01.jpg');">
             <h1 class="text-white text-3xl mb-3 text-center">Fuzik Collaboration: <br />Welcome new musician</h1>
             <div>
               <p class="text-white">Play and Jam with musicians around the globe. Fuzik collaboration is a platform to mix and share your music performance.<br /><br />You only need 3 easy steps:<br />1. Upload<br />2. Mix<br />3. Get the jamming video and share in your own channel.<br /><a href="#" class="text-yellow-500 font-semibold">Learn more</a></p>

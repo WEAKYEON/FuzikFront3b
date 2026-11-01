@@ -13,6 +13,10 @@
           :collab_video03="collab_video03" 
         />
       </div>      
+      <div v-if="collab_code?.localeCompare('3_07')==0"><Collab_3_07_01 /></div>
+      <div v-if="collab_code?.localeCompare('3_06')==0"><Collab_3_06_01 /></div>
+      <div v-if="collab_code?.localeCompare('3_05')==0"><Collab_3_05_01 /></div>
+      <div v-if="collab_code?.localeCompare('3_04')==0"><Collab_3_04_01 /></div>
       <div v-if="collab_code?.localeCompare('3_03')==0">
         <Collab_3_03_01>
         </Collab_3_03_01>  
@@ -25,15 +29,19 @@
         <Collab_3_01_01>
         </Collab_3_01_01>  
       </div>
+      <div v-if="collab_code?.localeCompare('2_08')==0"><Collab_2_08_01 /></div>
+      <div v-if="collab_code?.localeCompare('2_07')==0"><Collab_2_07_01 /></div>
+      <div v-if="collab_code?.localeCompare('2_06')==0"><Collab_2_06_01 /></div>
+      <div v-if="collab_code?.localeCompare('2_05')==0"><Collab_2_05_01 /></div>
       <div v-if="collab_code?.localeCompare('2_04')==0">
         <Collab_2_04_01>
         </Collab_2_04_01>  
       </div>
       <div v-if="collab_code === '2_03'">
-        <CollaborationVideoPicker :code="collab_code" :initial-video="collab_video01" />
+        <Collab_2_03_01 />
       </div>
       <div v-if="collab_code === '2_02'">
-        <CollaborationVideoPicker :code="collab_code" :initial-video="collab_video01" />
+        <Collab_2_02_01 />
       </div>
       <div v-if="collab_code?.localeCompare('2_01')==0">
         <Collab_2_01_01>

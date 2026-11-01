@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form id="main_form" action="/video_info_success" method="POST" @submit.prevent="send_data()">
+    <form id="main_form" action="/webapp/video_info_success" method="POST" @submit.prevent="send_data()">
       {{ display }}
       <div class="flex gap-2">
         <div class="flex-initial max-h-96">
@@ -12,16 +12,16 @@
         <div class="flex-initial max-h-96">
           <div class="grid grid-cols-1 gap-2">
             <input type="text" id="video_title" v-model="video_title" placeholder="Video Title"
-              class="w-full border border-gray-400 rounded-xl py-2 px-2 text-black dark:text-black">
+              class="w-full border border-gray-400 rounded-xl py-2 px-2 text-white dark:text-white">
             <textarea placeholder="Description" v-model="description" rows="4"
-              class="w-full border border-gray-400  rounded-xl py-2 px-2 text-black dark:text-black"></textarea>
+              class="w-full border border-gray-400  rounded-xl py-2 px-2 text-white dark:text-white"></textarea>
             <input type="text" v-model="music_title" placeholder="Music Title"
-              class="w-full border border-gray-400 rounded-xl py-2 px-2 text-black dark:text-black">
+              class="w-full border border-gray-400 rounded-xl py-2 px-2  text-white dark:text-white">
             <input type="text" v-model="original" placeholder="Original Writer/Performer"
-              class="w-full border border-gray-400 rounded-xl py-2 px-2 text-black dark:text-black">
+              class="w-full border border-gray-400 rounded-xl py-2 px-2  text-white dark:text-white">
 
             <input type="text" v-model="instrument" placeholder="Instrument"
-              class="w-full border border-gray-400 rounded-xl py-2 px-2 text-black dark:text-black">
+              class="w-full border border-gray-400 rounded-xl py-2 px-2  text-white dark:text-white">
             <div class="flex items-center gap-1">
               <input id="agree-chk" v-model="is_agree" type="checkbox" value="" @change="agree()"
                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"> <label
@@ -329,10 +329,10 @@ async function encrypt_video_location(original_location:string) {
   var location_len = location.length;
 
   var code ='';
-
+  
   for (let i = 0; i < location_len; i++) {
 
-    let pos = caesar1.indexOf(location[i]);
+    let pos = caesar1.indexOf(location[i]??" ");
 
     code += caesar2[pos];
 
@@ -343,7 +343,7 @@ async function encrypt_video_location(original_location:string) {
   return result;
 }
 
-async function check_rotaion(file_location) {
+async function check_rotaion(file_location:string) {
 
   const response_text = ref('');
   var url = 'https://media05.fuzikapp.com/rotation_check.php?video_location=' + encodeURIComponent(String(file_location));
