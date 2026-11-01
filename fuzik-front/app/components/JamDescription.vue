@@ -131,10 +131,8 @@
       
     </div>
     <UModal v-model:open="isOpen" :overlay="false" title="Share video" description="Copy the video link to share it.">
-      <template #content>
-      <div class="p-4 text-center">
-        <p class="text-gray-900">{{ shareMessage }}</p>
-      </div>
+      <template #body>
+        <p class="text-center text-white">{{ shareMessage }}</p>
       </template>
     </UModal>
   </div>

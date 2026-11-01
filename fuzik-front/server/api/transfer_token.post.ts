@@ -1,10 +1,15 @@
 import { serverSupabaseUser } from '#supabase/server'
-import { randomUUID } from 'node:crypto'
 import { createJamDownloadTicket } from '../utils/jamDownloadTicket'
 
-// Reference flow from the earlier backend: master26 has /transfer instead of
-// /debit_fz and returns a different transfer ID. Keep the feature flag off
-// until the charge contract and duplicate-charge protection are agreed.
+const DOWNLOAD_FEE = 150
+const ACTIVITIES_ACCOUNT_EMAIL = 'ohm@tetrasolution.com'
+const FZ_REALM_ID = 'REALM00000002'
+
+// Per the engine's accounting spec, downloads are charged via the public /transfer
+// endpoint (remark=Purchase), not /debit_fz. Known engine-side gaps (flagged to
+// Ohm/Tanat separately, not fixable from here): the Purchase/Withdraw branch of
+// _transfer checks the recipient's (Activities account) balance instead of the
+// customer's, and /transfer has no duplicate-charge protection like /debit_fz did.
 
 interface JamRecord {
   status?: string
@@ -23,9 +28,8 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401, statusMessage: 'Sign in to continue' })
   }
 
-  const debitApiKey = String(config.fzDebitApiKey || '')
   const signingKey = String(config.jamDownloadSigningKey || '')
-  if (debitApiKey.length < 32 || signingKey.length < 32) {
+  if (signingKey.length < 32) {
     throw createError({ statusCode: 503, statusMessage: 'Token debit is not fully configured' })
   }
 
@@ -56,22 +60,19 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 502, statusMessage: 'Jam video is not ready for download' })
   }
 
-  // The engine enforces one charge per user and Jam, even if this request is retried.
-  const response = await $fetch<{ result?: string, transfer_id?: string }>(
-    `${engineBaseUrl}/debit_fz`,
-    {
-      method: 'POST',
-      headers: { 'X-Fuzik-Debit-Key': debitApiKey },
-      body: {
-        email_account: customerEmail,
-        jam_url: body.jamUrl,
-        request_id: randomUUID()
-      },
-      retry: 0,
-      timeout: 15000
-    }
-  )
-  if (response?.result !== 'Success' || !response.transfer_id || !/^FZ[A-F0-9]{18}$/.test(response.transfer_id)) {
+  const response = await $fetch<{ result?: string, transfer_id?: string }>(`${engineBaseUrl}/transfer`, {
+    query: {
+      to_email: ACTIVITIES_ACCOUNT_EMAIL,
+      from_email: customerEmail,
+      amount: DOWNLOAD_FEE,
+      remark: 'Purchase',
+      realm_id: FZ_REALM_ID,
+      void: 0
+    },
+    retry: 0,
+    timeout: 15000
+  })
+  if (response?.result !== 'Success' || !response.transfer_id || !/^NLB\d{8}$/.test(response.transfer_id)) {
     throw createError({ statusCode: 502, statusMessage: 'Transfer was not confirmed; check the ledger before retrying' })
   }
 

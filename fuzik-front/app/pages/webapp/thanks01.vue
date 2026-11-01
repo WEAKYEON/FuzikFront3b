@@ -1,11 +1,13 @@
 <template>
     <div class="bkk">
         <div class="card">
-            <div class="success-icon">✓</div>
-            <h1>Success!</h1>
-            <p>Your payment has been processed successfully. A receipt has been sent to your email.</p>
-            
-            <a href="/webapp/" class="btn">Back to Dashboard</a>
+            <div class="success-icon">{{ status === 'error' ? '!' : '✓' }}</div>
+            <h1>{{ status === 'confirmed' ? 'Success!' : 'Almost there' }}</h1>
+            <p v-if="status === 'confirmed'">Your payment has been processed successfully. A receipt has been sent to your email.</p>
+            <p v-else-if="status === 'processing'">We're still confirming your payment with the gateway. Your coins will appear in your wallet shortly — no need to pay again.</p>
+            <p v-else>We couldn't reach the payment service to confirm this. Please check your wallet balance, or contact support if coins don't appear shortly.</p>
+
+            <NuxtLink to="/webapp/" class="btn">Back to Dashboard</NuxtLink>
         </div>
     </div>
 </template>
@@ -16,8 +18,12 @@
     });
 
     useHead({
-        title: 'Thank You', 
+        title: 'Thank You',
     })
+
+    const result = await $fetch<Array<{ result: string }>>('/api/confirm_all').catch(() => [{ result: 'Failure' }])
+    const outcome = result[0]?.result
+    const status = outcome === 'Success' ? 'confirmed' : outcome === 'Failure' ? 'error' : 'processing'
 </script>
 
 <style scoped>

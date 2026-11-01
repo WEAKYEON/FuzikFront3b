@@ -34,7 +34,7 @@ export function isValidJamDownloadTicket(secret: string, token: unknown, jamId: 
     const ticket = JSON.parse(Buffer.from(parts[0], 'base64url').toString('utf8')) as DownloadTicket
     return ticket.jamId === jamId &&
       ticket.email === email.trim().toLowerCase() &&
-      /^FZ[A-F0-9]{18}$/.test(ticket.transferId) &&
+      /^NLB\d{8}$/.test(ticket.transferId) &&
       Number.isFinite(ticket.expiresAt) &&
       ticket.expiresAt > Date.now()
   } catch {

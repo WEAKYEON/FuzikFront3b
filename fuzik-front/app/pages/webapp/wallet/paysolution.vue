@@ -30,6 +30,8 @@
       {{ submitting ? 'Redirecting…' : 'Confirm Purchase' }}
     </button>
 
+    <p v-if="depositError" class="paysolution__error">{{ depositError }}</p>
+
     <p class="paysolution__disclaimer">
       Coins are added to your PR balance instantly after payment. Purchases are non-refundable.
     </p>
@@ -72,28 +74,41 @@ const packs: CoinPack[] = [
   { code: 'presto', name: 'Presto Pack', baseCoins: 170, bonusCoins: 30, price: 269, featured: true }
 ]
 
-function generateRefno() {
-  const timestamp = Date.now().toString().slice(-9)
-  const random = Math.floor(100 + Math.random() * 900).toString()
-  return `${timestamp}${random}`.slice(-12).padStart(12, '0')
-}
-
 const packCode = route.query.pack?.toString() ?? ''
 const pack = packs.find(p => p.code === packCode) ?? null
 
 const customerEmail = ref('')
 const productDetail = pack ? `coin-pack-${pack.code}` : ''
-const refno = generateRefno()
+const refno = ref('')
 const submitting = ref(false)
 const paymentForm = ref<HTMLFormElement | null>(null)
 
-function submitPayment() {
-  if (!pack || submitting.value) return
+const depositError = ref('')
+
+async function submitPayment() {
+  if (!pack || !refno.value || submitting.value) return
   submitting.value = true
+  depositError.value = ''
+
+  const result = await $fetch<{ result: string }>('/api/deposit_transfer', {
+    query: { from_email: customerEmail.value, amount: pack.price, refno: refno.value }
+  }).catch(() => ({ result: 'Failure' }))
+
+  if (result.result !== 'Success') {
+    depositError.value = 'Could not start this payment. Please try again.'
+    submitting.value = false
+    return
+  }
+
   paymentForm.value?.submit()
 }
 
-const { data: authData } = await client.auth.getSession()
+const [{ data: authData }, refnoResponse] = await Promise.all([
+  client.auth.getSession(),
+  pack ? $fetch<Array<{ refno: string }>>('/api/refno').catch(() => []) : Promise.resolve([])
+])
+refno.value = refnoResponse[0]?.refno ?? ''
+
 if (!authData.session?.user.email) {
   await navigateTo('/webapp/login')
 } else if (!pack) {
@@ -121,4 +136,5 @@ if (!authData.session?.user.email) {
 .paysolution-confirm:hover { background:#facc15; }
 .paysolution-confirm:disabled { opacity:.6; cursor:not-allowed; }
 .paysolution__disclaimer { margin-top:1rem; color:#71717a; font-size:.75rem; text-align:center; }
+.paysolution__error { margin-top:1rem; color:#f87171; font-size:.85rem; text-align:center; }
 </style>
