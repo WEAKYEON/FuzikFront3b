@@ -105,6 +105,7 @@
             </div>
             <div>Share</div>
           </div>
+          <JamDownloadPreview :email="current_user_email" :jam-url="url" />
         </div>
       </div>
     </div>

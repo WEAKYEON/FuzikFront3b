@@ -60,7 +60,10 @@
           <div class="profile-fields__grid">
             <ProfileField v-model="form.first_name" label="First Name" placeholder="Your first name" required :error="errors.first_name" />
             <ProfileField v-model="form.last_name" label="Last Name" placeholder="Your last name" required :error="errors.last_name" />
-            <ProfileField v-model="form.display_name" label="Display Name" placeholder="Your display name" required :error="errors.display_name" />
+            <div class="profile-display-name">
+              <ProfileField v-model="form.display_name" label="Display Name" placeholder="Your display name" required readonly :error="errors.display_name" />
+              <p class="profile-display-name__note">Display name cannot be changed.</p>
+            </div>
             <ProfileField v-model="form.tel" label="Phone Number" placeholder="Phone number" :error="errors.tel" />
             <ProfileField v-model="form.music_genre" label="Music Genre" placeholder="Your music genre" required :error="errors.music_genre" />
             <ProfileField v-model="form.music_inst" label="Instrument" placeholder="Your musical instruments" required :error="errors.music_inst" />
@@ -209,10 +212,9 @@ async function saveChanges() {
 
   isSaving.value = true
   try {
-    if (
-      form.display_name.trim() !== savedForm.value.display_name &&
-      !await isDisplayNameAvailable(form.display_name.trim())
-    ) {
+    const displayName = form.display_name.trim()
+    const savedDisplayName = savedForm.value.display_name.trim()
+    if (displayName !== savedDisplayName && !await isDisplayNameAvailable(displayName)) {
       errors.display_name = 'This display name is already in use.'
       showToast('error', errors.display_name)
       return
@@ -224,7 +226,7 @@ async function saveChanges() {
     const fields: Array<[EditableProfileField, string]> = [
       ['first_name', form.first_name.trim()],
       ['last_name', form.last_name.trim()],
-      ['display_name', form.display_name.trim()],
+      ['display_name', displayName],
       ['tel', form.tel.trim()],
       ['music_genre', form.music_genre.trim()],
       ['music_inst', form.music_inst.trim()]
@@ -298,6 +300,7 @@ if (!authData.session) {
 .rank-badge img { width:34px; height:34px; object-fit:contain; }
 .rank-badge strong { color:#fde047; }
 .profile-fields { min-width:0; padding-top:3.2rem; }
+.profile-display-name__note { margin:.5rem 0 0; color:#d1d5db; font-size:.8rem; }
 .profile-fields__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:clamp(3rem,8vw,7rem); row-gap:4.25rem; }
 .profile-fields__footer { display:flex; justify-content:center; padding-top:5rem; }
 .save-button { display:flex; min-width:170px; min-height:50px; align-items:center; justify-content:center; gap:.5rem; padding:.75rem 1.5rem; color:#000; background:#fde047; border-radius:.7rem; box-shadow:0 0 18px rgb(250 204 21 / 45%); font-size:1.05rem; font-weight:800; transition:.2s ease; }

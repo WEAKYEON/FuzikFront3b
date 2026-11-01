@@ -200,6 +200,7 @@
 </template>
 
 <script setup lang="ts">
+import type { PlayVideo } from '~/types/play-video'
 
 import WaveSurfer from 'wavesurfer.js';
 import TimelinePlugin from 'wavesurfer.js/dist/plugins/timeline.js';
@@ -234,7 +235,7 @@ var ruler_checked = false;
 
 var request_url = '/api/play2_watch?p=' + encodeURIComponent(String(cookie_collab_url1.value));
 
-const data = await $fetch(request_url);  
+const data = await $fetch<PlayVideo[]>(request_url);  
 var play_data1 = data;
 
 //alert(play_data);
@@ -242,7 +243,7 @@ var play_data1 = data;
 
 if (typeof play_data1 === "object" ) {
     // message gets narrowed to string!
-    if (play_data1 != null) { 
+    if (play_data1?.[0] != null) { 
         //alert(source_image1);
         file_location_1_120 = play_data1[0].video_location_120; 
         file_location_1 = play_data1[0].video_location; 
@@ -255,11 +256,11 @@ if (typeof play_data1 === "object" ) {
 }
 
 var request_url2 = '/api/play2_watch?p=' + encodeURIComponent(String(cookie_collab_url2.value));
-const data2 = await $fetch(request_url2);  
+const data2 = await $fetch<PlayVideo[]>(request_url2);  
 var play_data2 = data2;
 if (typeof play_data2 === "object" ) {
     // message gets narrowed to string!
-    if (play_data2 != null) { 
+    if (play_data2?.[0] != null) { 
         //alert(source_image1);
         file_location_2_120 = play_data2[0].video_location_120; 
         file_location_2 = play_data2[0].video_location; 
@@ -268,11 +269,11 @@ if (typeof play_data2 === "object" ) {
 }
 
 var request_url3 = '/api/play2_watch?p=' + encodeURIComponent(String(cookie_collab_url3.value));
-const data3 = await $fetch(request_url3);  
+const data3 = await $fetch<PlayVideo[]>(request_url3);  
 var play_data3 = data3;
 if (typeof play_data3 === "object" ) {
     // message gets narrowed to string!
-    if (play_data3 != null) { 
+    if (play_data3?.[0] != null) { 
         //alert(source_image1);
         file_location_3_120 = play_data3[0].video_location_120;
         file_location_3 = play_data3[0].video_location;
@@ -745,7 +746,7 @@ function show_ruler() {
             line.style.opacity = '0.05';
         } else {
             line.style.opacity = '1';
-            var x,y = 0;
+            let x: number = 0, y: number = 0;
             var waveform1 = document.getElementById('waveform01');
             if (waveform1 != null) {
                 var rect = waveform1.getBoundingClientRect();
@@ -1179,9 +1180,9 @@ async function textinput01_forward() {
     }   */
 }
 
-function hasTwoDecimals(text) {
+function hasTwoDecimals(text: string): boolean {
   // Check if the input is a number
-  if (isNaN(text)) {
+  if (isNaN(Number(text))) {
     //console.log('Y');
     return false;
   }
@@ -1208,7 +1209,7 @@ function hasTwoDecimals(text) {
   //console.log('parts[1].length');
   //console.log(parts[1].length);
   
-  return parts.length === 2 && (parts[1].length <= 2);
+  return parts.length === 2 && ((parts[1]?.length ?? 0) <= 2);
 }
 
 function textinput02_edit() {    

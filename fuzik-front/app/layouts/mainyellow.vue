@@ -34,12 +34,16 @@
                             </NuxtLink>
                         </div>
                         <div v-else class="flex items-center ms-3">
-                            <ProfileDropdown
-                                :display-name="display_name"
-                                :full-name="`${first_name} ${last_name}`.trim()"
-                                :email="email"
-                                :profile-image="profile_image"
-                            />
+                            <PretzelleCoin :email="email" />
+                            <FuzikToken :email="email" />
+                            <div class="ms-3">
+                                <ProfileDropdown
+                                    :display-name="display_name"
+                                    :full-name="`${first_name} ${last_name}`.trim()"
+                                    :email="email"
+                                    :profile-image="profile_image"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
