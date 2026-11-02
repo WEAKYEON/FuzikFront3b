@@ -1,6 +1,6 @@
 <template>
   <section class="jam-download">
-    <button type="button" class="jam-download__button" :disabled="busy" @click="openDialog">
+    <button type="button" class="jam-download__button" :disabled="busy || !!paidDownloadUrl" @click="openDialog">
       Download Jam video
     </button>
     <a v-if="paidDownloadUrl" class="jam-download__button jam-download__retry" :href="paidDownloadUrl">Download again</a>
@@ -74,7 +74,7 @@ async function confirmDownload() {
     startDownload(receipt.downloadUrl)
     window.dispatchEvent(new Event('fuzik:wallet-changed'))
   } catch {
-    notice.value = 'Transfer was not confirmed. Please retry; this Jam can only be charged once.'
+    notice.value = 'Transfer status is unclear. Check your wallet before trying again.'
   } finally {
     busy.value = false
     closeDialog()

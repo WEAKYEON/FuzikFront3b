@@ -5,11 +5,9 @@ const DOWNLOAD_FEE = 150
 const ACTIVITIES_ACCOUNT_EMAIL = 'ohm@tetrasolution.com'
 const FZ_REALM_ID = 'REALM00000002'
 
-// Per the engine's accounting spec, downloads are charged via the public /transfer
-// endpoint (remark=Purchase), not /debit_fz. Known engine-side gaps (flagged to
-// Ohm/Tanat separately, not fixable from here): the Purchase/Withdraw branch of
-// _transfer checks the recipient's (Activities account) balance instead of the
-// customer's, and /transfer has no duplicate-charge protection like /debit_fz did.
+// For Liability accounts, account_balance is credit (account_from) minus debit
+// (account_to). Purchase therefore records Activities as from and the customer
+// as to; the engine's Purchase branch checks the customer's balance.
 
 interface JamRecord {
   status?: string
@@ -62,8 +60,8 @@ export default defineEventHandler(async (event) => {
 
   const response = await $fetch<{ result?: string, transfer_id?: string }>(`${engineBaseUrl}/transfer`, {
     query: {
-      to_email: ACTIVITIES_ACCOUNT_EMAIL,
-      from_email: customerEmail,
+      to_email: customerEmail,
+      from_email: ACTIVITIES_ACCOUNT_EMAIL,
       amount: DOWNLOAD_FEE,
       remark: 'Purchase',
       realm_id: FZ_REALM_ID,
